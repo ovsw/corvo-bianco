@@ -1,7 +1,6 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import Icon from './icons'
-import { cn } from '../lib/helpers'
 
 const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
   <div>
@@ -16,19 +15,19 @@ const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
         <div className='flex w-full pt-2 content-center justify-between md:w-1/2 md:justify-end'>
           <ul className='list-reset flex justify-between flex-1 md:flex-none items-center'>
             <li className='mr-3'>
-              <a className='inline-block py-2 px-4 text-white no-underline' href='#'>Menu</a>
+              <Link className='inline-block py-2 px-4 text-white no-underline' to='/menu'>Menu</Link>
             </li>
             <li className='mr-3'>
-              <a className='inline-block  py-2 px-4 text-gray-600 no-underline hover:text-gray-200 hover:text-underline' href='#'>Location</a>
+              <Link className='inline-block  py-2 px-4 text-gray-600 no-underline hover:text-gray-200 hover:text-underline' to='/'>Location</Link>
             </li>
             <li className='mr-3'>
-              <a className='inline-block  py-2 px-4 text-gray-600 no-underline hover:text-gray-200 hover:text-underline' href='#'>Reviews</a>
+              <Link className='inline-block  py-2 px-4 text-gray-600 no-underline hover:text-gray-200 hover:text-underline' to='/'>Reviews</Link>
             </li>
             <li className='mr-3'>
-              <a className='inline-block  py-2 px-4 text-gray-600 no-underline hover:text-gray-200 hover:text-underline' href='#'>About</a>
+              <Link className='inline-block  py-2 px-4 text-gray-600 no-underline hover:text-gray-200 hover:text-underline' to='/'>About</Link>
             </li>
             <li className='mr-3'>
-              <a className='inline-block  py-2 px-4 text-gray-600 no-underline hover:text-gray-200 hover:text-underline' href='#'>Contact</a>
+              <Link className='inline-block  py-2 px-4 text-gray-600 no-underline hover:text-gray-200 hover:text-underline' to='/'>Contact</Link>
             </li>
 
           </ul>
