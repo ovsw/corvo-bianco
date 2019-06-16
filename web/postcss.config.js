@@ -4,6 +4,7 @@ module.exports = () => ({
     require('postcss-preset-env')({
       stage: 0
     }),
-    require('tailwindcss')
+    require('tailwindcss'),
+    require('autoprefixer')
   ]
 })
