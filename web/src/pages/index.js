@@ -8,6 +8,7 @@ import ProjectPreviewGrid from '../components/project-preview-grid'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import Hero from '../components/hero'
+import ThreeBoxes from '../threeBoxes'
 
 export const query = graphql`
   query IndexPageQuery {
@@ -85,6 +86,7 @@ const IndexPage = props => {
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
       <Container>
         <Hero />
+        <ThreeBoxes />
         <h1 hidden>Welcome to {site.title}</h1>
         {projectNodes && (
           <ProjectPreviewGrid
