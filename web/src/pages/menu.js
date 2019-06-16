@@ -7,20 +7,26 @@ import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import { mapEdgesToNodes, filterOutDocsWithoutSlugs } from '../lib/helpers'
 
+// allSanityMenuItem(limit: 12, sort: { fields: [publishedAt], order: DESC })
+
 export const query = graphql`
-  query ProjectsPageQuery {
-    projects: allSanityProject(limit: 12, sort: { fields: [publishedAt], order: DESC }) {
+  query MenuPageQuery {
+    menuItems: allSanityMenuItem {
       edges {
         node {
           id
+          ingredients
           mainImage {
             asset {
               _id
+              fluid(maxWidth: 700) {
+                ...GatsbySanityImageFluid
+              }
             }
             alt
           }
-          title
-          _rawExcerpt
+          name
+          price
           slug {
             current
           }
@@ -39,14 +45,14 @@ const ProjectsPage = props => {
       </Layout>
     )
   }
-  const projectNodes =
-    data && data.projects && mapEdgesToNodes(data.projects).filter(filterOutDocsWithoutSlugs)
+  const menuItemNodes =
+    data && data.menuItems && mapEdgesToNodes(data.menuItems).filter(filterOutDocsWithoutSlugs)
   return (
     <Layout>
       <SEO title='Projects' />
       <Container>
-        <h1 className={responsiveTitle1}>Projects</h1>
-        {projectNodes && projectNodes.length > 0 && <ProjectPreviewGrid nodes={projectNodes} />}
+        <h1>Our Menu</h1>
+        {/* {menuItemNodes && menuItemNodes.length > 0 && <ProjectPreviewGrid nodes={projectNodes} />} */}
       </Container>
     </Layout>
   )

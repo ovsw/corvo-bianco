@@ -43,11 +43,11 @@ async function createBlogPostPages (graphql, actions, reporter) {
   })
 }
 
-async function createProjectPages (graphql, actions, reporter) {
+async function createMenuItemPages (graphql, actions, reporter) {
   const { createPage } = actions
   const result = await graphql(`
     {
-      allSanityProject(filter: { slug: { current: { ne: null } } }) {
+      allSanityMenuItem(filter: { slug: { current: { ne: null } } }) {
         edges {
           node {
             id
@@ -62,18 +62,18 @@ async function createProjectPages (graphql, actions, reporter) {
 
   if (result.errors) throw result.errors
 
-  const projectEdges = (result.data.allSanityProject || {}).edges || []
+  const MenuItemEdges = (result.data.allSanityMenuItem || {}).edges || []
 
-  projectEdges.forEach(edge => {
+  MenuItemEdges.forEach(edge => {
     const id = edge.node.id
     const slug = edge.node.slug.current
-    const path = `/project/${slug}/`
+    const path = `/menu/${slug}/`
 
-    reporter.info(`Creating project page: ${path}`)
+    reporter.info(`Creating Menu Item page: ${path}`)
 
     createPage({
       path,
-      component: require.resolve('./src/templates/project.js'),
+      component: require.resolve('./src/templates/menu-item.js'),
       context: { id }
     })
   })
@@ -81,5 +81,5 @@ async function createProjectPages (graphql, actions, reporter) {
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   await createBlogPostPages(graphql, actions, reporter)
-  await createProjectPages(graphql, actions, reporter)
+  await createMenuItemPages(graphql, actions, reporter)
 }

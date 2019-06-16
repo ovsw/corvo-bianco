@@ -16,40 +16,7 @@ export const query = graphql`
       keywords
     }
 
-    projects: allSanityProject(limit: 6, sort: { fields: [publishedAt], order: DESC }) {
-      edges {
-        node {
-          id
-          mainImage {
-            crop {
-              _key
-              _type
-              top
-              bottom
-              left
-              right
-            }
-            hotspot {
-              _key
-              _type
-              x
-              y
-              height
-              width
-            }
-            asset {
-              _id
-            }
-            alt
-          }
-          title
-          _rawExcerpt
-          slug {
-            current
-          }
-        }
-      }
-    }
+    
 
     posts: allSanityPost(limit: 6, sort: { fields: [publishedAt], order: DESC }) {
       edges {
