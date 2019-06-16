@@ -133,6 +133,7 @@ const IndexPage = props => {
             browseMoreHref='/blog/'
           />
         )}
+
       </Container>
     </Layout>
   )

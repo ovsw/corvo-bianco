@@ -1,4 +1,11 @@
 
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+
 html {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: var(--font-base-size);
