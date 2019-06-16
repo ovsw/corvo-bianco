@@ -5,6 +5,7 @@ module.exports = () => ({
       stage: 0
     }),
     require('tailwindcss'),
+    require('postcss-nested'),
     require('autoprefixer')
   ]
 })
