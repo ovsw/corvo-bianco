@@ -3,8 +3,6 @@ import SEO from '../components/seo'
 import Container from '../components/layout'
 import Layout from '../containers/layout'
 
-import { responsiveTitle1 } from '../components/typography.module.css'
-
 const NotFoundPage = () => (
   <Layout>
     <SEO title='404: Not found' />

@@ -7,8 +7,6 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 
-import { responsiveTitle1 } from '../components/typography.module.css'
-
 export const query = graphql`
   query BlogPageQuery {
     posts: allSanityPost(limit: 12, sort: { fields: [publishedAt], order: DESC }) {
