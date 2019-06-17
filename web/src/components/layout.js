@@ -17,7 +17,7 @@ const Layout = ({ children, companyInfo, onHideNav, onShowNav, showNav, siteTitl
 
           <div className='flex-1'>
 
-            <Link className='text-gray-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl' href='#'>
+            <Link className='text-gray-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl' to='/'>
               {companyInfo.name}
             </Link>
 
