@@ -1,13 +1,22 @@
 import S from '@sanity/desk-tool/structure-builder'
-import { MdBusiness, MdSettings, MdLocalPizza } from 'react-icons/md'
+import { MdBusiness, MdSettings, MdLocalPizza, MdViewList } from 'react-icons/md'
 import { FaFile } from 'react-icons/fa'
 
-const hiddenTypes = ['category', 'companyInfo', 'page', 'person', 'post', 'menuItem', 'siteSettings']
+const hiddenTypes = ['category', 'companyInfo', 'page', 'person', 'post', 'menuItem', 'menuSettings', 'siteSettings']
 
 export default () =>
   S.list()
     .title('Content')
     .items([
+      S.listItem()
+        .title('Current Food Menu Settings')
+        .child(
+          S.editor()
+            .id('menuSettings')
+            .schemaType('menuSettings')
+            .documentId('menuSettings')
+        )
+        .icon(MdViewList),
       S.listItem()
         .title('Menu Items')
         .schemaType('menuItem')
