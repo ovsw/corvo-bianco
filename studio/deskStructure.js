@@ -1,8 +1,8 @@
 import S from '@sanity/desk-tool/structure-builder'
 import { MdBusiness, MdSettings, MdLocalPizza, MdViewList } from 'react-icons/md'
-import { FaFile } from 'react-icons/fa'
+import { FaFile, FaPizzaSlice, FaLeaf, FaLayerGroup } from 'react-icons/fa'
 
-const hiddenTypes = ['category', 'companyInfo', 'page', 'person', 'post', 'menuItem', 'menuSettings', 'siteSettings']
+const hiddenTypes = ['category', 'companyInfo', 'page', 'person', 'post', 'menuItem', 'menuSettings', 'siteSettings', 'Savory-Pizza', 'Dessert-Pizza', 'puccia', 'insalata']
 
 export default () =>
   S.list()
@@ -17,11 +17,31 @@ export default () =>
             .documentId('menuSettings')
         )
         .icon(MdViewList),
+      // S.listItem()
+      //   .title('Menu Items')
+      //   .schemaType('menuItem')
+      //   .child(S.documentTypeList('menuItem').title('Menu Items'))
+      //   .icon(MdLocalPizza),
       S.listItem()
-        .title('Menu Items')
-        .schemaType('menuItem')
-        .child(S.documentTypeList('menuItem').title('Menu Items'))
+        .title('Savory Pizzas')
+        .schemaType('Savory-Pizza')
+        .child(S.documentTypeList('Savory-Pizza').title('Savory Pizza'))
+        .icon(FaPizzaSlice),
+      S.listItem()
+        .title('Dessert Pizzas')
+        .schemaType('Dessert-Pizza')
+        .child(S.documentTypeList('Dessert-Pizza').title('Dessert Pizzas'))
         .icon(MdLocalPizza),
+      S.listItem()
+        .title('Puccia')
+        .schemaType('puccia')
+        .child(S.documentTypeList('puccia').title('Puccia'))
+        .icon(FaLayerGroup),
+      S.listItem()
+        .title('Insalate')
+        .schemaType('insalata')
+        .child(S.documentTypeList('insalata').title('Insalate'))
+        .icon(FaLeaf),
       S.listItem()
         .title('Blog posts')
         .schemaType('post')

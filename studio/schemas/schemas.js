@@ -19,6 +19,10 @@ import projectMember from './projectMember'
 import siteSettings from './siteSettings'
 import slideshow from './slideshow'
 import menuItem from './menuItem'
+import savoryPizza from './savoryPizza'
+import dessertPizza from './dessertPizza'
+import puccia from './puccia'
+import insalata from './insalata'
 import menuSettings from './menuSettings'
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -44,6 +48,10 @@ export default createSchema({
     siteSettings,
     slideshow,
     menuItem,
+    savoryPizza,
+    dessertPizza,
+    puccia,
+    insalata,
     menuSettings
 
     // When added to this list, object types can be used as

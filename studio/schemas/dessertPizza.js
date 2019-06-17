@@ -2,8 +2,8 @@ import FoodItemFields from './foodItemFields'
 import FoodItemPreview from './foodItemPreview'
 
 export default {
-  name: 'menuItem',
-  title: 'Menu Item',
+  name: 'Dessert-Pizza',
+  title: 'Dessert Pizza',
   type: 'document',
   fields: FoodItemFields,
 
