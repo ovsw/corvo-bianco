@@ -10,6 +10,7 @@ import Layout from '../containers/layout'
 import Hero from '../components/hero'
 import ThreeBoxes from '../threeBoxes'
 import FoodMenu from '../components/foodMenu'
+import CurrentMenu from '../containers/currentMenu'
 
 export const query = graphql`
   query IndexPageQuery {
@@ -88,15 +89,15 @@ const IndexPage = props => {
       <Container>
         <Hero />
         <ThreeBoxes />
-        <FoodMenu />
         <h1 hidden>Welcome to {site.title}</h1>
-        {projectNodes && (
+        <CurrentMenu />
+        {/* {projectNodes && (
           <ProjectPreviewGrid
             title='Latest projects'
             nodes={projectNodes}
             browseMoreHref='/projects/'
           />
-        )}
+        )} */}
         {postNodes && (
           <BlogPostPreviewGrid
             title='Latest blog posts'
