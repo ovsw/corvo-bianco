@@ -5,9 +5,10 @@
 
 @import "tailwindcss/utilities";
 
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,700|Roboto+Mono:400,700|Sacramento&display=swap');
 
 html {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Roboto Mono', monospace;
   font-size: var(--font-base-size);
   line-height: var(--font-base-line-height);
 }
@@ -17,6 +18,9 @@ body {
   background: var(--color-white);
   color: var(--color-black);
   margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
 }
 
 html, body, body > div, body > div > div {
