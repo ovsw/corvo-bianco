@@ -7,7 +7,7 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import Hero from '../components/hero'
-import ThreeBoxes from '../threeBoxes'
+import ThreeBoxes from '../components/threeBoxes'
 import CurrentMenu from '../containers/currentMenu'
 
 export const query = graphql`
@@ -71,9 +71,9 @@ const IndexPage = props => {
   const postNodes = (data || {}).posts
     ? mapEdgesToNodes(data.posts).filter(filterOutDocsWithoutSlugs)
     : []
-  const projectNodes = (data || {}).projects
-    ? mapEdgesToNodes(data.projects).filter(filterOutDocsWithoutSlugs)
-    : []
+  // const projectNodes = (data || {}).projects
+  //   ? mapEdgesToNodes(data.projects).filter(filterOutDocsWithoutSlugs)
+  //   : []
 
   if (!site) {
     throw new Error(
@@ -98,7 +98,7 @@ const IndexPage = props => {
         )} */}
         {postNodes && (
           <BlogPostPreviewGrid
-            title='Latest blog posts'
+            title='Latest News'
             nodes={postNodes}
             browseMoreHref='/blog/'
           />

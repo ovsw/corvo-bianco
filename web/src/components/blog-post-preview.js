@@ -3,25 +3,31 @@ import React from 'react'
 import { buildImageObj, cn, getBlogUrl } from '../lib/helpers'
 import { imageUrlFor } from '../lib/image-url'
 import BlockText from './block-text'
+import Moment from 'react-moment'
 
-function BlogPostPreview (props) {
+function BlogPostPreview ({ title, slug, publishedAt, mainImage, _rawExcerpt }) {
   return (
-    <Link to={getBlogUrl(props.publishedAt, props.slug.current)}>
+    <Link to={getBlogUrl(publishedAt, slug.current)}>
       <div >
-        {props.mainImage && props.mainImage.asset && (
+        {mainImage && mainImage.asset && (
           <img
-            src={imageUrlFor(buildImageObj(props.mainImage))
+            src={imageUrlFor(buildImageObj(mainImage))
               .width(300)
               .height(Math.floor((9 / 16) * 300))
               .url()}
-            alt={props.mainImage.alt}
+            alt={mainImage.alt}
           />
         )}
       </div>
-      <h3>{props.title}</h3>
-      {props._rawExcerpt && (
+      <h3 className='text-2xl font-bold' style={{ fontFamily: 'Roboto Mono' }}>{title}</h3>
+      <p>
+        <Moment format='MMMM Do'>
+          {publishedAt}
+        </Moment>
+      </p>
+      {_rawExcerpt && (
         <div>
-          <BlockText blocks={props._rawExcerpt} />
+          <BlockText blocks={_rawExcerpt} />
         </div>
       )}
     </Link>
