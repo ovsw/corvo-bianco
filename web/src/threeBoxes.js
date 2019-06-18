@@ -8,7 +8,8 @@ const ThreeBoxes = () => {
       <div className='container mx-auto flex flex-wrap pt-4 pb-12'>
 
         <h1 className='w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800'>What is true Neapolitan Pizza?</h1>
-        <p className='text-center text-gray-800 w-1/2 mx-auto'>Here's what makes a true-to-form Neapolitan Pizza, made according to the rules of the Associazione Verace Pizza Napoletana:</p>
+        <p className='text-center text-gray-800 w-full mx-32 lg:px-32 mb-8'><strong className='text-gray-900'>fast, deilicious, healthy</strong></p>
+        <p className='text-center text-gray-600 w-full text-sm mx-32 lg:px-32'>Here's what makes a true-to-form Neapolitan Pizza, made according to the rules of the <a href='https://www.pizzanapoletana.org/en/' target='_blank' style={{ textDecoration: 'underline' }}>Associazione Verace Pizza Napoletana</a>:</p>
         <div className='w-full mb-4'>
           <div className='h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t' />
         </div>
@@ -18,7 +19,7 @@ const ThreeBoxes = () => {
             <a href='#' className='flex flex-wrap no-underline hover:no-underline'>
               {/* <p className='w-full text-gray-600 text-xs md:text-sm px-6'>xGETTING STARTED</p> */}
               <div className='w-full font-bold text-xl text-gray-800 px-6 mb-6'>The Wood Fired Oven & Cooking Method</div>
-              <p className='text-gray-800 text-base px-6 mb-5'>Our pizzas are cooked for a short time at a very high temperature in our wood fired oven.
+              <p className='text-gray-600 text-base px-6 mb-5'>Our pizzas are cooked for <strong className='text-gray-900'>90-120 seconds @ 700°F </strong> in our <strong className='text-gray-900'>wood fired oven</strong> for a moist dough and well-cooked toppings.
               </p>
             </a>
           </div>
@@ -34,7 +35,7 @@ const ThreeBoxes = () => {
             <a href='#' className='flex flex-wrap no-underline hover:no-underline'>
               {/* <p className='w-full text-gray-600 text-xs md:text-sm px-6'>xGETTING STARTED</p> */}
               <div className='w-full font-bold text-xl text-gray-800 px-6 mb-6'>The Authentic Neapolitan Recipe</div>
-              <p className='text-gray-800 text-base px-6 mb-5'>Hand-kneaded dough from Capudo 00 wheat flour, fresh brewer's yeast, salt and water. Nothing more, nothing less.
+              <p className='text-gray-600 text-base px-6 mb-5'>Hand-kneaded dough from <strong className='text-gray-900'>Capudo 00 wheat flour</strong>, fresh <strong className='text-gray-900'>brewer's yeast</strong>, <strong className='text-gray-900'>salt</strong> and <strong className='text-gray-900'>water</strong>. Nothing more, nothing less.
               </p>
             </a>
           </div>
@@ -50,7 +51,7 @@ const ThreeBoxes = () => {
             <a href='#' className='flex flex-wrap no-underline hover:no-underline'>
               {/* <p className='w-full text-gray-600 text-xs md:text-sm px-6'>xGETTING STARTED</p> */}
               <div className='w-full font-bold text-xl text-gray-800 px-6 mb-6'>The Best Ingredients</div>
-              <p className='text-gray-800 text-base px-6 mb-5'>Only fresh and organic toppings: Italian Fiori di Late or Mozzarella di Bufala, pureed San Marzano tomatoes from Italy. Plus other local seasonal toppings.
+              <p className='text-gray-600 text-base px-6 mb-5'>Only fresh and organic toppings: <strong className='text-gray-900'>Italian Fiori di Late Mozzarella</strong>, pureed <strong className='text-gray-900'>San Marzano tomatoes</strong> from Italy. Plus other local seasonal toppings.
               </p>
             </a>
           </div>
