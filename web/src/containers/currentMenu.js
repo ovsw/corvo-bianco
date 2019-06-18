@@ -40,6 +40,9 @@ const query = graphql`
               fluid(maxWidth: 700) {
                 ...GatsbySanityImageFluid
               }
+              fixed(width: 200) {
+                ...GatsbySanityImageFixed
+              }
             }
             alt
           }
