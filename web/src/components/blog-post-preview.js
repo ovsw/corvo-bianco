@@ -7,8 +7,8 @@ import Moment from 'react-moment'
 
 function BlogPostPreview ({ title, slug, publishedAt, mainImage, _rawExcerpt }) {
   return (
-    <Link to={getBlogUrl(publishedAt, slug.current)}>
-      <div >
+    <Link className='text-left' to={getBlogUrl(publishedAt, slug.current)}>
+      <div>
         {mainImage && mainImage.asset && (
           <img
             src={imageUrlFor(buildImageObj(mainImage))

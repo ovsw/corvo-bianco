@@ -16,10 +16,10 @@ function BlogPostPreviewGrid (props) {
         </h2>
       )}
 
-      <ul className='flex max-w-6xl mx-auto'>
+      <ul className='flex max-w-5xl mx-auto'>
         {props.nodes &&
           props.nodes.map(node => (
-            <li key={node.id} className=' flex-1 w-1/3'>
+            <li key={node.id} className=' flex-1 text-center px-6'>
               <BlogPostPreview {...node} />
             </li>
           ))}
