@@ -9,6 +9,7 @@ import Layout from '../containers/layout'
 import Hero from '../components/hero'
 import ThreeBoxes from '../components/threeBoxes'
 import CurrentMenu from '../containers/currentMenu'
+import CTANews from '../components/ctaNews'
 
 export const query = graphql`
   query IndexPageQuery {
@@ -96,6 +97,7 @@ const IndexPage = props => {
             browseMoreHref='/projects/'
           />
         )} */}
+        <CTANews />
         {postNodes && (
           <BlogPostPreviewGrid
             title='Latest News'
