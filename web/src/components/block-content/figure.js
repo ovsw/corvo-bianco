@@ -2,18 +2,19 @@ import React from 'react'
 import { buildImageObj } from '../../lib/helpers'
 import { imageUrlFor } from '../../lib/image-url'
 
-function Figure (props) {
+function Figure(props) {
+  const { asset, alt, caption } = props
   return (
     <figure>
-      {props.asset && (
+      {asset && (
         <img
           src={imageUrlFor(buildImageObj(props))
             .width(1200)
             .url()}
-          alt={props.alt}
+          alt={alt}
         />
       )}
-      <figcaption >{props.caption}</figcaption>
+      <figcaption>{caption}</figcaption>
     </figure>
   )
 }

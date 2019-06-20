@@ -47,11 +47,7 @@ export const query = graphql`
 const ProjectTemplate = props => {
   const { data, errors } = props
   const menuItem = data && data.menuItem
-  return (
-    <>
-      {menuItem && <p>WE HAVE A Menu Item</p>}
-    </>
-  )
+  return <>{menuItem && <p>WE HAVE A Menu Item</p>}</>
 }
 
 export default ProjectTemplate

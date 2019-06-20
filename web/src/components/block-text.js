@@ -3,13 +3,13 @@ import React from 'react'
 
 const serializers = {
   types: {
-    block (props) {
+    block(props) {
       switch (props.node.style) {
         default:
           return <p>{props.children}</p>
       }
-    }
-  }
+    },
+  },
 }
 
 const BlockText = ({ blocks }) => <BaseBlockContent blocks={blocks} serializers={serializers} />

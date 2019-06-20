@@ -4,24 +4,24 @@ import { cn, buildImageObj } from '../lib/helpers'
 import { imageUrlFor } from '../lib/image-url'
 import BlockText from './block-text'
 
-function ProjectPreview (props) {
+function ProjectPreview({ title, slug, mainImage, _rawExcerpt }) {
   return (
-    <Link to={`/project/${props.slug.current}`}>
+    <Link to={`/project/${slug.current}`}>
       <div>
-        {props.mainImage && props.mainImage.asset && (
+        {mainImage && mainImage.asset && (
           <img
-            src={imageUrlFor(buildImageObj(props.mainImage))
+            src={imageUrlFor(buildImageObj(mainImage))
               .width(600)
               .height(Math.floor((9 / 16) * 600))
               .url()}
-            alt={props.mainImage.alt}
+            alt={mainImage.alt}
           />
         )}
       </div>
-      <h3>{props.title}</h3>
-      {props._rawExcerpt && (
+      <h3>{title}</h3>
+      {_rawExcerpt && (
         <div>
-          <BlockText blocks={props._rawExcerpt} />
+          <BlockText blocks={_rawExcerpt} />
         </div>
       )}
     </Link>

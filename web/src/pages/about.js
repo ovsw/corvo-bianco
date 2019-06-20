@@ -44,8 +44,7 @@ const AboutPage = props => {
   }
 
   const page = data && data.page
-  const personNodes =
-    data && data.people && mapEdgesToNodes(data.people).filter(filterOutDocsWithoutSlugs)
+  const personNodes = data && data.people && mapEdgesToNodes(data.people).filter(filterOutDocsWithoutSlugs)
 
   if (!page) {
     throw new Error(
@@ -59,7 +58,7 @@ const AboutPage = props => {
       <Container>
         <h1>{page.title}</h1>
         <BlockContent blocks={page._rawBody || []} />
-        {personNodes && personNodes.length > 0 && <PeopleGrid items={personNodes} title='People' />}
+        {personNodes && personNodes.length > 0 && <PeopleGrid items={personNodes} title="People" />}
       </Container>
     </Layout>
   )

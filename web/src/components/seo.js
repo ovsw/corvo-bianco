@@ -14,7 +14,7 @@ const detailsQuery = graphql`
   }
 `
 
-function SEO ({ description, lang, meta, keywords = [], title }) {
+function SEO({ description, lang, meta, keywords = [], title }) {
   return (
     <StaticQuery
       query={detailsQuery}
@@ -26,50 +26,50 @@ function SEO ({ description, lang, meta, keywords = [], title }) {
         return (
           <Helmet
             htmlAttributes={{
-              lang
+              lang,
             }}
             title={title}
             titleTemplate={title === data.site.title ? '%s' : `%s | ${data.site.title}`}
             meta={[
               {
                 name: 'description',
-                content: metaDescription
+                content: metaDescription,
               },
               {
                 property: 'og:title',
-                content: title
+                content: title,
               },
               {
                 property: 'og:description',
-                content: metaDescription
+                content: metaDescription,
               },
               {
                 property: 'og:type',
-                content: 'website'
+                content: 'website',
               },
               {
                 name: 'twitter:card',
-                content: 'summary'
+                content: 'summary',
               },
               {
                 name: 'twitter:creator',
-                content: data.site.author
+                content: data.site.author,
               },
               {
                 name: 'twitter:title',
-                content: title
+                content: title,
               },
               {
                 name: 'twitter:description',
-                content: metaDescription
-              }
+                content: metaDescription,
+              },
             ]
               .concat(
                 keywords && keywords.length > 0
                   ? {
-                    name: 'keywords',
-                    content: keywords.join(', ')
-                  }
+                      name: 'keywords',
+                      content: keywords.join(', '),
+                    }
                   : []
               )
               .concat(meta)}
@@ -83,7 +83,7 @@ function SEO ({ description, lang, meta, keywords = [], title }) {
 SEO.defaultProps = {
   lang: 'en',
   meta: [],
-  keywords: []
+  keywords: [],
 }
 
 SEO.propTypes = {
@@ -91,7 +91,7 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.array,
   keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 }
 
 export default SEO

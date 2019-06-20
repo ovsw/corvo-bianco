@@ -45,11 +45,10 @@ const ProjectsPage = props => {
       </Layout>
     )
   }
-  const menuItemNodes =
-    data && data.menuItems && mapEdgesToNodes(data.menuItems).filter(filterOutDocsWithoutSlugs)
+  const menuItemNodes = data && data.menuItems && mapEdgesToNodes(data.menuItems).filter(filterOutDocsWithoutSlugs)
   return (
     <Layout>
-      <SEO title='Projects' />
+      <SEO title="Projects" />
       <Container>
         <h1>Our Menu</h1>
         {/* {menuItemNodes && menuItemNodes.length > 0 && <ProjectPreviewGrid nodes={projectNodes} />} */}

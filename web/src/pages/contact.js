@@ -26,7 +26,7 @@ const ContactPage = props => {
     )
   }
 
-  const page = data.page
+  const { page } = data
 
   if (!page) {
     throw new Error(
@@ -47,8 +47,8 @@ const ContactPage = props => {
 ContactPage.defaultProps = {
   data: {
     page: {
-      title: 'No title'
-    }
-  }
+      title: 'No title',
+    },
+  },
 }
 export default ContactPage

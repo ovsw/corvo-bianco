@@ -3,7 +3,7 @@ import BlockText from './block-text'
 import { buildImageObj } from '../lib/helpers'
 import { imageUrlFor } from '../lib/image-url'
 
-function ProfileCard ({ image, name, _rawBio }) {
+function ProfileCard({ image, name, _rawBio }) {
   return (
     <div>
       <div>
@@ -14,6 +14,7 @@ function ProfileCard ({ image, name, _rawBio }) {
               .height(600)
               .fit('crop')
               .url()}
+            alt={name}
           />
         )}
       </div>
@@ -27,7 +28,7 @@ function ProfileCard ({ image, name, _rawBio }) {
   )
 }
 
-function PeopleGrid ({ items, title }) {
+function PeopleGrid({ items, title }) {
   return (
     <div>
       {<h2>{title}</h2>}

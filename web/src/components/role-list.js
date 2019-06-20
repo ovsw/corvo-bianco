@@ -2,11 +2,11 @@ import React from 'react'
 import { buildImageObj } from '../lib/helpers'
 import { imageUrlFor } from '../lib/image-url'
 
-function ucfirst (str) {
+function ucfirst(str) {
   return `${str.substr(0, 1).toUpperCase()}${str.substr(1)}`
 }
 
-function RoleList ({ items, title }) {
+function RoleList({ items, title }) {
   return (
     <div>
       <h2>{title}</h2>
@@ -22,7 +22,7 @@ function RoleList ({ items, title }) {
                       .height(100)
                       .fit('crop')
                       .url()}
-                    alt=''
+                    alt={item.person.name}
                   />
                 )}
               </div>

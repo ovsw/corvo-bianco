@@ -6,7 +6,7 @@ import BlockContent from './block-content'
 import Container from './container'
 import RoleList from './role-list'
 
-function BlogPost (props) {
+function BlogPost(props) {
   const { _rawBody, authors, categories, title, mainImage, publishedAt } = props
   return (
     <article>
@@ -36,7 +36,7 @@ function BlogPost (props) {
                   : format(new Date(publishedAt), 'MMMM Do YYYY')}
               </div>
             )}
-            {authors && <RoleList items={authors} title='Authors' />}
+            {authors && <RoleList items={authors} title="Authors" />}
             {categories && (
               <div>
                 <h3>Categories</h3>

@@ -68,10 +68,8 @@ const IndexPage = props => {
     )
   }
 
-  const site = (data || {}).site
-  const postNodes = (data || {}).posts
-    ? mapEdgesToNodes(data.posts).filter(filterOutDocsWithoutSlugs)
-    : []
+  const { site } = data || {}
+  const postNodes = (data || {}).posts ? mapEdgesToNodes(data.posts).filter(filterOutDocsWithoutSlugs) : []
   // const projectNodes = (data || {}).projects
   //   ? mapEdgesToNodes(data.projects).filter(filterOutDocsWithoutSlugs)
   //   : []
@@ -98,14 +96,7 @@ const IndexPage = props => {
           />
         )} */}
         <CTANews />
-        {postNodes && (
-          <BlogPostPreviewGrid
-            title='Latest News'
-            nodes={postNodes}
-            browseMoreHref='/blog/'
-          />
-        )}
-
+        {postNodes && <BlogPostPreviewGrid title="Latest News" nodes={postNodes} browseMoreHref="/blog/" />}
       </Container>
     </Layout>
   )

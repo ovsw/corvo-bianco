@@ -2,29 +2,21 @@ import { Link } from 'gatsby'
 import React from 'react'
 import ProjectPreview from './project-preview'
 
-function ProjectPreviewGrid (props) {
+function ProjectPreviewGrid({ title, browseMoreHref, nodes }) {
   return (
     <div>
-      {props.title && (
-        <h2>
-          {props.browseMoreHref ? (
-            <Link to={props.browseMoreHref}>{props.title}</Link>
-          ) : (
-            props.title
-          )}
-        </h2>
-      )}
+      {title && <h2>{browseMoreHref ? <Link to={browseMoreHref}>{title}</Link> : title}</h2>}
       <ul>
-        {props.nodes &&
-          props.nodes.map(node => (
+        {nodes &&
+          nodes.map(node => (
             <li key={node.id}>
               <ProjectPreview {...node} />
             </li>
           ))}
       </ul>
-      {props.browseMoreHref && (
+      {browseMoreHref && (
         <div>
-          <Link to={props.browseMoreHref}>Browse more</Link>
+          <Link to={browseMoreHref}>Browse more</Link>
         </div>
       )}
     </div>
@@ -34,7 +26,7 @@ function ProjectPreviewGrid (props) {
 ProjectPreviewGrid.defaultProps = {
   title: '',
   nodes: [],
-  browseMoreHref: ''
+  browseMoreHref: '',
 }
 
 export default ProjectPreviewGrid

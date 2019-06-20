@@ -7,11 +7,10 @@ import BlockContent from './block-content'
 import Container from './container'
 import RoleList from './role-list'
 
-function Project (props) {
-  const { _rawBody, title, categories, mainImage, members, publishedAt, relatedProjects } = props
+function Project({ _rawBody, title, categories, mainImage, members, publishedAt, relatedProjects }) {
   return (
     <article>
-      {props.mainImage && mainImage.asset && (
+      {mainImage && mainImage.asset && (
         <div>
           <img
             src={imageUrlFor(buildImageObj(mainImage))
@@ -37,7 +36,7 @@ function Project (props) {
                   : format(new Date(publishedAt), 'MMMM Do YYYY')}
               </div>
             )}
-            {members && <RoleList items={members} title='Authors' />}
+            {members && <RoleList items={members} title="Authors" />}
             {categories && (
               <div>
                 <h3>Categories</h3>

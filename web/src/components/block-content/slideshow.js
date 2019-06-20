@@ -2,34 +2,31 @@ import React, { useState } from 'react'
 import { buildImageObj } from '../../lib/helpers'
 import { imageUrlFor } from '../../lib/image-url'
 
-function Slideshow (props) {
-  if (!props.slides) return null
-  const len = props.slides.length
+function Slideshow({ slides }) {
+  if (!slides) return null
+  const len = slides.length
   const [index, setIndex] = useState(0)
-  function handlePrev () {
+  function handlePrev() {
     setIndex(Math.max(index - 1, 0))
   }
-  function handleNext () {
+  function handleNext() {
     setIndex(Math.min(index + 1, len - 1))
   }
   return (
     <div>
       <div>
-        <button onClick={handlePrev} disabled={index === 0}>
+        <button type="button" onClick={handlePrev} disabled={index === 0}>
           Prev
         </button>
         <span>
           {index + 1} of {len}
         </span>
-        <button onClick={handleNext} disabled={index === len - 1}>
+        <button type="button" onClick={handleNext} disabled={index === len - 1}>
           Next
         </button>
       </div>
-      <ul
-        data-index={index}
-        style={{ transform: `translate3d(${index * -100}%, 0, 0)` }}
-      >
-        {props.slides.map(slide => (
+      <ul data-index={index} style={{ transform: `translate3d(${index * -100}%, 0, 0)` }}>
+        {slides.map(slide => (
           <li key={slide._key}>
             {slide.asset && (
               <img
@@ -38,6 +35,7 @@ function Slideshow (props) {
                   .height(Math.floor((9 / 16) * 1200))
                   .fit('crop')
                   .url()}
+                alt={slide}
               />
             )}
           </li>
