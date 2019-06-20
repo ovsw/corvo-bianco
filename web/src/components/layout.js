@@ -4,6 +4,12 @@ import Header from './header'
 
 import './layout.css'
 
+import 'typeface-oswald'
+// import 'typeface-special-elite'
+// import 'typeface-carter-one'
+import 'typeface-roboto'
+import 'typeface-merriweather'
+
 const Layout = ({ children, companyInfo, onHideNav, onShowNav, showNav, siteTitle }) => (
   <>
     <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />

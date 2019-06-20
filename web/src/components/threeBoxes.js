@@ -35,7 +35,7 @@ const ThreeBoxes = () => (
         <div className="flex-1 bg-white  overflow-hidden  pt-6 border border-b-0">
           <a href="#" className="flex flex-wrap no-underline hover:no-underline">
             {/* <p className='w-full text-gray-600 text-xs md:text-sm px-6'>xGETTING STARTED</p> */}
-            <div className="w-full font-bold text-xl text-gray-800 px-6 mb-6">The Wood Fired Oven & Cooking Method</div>
+            <h3 className="w-full font-bold text-xl text-gray-800 px-6 mb-6">The Wood Fired Oven & Cooking Method</h3>
             <p className="text-gray-600 text-base px-6 mb-5">
               Our pizzas are cooked for <strong className="text-gray-900">90-120 seconds @ 700°F </strong> in our{' '}
               <strong className="text-gray-900">wood fired oven</strong> for a moist dough and well-cooked toppings.
@@ -58,7 +58,7 @@ const ThreeBoxes = () => (
         <div className="flex-1 bg-white  overflow-hidden  pt-6 border border-b-0">
           <a href="#" className="flex flex-wrap no-underline hover:no-underline">
             {/* <p className='w-full text-gray-600 text-xs md:text-sm px-6'>xGETTING STARTED</p> */}
-            <div className="w-full font-bold text-xl text-gray-800 px-6 mb-6">The Authentic Neapolitan Recipe</div>
+            <h3 className="w-full font-bold text-xl text-gray-800 px-6 mb-6">The Authentic Neapolitan Recipe</h3>
             <p className="text-gray-600 text-base px-6 mb-5">
               Hand-kneaded dough from <strong className="text-gray-900">Capudo 00 wheat flour</strong>, fresh{' '}
               <strong className="text-gray-900">brewer's yeast</strong>, <strong className="text-gray-900">salt</strong>{' '}
@@ -82,8 +82,8 @@ const ThreeBoxes = () => (
         <div className="flex-1 bg-white  overflow-hidden  pt-6 border border-b-0">
           <a href="#" className="flex flex-wrap no-underline hover:no-underline">
             {/* <p className='w-full text-gray-600 text-xs md:text-sm px-6'>xGETTING STARTED</p> */}
-            <div className="w-full font-bold text-xl text-gray-800 px-6 mb-6">The Best Ingredients</div>
-            <p className="text-gray-600 text-base px-6 mb-5">
+            <h2 className="w-full font-bold text-xl text-gray-800 px-6 mb-6">The Best Ingredients</h2>
+            <p className="text-gray-600 text-sm px-6 mb-5 leading-relaxed">
               Only fresh and organic toppings:{' '}
               <strong className="text-gray-900">Italian Fiori di Late Mozzarella</strong>, pureed{' '}
               <strong className="text-gray-900">San Marzano tomatoes</strong> from Italy. Plus other local seasonal

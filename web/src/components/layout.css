@@ -5,10 +5,10 @@
 
 @import "tailwindcss/utilities";
 
-@import url('https://fonts.googleapis.com/css?family=Oswald:200,700|Roboto+Mono:400,700|Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sacramento&display=swap');
 
 html {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Merriweather', monospace;
   font-size: var(--font-base-size);
   line-height: var(--font-base-line-height);
 }
