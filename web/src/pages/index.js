@@ -1,14 +1,15 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { mapEdgesToNodes, filterOutDocsWithoutSlugs } from '../lib/helpers'
-import BlogPostPreviewGrid from '../components/blog-post-preview-grid'
-import Container from '../components/container'
+import BlogPostPreviewGrid from '../components/BlogPostPreview'
+import Container from '../ui/Container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import Hero from '../components/hero'
 import ThreeBoxes from '../components/threeBoxes'
-import CurrentMenu from '../containers/currentMenu'
+import FoodMenu from '../components/FoodMenu'
+import ReviewsPreview from '../components/ReviewsPreview'
 import CTANews from '../components/ctaNews'
 
 export const query = graphql`
@@ -87,7 +88,8 @@ const IndexPage = props => {
         <Hero />
         <ThreeBoxes />
         <h1 hidden>Welcome to {site.title}</h1>
-        <CurrentMenu />
+        <FoodMenu />
+        <ReviewsPreview />
         {/* {projectNodes && (
           <ProjectPreviewGrid
             title='Latest projects'

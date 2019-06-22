@@ -1,11 +1,11 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import Moment from 'react-moment'
-import { buildImageObj, cn, getBlogUrl } from '../lib/helpers'
-import { imageUrlFor } from '../lib/image-url'
-import BlockText from './block-text'
+import { buildImageObj, cn, getBlogUrl } from '../../lib/helpers'
+import { imageUrlFor } from '../../lib/image-url'
+import BlockText from '../block-text'
 
-function BlogPostPreview({ title, slug, publishedAt, mainImage, _rawExcerpt }) {
+function BlogPostPreviewItem({ title, slug, publishedAt, mainImage, _rawExcerpt }) {
   return (
     <Link className="text-left" to={getBlogUrl(publishedAt, slug.current)}>
       <div>
@@ -34,4 +34,4 @@ function BlogPostPreview({ title, slug, publishedAt, mainImage, _rawExcerpt }) {
   )
 }
 
-export default BlogPostPreview
+export default BlogPostPreviewItem

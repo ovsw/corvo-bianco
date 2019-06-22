@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import BlockContent from '../components/block-content'
-import Container from '../components/container'
+import Container from '../ui/Container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import PeopleGrid from '../components/people-grid'
 import SEO from '../components/seo'

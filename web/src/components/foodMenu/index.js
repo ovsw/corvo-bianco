@@ -1,27 +1,73 @@
 import React from 'react'
-import FoodMenuItemsListing from './foodMenuItemsListing'
+import { graphql, StaticQuery } from 'gatsby'
+import { mapEdgesToNodes, filterOutDocsWithoutSlugs } from '../../lib/helpers'
+import FoodMenuShell from './Shell'
 
-const FoodMenu = ({ savoryPizzas }) => {
+const query = graphql`
+  query CurrentMenuQuery {
+    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
+      title
+    }
+
+    sanityMenuSettings {
+      savoryPizzaCurrMenu {
+        id
+        name
+        ingredients
+        price
+        slug {
+          current
+        }
+        mainImage {
+          crop {
+            _key
+            _type
+            top
+            bottom
+            left
+            right
+          }
+          hotspot {
+            _key
+            _type
+            x
+            y
+            height
+            width
+          }
+          asset {
+            _id
+            fluid(maxWidth: 700) {
+              ...GatsbySanityImageFluid
+            }
+            fixed(width: 200) {
+              ...GatsbySanityImageFixed
+            }
+          }
+          alt
+        }
+      }
+    }
+  }
+`
+
+function CurrentMenu() {
   return (
-
-    <section className='bg-gray-800 border-b py-8'>
-
-      <div className='container mx-auto flex flex-wrap pt-4 pb-12'>
-
-        {/* <h2 className='w-full my-2 text-5xl font-bold leading-tight text-center text-white'>Our Menu</h2> */}
-        <div className='w-full mb-4'>
-          <div className='h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t' />
-        </div>
-
-        <div className='w-fullp-6 flex flex-col flex-grow flex-shrink'>
-          <h3 className='text-center text-5xl text-gray-100 mb-10' style={{ fontFamily: 'Sacramento' }}>Savory Pizzas</h3>
-          <FoodMenuItemsListing items={savoryPizzas} />
-        </div>
-
-      </div>
-
-    </section>
+    <StaticQuery
+      query={query}
+      render={data => {
+        if (!data.sanityMenuSettings) {
+          throw new Error('Missing Savory Pizza Current Menu. Please add one in the back end.')
+        }
+        const { savoryPizzaCurrMenu } = data.sanityMenuSettings
+        return (
+          <>
+            <FoodMenuShell savoryPizzas={savoryPizzaCurrMenu} />
+          </>
+        )
+      }}
+    />
   )
 }
 
-export default FoodMenu
+export default CurrentMenu

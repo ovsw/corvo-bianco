@@ -1,6 +1,6 @@
 import { Link } from 'gatsby'
 import React from 'react'
-import Icon from './icons'
+import Icon from '../ui/icons'
 
 const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
   <div>

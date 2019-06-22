@@ -1,6 +1,6 @@
 import { Link } from 'gatsby'
 import React from 'react'
-import BlogPostPreview from './blog-post-preview'
+import BlogPostPreviewItem from './Item'
 
 function BlogPostPreviewGrid({ title, browseMoreHref, nodes }) {
   return (
@@ -18,7 +18,7 @@ function BlogPostPreviewGrid({ title, browseMoreHref, nodes }) {
         {nodes &&
           nodes.map(node => (
             <li key={node.id} className=" flex-1 text-center px-6">
-              <BlogPostPreview {...node} />
+              <BlogPostPreviewItem {...node} />
             </li>
           ))}
       </ul>

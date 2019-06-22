@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import { buildImageObj } from '../lib/helpers'
 import { imageUrlFor } from '../lib/image-url'
 import BlockContent from './block-content'
-import Container from './container'
+import Container from '../ui/Container'
 import RoleList from './role-list'
 
 function Project({ _rawBody, title, categories, mainImage, members, publishedAt, relatedProjects }) {

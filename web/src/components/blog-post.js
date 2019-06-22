@@ -3,7 +3,7 @@ import React from 'react'
 import { buildImageObj } from '../lib/helpers'
 import { imageUrlFor } from '../lib/image-url'
 import BlockContent from './block-content'
-import Container from './container'
+import Container from '../ui/Container'
 import RoleList from './role-list'
 
 function BlogPost(props) {
