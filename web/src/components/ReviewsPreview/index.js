@@ -1,9 +1,11 @@
 import React from 'react'
+import { SectionTitle } from '../../ui/Titles'
+import HpSection from '../../ui/HpSection'
 
 const ReviewsPreview = () => (
-  <>
-    <h2>reviews</h2>
-  </>
+  <HpSection>
+    <SectionTitle>reviews</SectionTitle>
+  </HpSection>
 )
 
 export default ReviewsPreview

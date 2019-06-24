@@ -2,7 +2,7 @@ import React from 'react'
 import FoodMenuList from './List'
 
 const FoodMenuShell = ({ savoryPizzas }) => (
-  <section className="bg-gray-800 border-b py-8">
+  <section className="bg-gray-900 border-b py-8">
     <div className="container mx-auto flex flex-wrap pt-4 pb-12">
       {/* <h2 className='w-full my-2 text-5xl font-bold leading-tight text-center text-white'>Our Menu</h2> */}
       <div className="w-full mb-4">
