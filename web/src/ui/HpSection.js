@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
-import media from '../lib/responsive'
+import media from 'src/lib/responsive'
 
 const StyledSection = styled.div`
   ${tw`py-10`};

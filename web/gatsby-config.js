@@ -1,10 +1,12 @@
 require('dotenv').config()
+
 const {
-  api: { projectId, dataset }
+  api: { projectId, dataset },
 } = requireConfig('../studio/sanity.json')
 
 module.exports = {
   plugins: [
+    'gatsby-plugin-root-import',
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     {
@@ -16,10 +18,10 @@ module.exports = {
         // and add a token with read permissions
         token: process.env.SANITY_TOKEN,
         watchMode: true,
-        overlayDrafts: true
-      }
-    }
-  ]
+        overlayDrafts: true,
+      },
+    },
+  ],
 }
 
 /**
@@ -29,18 +31,16 @@ module.exports = {
  * with directions to enter the info manually or in the environment.
  */
 
-function requireConfig (path) {
+function requireConfig(path) {
   try {
     return require('../studio/sanity.json')
   } catch (e) {
-    console.error(
-      'Failed to require sanity.json. Fill in projectId and dataset name manually in gatsby-config.js'
-    )
+    console.error('Failed to require sanity.json. Fill in projectId and dataset name manually in gatsby-config.js')
     return {
       api: {
         projectId: process.env.SANITY_PROJECT_ID || '',
-        dataset: process.env.SANITY_DATASET || ''
-      }
+        dataset: process.env.SANITY_DATASET || '',
+      },
     }
   }
 }
