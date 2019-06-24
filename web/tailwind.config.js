@@ -10,6 +10,10 @@ module.exports = {
     extend: {
       colors: {
         brandp: 'red',
+        fgLight: 'black',
+        bgLight: 'white',
+        fgDark: 'white',
+        bgDark: 'black',
         gray: {
           '100': '#f5f5f5',
           '200': '#eeeeee',

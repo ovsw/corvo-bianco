@@ -1,10 +1,10 @@
 import React from 'react'
-import { SectionTitle } from '../../ui/Titles'
-import HpSection from '../../ui/HpSection'
+import HpSection from 'src/ui/HpSection'
+import { SectionTitle } from 'src/ui/Titles'
 
 const ReviewsPreview = () => (
-  <HpSection>
-    <SectionTitle>reviews</SectionTitle>
+  <HpSection altStyle>
+    <SectionTitle altStyle>reviews</SectionTitle>
   </HpSection>
 )
 

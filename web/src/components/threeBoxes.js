@@ -1,17 +1,17 @@
 import React from 'react'
 import tw from 'tailwind.macro'
 import styled from 'styled-components'
+import { SectionTitle } from 'src/ui/Titles'
+import HpSection from 'src/ui/HpSection'
 
 const BoxWrapper = styled.div`
   ${tw`w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink`}
 `
 
 const ThreeBoxes = () => (
-  <section className="bg-white border-b py-8">
+  <HpSection altStyle>
     <div className="container mx-auto flex flex-wrap pt-4 pb-12">
-      <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-        What is true Neapolitan Pizza?
-      </h1>
+      <SectionTitle altStyle>What is true Neapolitan Pizza?</SectionTitle>
       <p className="text-center text-gray-800 w-full mx-32 lg:px-32 mb-8">
         <strong className="text-gray-900">fast, deilicious, healthy</strong>
       </p>
@@ -103,7 +103,7 @@ const ThreeBoxes = () => (
         </div>
       </BoxWrapper>
     </div>
-  </section>
+  </HpSection>
 )
 
 export default ThreeBoxes

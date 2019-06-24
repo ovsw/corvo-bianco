@@ -1,18 +1,13 @@
 import { Link } from 'gatsby'
 import React from 'react'
+import { SectionTitle } from 'src/ui/Titles'
+import HpSection from 'src/ui/HpSection'
 import BlogPostPreviewItem from './Item'
 
 function BlogPostPreviewGrid({ title, browseMoreHref, nodes }) {
   return (
-    <section className="bg-white py-20">
-      {title && (
-        <h2
-          className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800 mb-16"
-          style={{ fontFamily: 'Roboto Mono' }}
-        >
-          {browseMoreHref ? <Link to={browseMoreHref}>{title}</Link> : title}
-        </h2>
-      )}
+    <HpSection altStyle>
+      {title && <SectionTitle>{browseMoreHref ? <Link to={browseMoreHref}>{title}</Link> : title}</SectionTitle>}
 
       <ul className="flex max-w-5xl mx-auto">
         {nodes &&
@@ -28,7 +23,7 @@ function BlogPostPreviewGrid({ title, browseMoreHref, nodes }) {
           <Link to={browseMoreHref}>Browse more</Link>
         </div>
       )}
-    </section>
+    </HpSection>
   )
 }
 

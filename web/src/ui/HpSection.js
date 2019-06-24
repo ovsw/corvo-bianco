@@ -5,8 +5,8 @@ import media from 'src/lib/responsive'
 
 const StyledSection = styled.div`
   ${tw`py-10`};
-  background-color: ${props => (props.kind === 'dark' ? '#222' : '#ccc')};
+  background-color: ${props => (!props.altStyle ? '#222' : '#555')};
 `
-const HpSection = ({ children, kind = 'dark' }) => <StyledSection kind={kind}>{children}</StyledSection>
+const HpSection = ({ children, altStyle }) => <StyledSection altStyle={altStyle}>{children}</StyledSection>
 
 export default HpSection
