@@ -15,6 +15,7 @@ export default () =>
             .id('menuSettings')
             .schemaType('menuSettings')
             .documentId('menuSettings')
+            .title('Current Food Menu')
         )
         .icon(MdViewList),
       // S.listItem()

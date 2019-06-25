@@ -47,6 +47,43 @@ const query = graphql`
           alt
         }
       }
+      dessertPizzaCurrMenu {
+        id
+        name
+        ingredients
+        price
+        slug {
+          current
+        }
+        mainImage {
+          crop {
+            _key
+            _type
+            top
+            bottom
+            left
+            right
+          }
+          hotspot {
+            _key
+            _type
+            x
+            y
+            height
+            width
+          }
+          asset {
+            _id
+            fluid(maxWidth: 700) {
+              ...GatsbySanityImageFluid
+            }
+            fixed(width: 200) {
+              ...GatsbySanityImageFixed
+            }
+          }
+          alt
+        }
+      }
     }
   }
 `
@@ -59,10 +96,12 @@ function CurrentMenu() {
         if (!data.sanityMenuSettings) {
           throw new Error('Missing Savory Pizza Current Menu. Please add one in the back end.')
         }
-        const { savoryPizzaCurrMenu } = data.sanityMenuSettings
+
+        const { savoryPizzaCurrMenu, dessertPizzaCurrMenu } = data.sanityMenuSettings
+        // console.log(desertPizzaCurrMenu)
         return (
           <>
-            <FoodMenuShell savoryPizzas={savoryPizzaCurrMenu} />
+            <FoodMenuShell savoryPizzas={savoryPizzaCurrMenu} dessertPizzas={dessertPizzaCurrMenu} />
           </>
         )
       }}

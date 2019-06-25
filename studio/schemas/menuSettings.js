@@ -21,8 +21,8 @@ export default {
 
     },
     {
-      title: 'Desert Pizza Current Menu',
-      name: 'desertPizzaCurrMenu',
+      title: 'Dessert Pizza Current Menu',
+      name: 'dessertPizzaCurrMenu',
       type: 'array',
       of: [
         {

@@ -5,6 +5,8 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import ProjectPreviewGrid from '../components/project-preview-grid'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
+import FoodMenu from '../components/FoodMenu'
+
 import { mapEdgesToNodes, filterOutDocsWithoutSlugs } from '../lib/helpers'
 
 // allSanityMenuItem(limit: 12, sort: { fields: [publishedAt], order: DESC })
@@ -49,10 +51,8 @@ const ProjectsPage = props => {
   return (
     <Layout>
       <SEO title="Projects" />
-      <Container>
-        <h1>Our Menu</h1>
-        {/* {menuItemNodes && menuItemNodes.length > 0 && <ProjectPreviewGrid nodes={projectNodes} />} */}
-      </Container>
+
+      <FoodMenu />
     </Layout>
   )
 }
