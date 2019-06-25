@@ -35,6 +35,8 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-moment": "^0.9.2",
+    "react-slick": "^0.24.0",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^4.3.2",
     "tailwind.macro": "^1.0.0-alpha.10",
     "typeface-carter-one": "0.0.72",
