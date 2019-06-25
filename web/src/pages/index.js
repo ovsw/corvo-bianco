@@ -9,6 +9,7 @@ import Layout from '../containers/layout'
 import Hero from '../components/hero'
 import ThreeBoxes from '../components/threeBoxes'
 import FoodMenu from '../components/FoodMenu'
+import MapSection from '../components/MapSection'
 import CTANews from '../components/ctaNews'
 
 export const query = graphql`
@@ -88,14 +89,15 @@ const IndexPage = props => {
         <ThreeBoxes />
         <h1 hidden>Welcome to {site.title}</h1>
         <FoodMenu />
+        <CTANews />
+        <MapSection />
         {/* {projectNodes && (
           <ProjectPreviewGrid
-            title='Latest projects'
-            nodes={projectNodes}
-            browseMoreHref='/projects/'
+          title='Latest projects'
+          nodes={projectNodes}
+          browseMoreHref='/projects/'
           />
         )} */}
-        <CTANews />
         {postNodes && <BlogPostPreviewGrid title="Latest News" nodes={postNodes} browseMoreHref="/blog/" />}
       </Container>
     </Layout>
