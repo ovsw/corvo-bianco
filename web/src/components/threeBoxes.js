@@ -1,7 +1,7 @@
 import React from 'react'
 import tw from 'tailwind.macro'
 import styled from 'styled-components'
-import { SectionTitle } from 'src/ui/Titles'
+import { SectionTitle, SectionSubTitle } from 'src/ui/Titles'
 import HpSection from 'src/ui/HpSection'
 
 const BoxWrapper = styled.div`
@@ -11,11 +11,9 @@ const BoxWrapper = styled.div`
 const ThreeBoxes = () => (
   <HpSection altStyle>
     <div className="container mx-auto flex flex-wrap pt-4 pb-12">
-      <SectionTitle altStyle>What is true Neapolitan Pizza?</SectionTitle>
-      <p className="text-center text-gray-800 w-full mx-32 lg:px-32 mb-8">
-        <strong className="text-gray-900">fast, deilicious, healthy</strong>
-      </p>
-      <p className="text-center text-gray-600 w-full text-sm mx-32 lg:px-32">
+      <SectionTitle>What is true Neapolitan Pizza?</SectionTitle>
+      <SectionSubTitle>fast, deilicious, healthy</SectionSubTitle>
+      <p className="text-center text-gray-300 w-full text-sm mx-32 lg:px-32">
         Here's what makes a true-to-form Neapolitan Pizza, made according to the rules of the{' '}
         <a
           href="https://www.pizzanapoletana.org/en/"
@@ -30,7 +28,6 @@ const ThreeBoxes = () => (
       <div className="w-full mb-4">
         <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t" />
       </div>
-
       <BoxWrapper>
         <div className="flex-1 bg-white  overflow-hidden  pt-6 border border-b-0">
           <a href="#" className="flex flex-wrap no-underline hover:no-underline">
@@ -53,7 +50,6 @@ const ThreeBoxes = () => (
           </div>
         </div>
       </BoxWrapper>
-
       <BoxWrapper>
         <div className="flex-1 bg-white  overflow-hidden  pt-6 border border-b-0">
           <a href="#" className="flex flex-wrap no-underline hover:no-underline">
@@ -77,7 +73,6 @@ const ThreeBoxes = () => (
           </div>
         </div>
       </BoxWrapper>
-
       <BoxWrapper>
         <div className="flex-1 bg-white  overflow-hidden  pt-6 border border-b-0">
           <a href="#" className="flex flex-wrap no-underline hover:no-underline">

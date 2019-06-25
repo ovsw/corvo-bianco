@@ -12,9 +12,7 @@ const FoodMenuShell = ({ savoryPizzas }) => (
       </div>
 
       <div className="w-fullp-6 flex flex-col flex-grow flex-shrink">
-        <h3 className="text-center text-5xl text-gray-100 mb-10" style={{ fontFamily: 'Sacramento' }}>
-          Savory Pizzas
-        </h3>
+        <h3 className="text-center text-5xl text-gray-100 mb-10">Savory Pizzas</h3>
         <FoodMenuList items={savoryPizzas} />
       </div>
     </div>
