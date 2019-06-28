@@ -9,17 +9,17 @@ function BlogPostPreviewGrid({ title, browseMoreHref, nodes }) {
     <HpSection altStyle>
       {title && <SectionTitle>{browseMoreHref ? <Link to={browseMoreHref}>{title}</Link> : title}</SectionTitle>}
 
-      <ul className="flex max-w-5xl mx-auto">
+      <ul className="flex flex-wrap md:flex-no-wrap pt-12 max-w-6xl mx-auto">
         {nodes &&
           nodes.map(node => (
-            <li key={node.id} className=" flex-1 text-center px-6">
+            <li key={node.id} className="w-full max-w-md mx-auto md:mx-0 mb-10 md:mb-0  text-center px-6">
               <BlogPostPreviewItem {...node} />
             </li>
           ))}
       </ul>
 
       {browseMoreHref && (
-        <div className="text-center mt-10">
+        <div className="text-center mt-10 text-gray-400">
           <Link to={browseMoreHref}>Browse more</Link>
         </div>
       )}
