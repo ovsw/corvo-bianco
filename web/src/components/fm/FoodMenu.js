@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
-import { mapEdgesToNodes, filterOutDocsWithoutSlugs } from '../lib/helpers'
-import FoodMenuShell from './FoodMenu/Shell'
+import FoodMenuShell from 'src/components/fm/Shell'
+import { mapEdgesToNodes, filterOutDocsWithoutSlugs } from '../../lib/helpers'
 
 const query = graphql`
   query CurrentMenuQuery {
@@ -88,25 +88,23 @@ const query = graphql`
   }
 `
 
-function CurrentMenu() {
-  return (
-    <StaticQuery
-      query={query}
-      render={data => {
-        if (!data.sanityMenuSettings) {
-          throw new Error('Missing Savory Pizza Current Menu. Please add one in the back end.')
-        }
+const FoodMenu = () => (
+  <StaticQuery
+    query={query}
+    render={data => {
+      if (!data.sanityMenuSettings) {
+        throw new Error('Missing Savory Pizza Current Menu. Please add one in the back end.')
+      }
 
-        const { savoryPizzaCurrMenu, dessertPizzaCurrMenu } = data.sanityMenuSettings
-        // console.log(desertPizzaCurrMenu)
-        return (
-          <>
-            <FoodMenuShell savoryPizzas={savoryPizzaCurrMenu} dessertPizzas={dessertPizzaCurrMenu} />
-          </>
-        )
-      }}
-    />
-  )
-}
+      const { savoryPizzaCurrMenu, dessertPizzaCurrMenu } = data.sanityMenuSettings
+      // console.log(desertPizzaCurrMenu)
+      return (
+        <>
+          <FoodMenuShell savoryPizzas={savoryPizzaCurrMenu} dessertPizzas={dessertPizzaCurrMenu} />
+        </>
+      )
+    }}
+  />
+)
 
-export default CurrentMenu
+export default FoodMenu
