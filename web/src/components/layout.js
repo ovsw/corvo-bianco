@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import CorvoTheme from 'src/themes/CorvoTheme'
 import { ThemeProvider } from 'styled-components'
-import Header from './header'
+import Header from 'src/components/Header'
 
 import './layout.css'
 
