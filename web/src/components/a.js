@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
-import { mapEdgesToNodes, filterOutDocsWithoutSlugs } from '../../lib/helpers'
-import FoodMenuShell from './Shell'
+import { mapEdgesToNodes, filterOutDocsWithoutSlugs } from '../lib/helpers'
+import FoodMenuShell from './FoodMenu/Shell'
 
 const query = graphql`
   query CurrentMenuQuery {
