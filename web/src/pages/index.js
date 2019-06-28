@@ -8,7 +8,7 @@ import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import Hero from '../components/hero'
 import ThreeBoxes from '../components/threeBoxes'
-// import FoodMenu from '../components/FoodMenu/index'
+import FoodMenu from '../components/FoodMenu/FoodMenu'
 import MapSection from '../components/MapSection'
 import CTANews from '../components/ctaNews'
 
@@ -88,7 +88,7 @@ const IndexPage = props => {
         <Hero />
         <ThreeBoxes />
         <h1 hidden>Welcome to {site.title}</h1>
-        {/* <FoodMenu /> */}
+        <FoodMenu />
         <CTANews />
         <MapSection />
         {/* {projectNodes && (
