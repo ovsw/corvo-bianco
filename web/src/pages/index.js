@@ -8,7 +8,7 @@ import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import Hero from '../components/hero'
 import ThreeBoxes from '../components/threeBoxes'
-import FoodMenu from '../components/fm/FoodMenu'
+import FoodMenu from '../components/fm'
 import MapSection from '../components/MapSection'
 import CTANews from '../components/ctaNews'
 
