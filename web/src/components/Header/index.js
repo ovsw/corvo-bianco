@@ -45,7 +45,7 @@ const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => {
           <div className="flex w-full pt-2 content-center justify-between md:w-1/2 md:justify-end">
             <ul className="list-reset flex justify-between flex-1 md:flex-none items-center">
               {MenuItems.map(item => (
-                <MenuItem>
+                <MenuItem key={item.url}>
                   <Link to={item.url}>{item.name}</Link>
                 </MenuItem>
               ))}
