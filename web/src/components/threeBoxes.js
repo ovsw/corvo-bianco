@@ -1,8 +1,11 @@
 import React from 'react'
 import tw from 'tailwind.macro'
 import styled from 'styled-components'
-import { SectionTitle, SectionSubTitle } from 'src/ui/Titles'
-import HpSection from 'src/ui/HpSection'
+
+// ui elements
+import HpSection from '../ui/HpSection'
+import ContentContainer from '../ui/ContentContainer'
+import { SectionTitle, SectionSubTitle } from '../ui/Titles'
 
 const BoxWrapper = styled.div`
   ${tw`w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink`}
@@ -13,7 +16,7 @@ const ThreeBoxes = () => (
     <div className="container mx-auto flex flex-wrap pt-4 pb-12">
       <SectionTitle>What is true Neapolitan Pizza?</SectionTitle>
       <SectionSubTitle>fast, deilicious, healthy</SectionSubTitle>
-      <p className="text-center text-gray-300 w-full text-sm mx-32 lg:px-32">
+      <ContentContainer className="text-center">
         Here's what makes a true-to-form Neapolitan Pizza, made according to the rules of the{' '}
         <a
           href="https://www.pizzanapoletana.org/en/"
@@ -24,7 +27,7 @@ const ThreeBoxes = () => (
           Associazione Verace Pizza Napoletana
         </a>
         :
-      </p>
+      </ContentContainer>
       <div className="w-full mb-4">
         <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t" />
       </div>
