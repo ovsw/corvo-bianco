@@ -3,6 +3,8 @@ import GlobalStyle from '../styles/global'
 import SEO from './SEO'
 import Header from './Header'
 
+import '../styles/tw.css'
+
 import 'typeface-cantata-one'
 import 'typeface-open-sans'
 

@@ -10,7 +10,7 @@ const LeftCol = styled.div`
 `
 
 const Intro = styled.p`
-  ${tw`uppercase tracking-loose text-gray-500`};
+  ${tw`uppercase tracking-loose text-blue`};
   ${tw`md:-mr-6`};
 `
 const RightCol = styled.div`
@@ -18,20 +18,20 @@ const RightCol = styled.div`
   ${tw`py-6`};
 `
 const Hero = () => (
-  <section className="bg-gray-900">
+  <section className="bg-orange-darkest">
     <div className="container mx-auto flex flex-col md:flex-row items-center text-white">
       {/* left col */}
       <LeftCol className="LeftCol">
         <Intro className="Intro">Pizza of the Day</Intro>
         <h1 className="font-bold text-5xl mb-6">Margherita</h1>
-        <p className="leading-normal mb-8 mr-6  text-gray-600">
+        <p className="leading-normal mb-8 mr-6  text-grey">
           Back to the basics. <br />
           Neapolitan dough with "The Sauce", Organic Fresh Basil, Fresh Mozzarella, baked in our wood fired oven in the
           traditional way.
         </p>
         <button
           type="button"
-          className="bg-transparent hover:bg-gray-100 text-gray-100 hover:text-gray-900 rounded shadow hover:shadow-lg py-2 px-4 border border-gray-100 hover:border-transparent"
+          className="bg-transparent hover:bg-grey-light text-grey-lightest hover:text-grey-darkest rounded shadow hover:shadow-lg py-2 px-4 border border-grey-lightest hover:border-transparent"
         >
           Come and get it!
         </button>
