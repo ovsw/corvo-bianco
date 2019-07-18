@@ -1,64 +1,55 @@
+import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
-import React from 'react'
 // import Icon from '../../ui/icons'
 
-const MenuItem = styled.li`
-  ${tw`mr-3`};
+import config from '../../../config/website'
 
-  a {
-    ${tw`inline-block py-2 px-2 md:px-4 text-white no-underline uppercase text-sm`};
-  }
+// components
+import MainNav from './MainNav'
+
+// images
+import LogoRoundImage from '../../images/corvo-bianco-logo-badge.png'
+import LogoImage from '../../images/corvo-bianco-logo.png'
+
+// styles
+const LogoMobile = styled.img`
+  height: 100px;
+  ${tw`lg:hidden px-4 pt-1`};
+`
+const Logo = styled.img`
+  ${tw`hidden h-16 xl:h-24 lg:block xl:pl-24 relative`};
+  ${tw`pr-16 pl-2 pt-1`};
+`
+const Line = styled.div`
+  ${tw`absolute border-t-2 w-4 lg:w-16`};
+  top: 49%;
+  right: 0;
 `
 
-const Header = () => {
-  const MenuItems = [
-    {
-      name: 'Menu',
-      url: '/menu',
-    },
-    {
-      name: 'Location',
-      url: '/location',
-    },
-    {
-      name: 'About',
-      url: '/about-us',
-    },
-    {
-      name: 'Contact',
-      url: '/contact',
-    },
-  ]
-  return (
-    <div>
-      <nav className="bg-gray-800 p-2 mt-0 w-full">
-        <div className="container mx-auto flex flex-wrap items-center">
-          <div className="flex w-full md:w-1/2 justify-center md:justify-start text-white font-extrabold">
-            <Link className="text-white no-underline hover:text-white hover:no-underline" to="/">
-              <span className="text-2xl pl-2">
-                <i className="em em-grinning" /> Corvo Bianco
-              </span>
-            </Link>
-          </div>
-          <div className="flex w-full pt-2 content-center justify-between md:w-1/2 md:justify-end">
-            <ul className="list-reset flex justify-between flex-1 md:flex-none items-center">
-              {MenuItems.map(item => (
-                <MenuItem key={item.url}>
-                  <Link to={item.url}>{item.name}</Link>
-                </MenuItem>
-              ))}
-            </ul>
-          </div>
+const Header = () => (
+  <div>
+    <nav className="bg-gray-800 mt-0 w-full">
+      <div className="mx-auto flex items-stretch xl:pt-4">
+        <div className="flex flex-none md:items-end relative">
+          <Line />
+          <Link className="no-underline" to="/">
+            <LogoMobile src={LogoRoundImage} alt={`${config.siteTitle} Logo`} />
+            <Logo src={LogoImage} alt={`${config.siteTitle} Logo`} />
+          </Link>
         </div>
-      </nav>
 
-      {/* <button onClick={showNav ? onHideNav : onShowNav}>
+        <div className="flex flex-1 pr-2 py-2 content-center justify-center">
+          <MainNav />
+        </div>
+      </div>
+    </nav>
+
+    {/* <button onClick={showNav ? onHideNav : onShowNav}>
         <Icon symbol='hamburger' />
       </button> */}
-    </div>
-  )
-}
+  </div>
+)
 
 export default Header

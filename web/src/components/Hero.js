@@ -18,7 +18,7 @@ const RightCol = styled.div`
   ${tw`py-6`};
 `
 const Hero = () => (
-  <section className="bg-orange-darkest">
+  <section className="bg-grey-darkest">
     <div className="container mx-auto flex flex-col md:flex-row items-center text-white">
       {/* left col */}
       <LeftCol className="LeftCol">
