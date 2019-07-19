@@ -10,12 +10,20 @@ import config from '../../../config/website'
 import MainNav from './MainNav'
 
 // images
+
 import LogoRoundImage from '../../images/corvo-bianco-logo-badge.png'
 import LogoImage from '../../images/corvo-bianco-logo.png'
 import ChalkBorderSource from '../../images/chalk-squalre.png'
 
-
 // styles
+const StyledHeader = styled.div`
+  ${tw`relative`};
+  z-index: 100;
+  border-image: url(${ChalkBorderSource}) 70;
+  border-image-repeat: round;
+  border-image-outset: 0;
+  border-bottom: 2px solid white;
+`
 const LogoMobile = styled.img`
   height: 100px;
   ${tw`lg:hidden px-4 pt-1`};
@@ -35,7 +43,7 @@ const Line = styled.div`
 `
 
 const Header = () => (
-  <div>
+  <StyledHeader>
     <nav className="bg-gray-800 mt-0 w-full">
       <div className="mx-auto flex items-stretch xl:pt-4">
         <div className="flex flex-none md:items-end relative">
@@ -55,7 +63,7 @@ const Header = () => (
     {/* <button onClick={showNav ? onHideNav : onShowNav}>
         <Icon symbol='hamburger' />
       </button> */}
-  </div>
+  </StyledHeader>
 )
 
 export default Header

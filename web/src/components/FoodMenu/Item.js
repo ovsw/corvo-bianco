@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
-import Img from 'gatsby-image'
-import { buildImageObj, cn, getBlogUrl } from '../../lib/helpers'
-import { imageUrlFor } from '../../lib/image-url'
+// import Img from 'gatsby-image'
+// import { buildImageObj, cn, getBlogUrl } from '../../lib/helpers'
+// import { imageUrlFor } from '../../lib/image-url'
 
 const Dots = styled.span`
   ${tw`border-b-4 border-dotted border-grey w-6 flex-1 relative`};
@@ -12,7 +12,7 @@ const Dots = styled.span`
 `
 
 const FoodMenuItem = ({ item: { name, slug, mainImage, ingredients, price } }) => (
-  <p className="w-full lg:w-1/2 text-center text-white pb-12 px-12">
+  <Link to={slug} className="w-full lg:w-1/2 text-center text-white pb-12 px-12">
     <span className="flex">
       <span className="text-2xl xl:text-3xl pr-4">{name}</span>
       <Dots />
@@ -32,7 +32,7 @@ const FoodMenuItem = ({ item: { name, slug, mainImage, ingredients, price } }) =
 
     {/* {!mainImage.crop && <Img fixed={mainImage.asset.fixed} /> } */}
     {/* </span> */}
-  </p>
+  </Link>
 )
 
 export default FoodMenuItem

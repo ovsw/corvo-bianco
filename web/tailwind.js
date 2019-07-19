@@ -223,7 +223,8 @@ module.exports = {
     ],
     mono: ['Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
     chalk: ['Cabin Sketch', 'Georgia', 'serif'],
-    typewritter: ['Special Elite', 'monospace']
+    typewritter: ['Special Elite', 'monospace'],
+    headings: ['Oswald', 'sans-serif'],
   },
 
   /*
