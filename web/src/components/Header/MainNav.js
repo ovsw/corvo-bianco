@@ -3,14 +3,21 @@ import styled from 'styled-components'
 import tw from 'tailwind.macro'
 import { Link } from 'gatsby'
 
+import ChalkBorderSource from '../../images/chalk-squalre.png'
+
 const MenuItem = styled.li`
   ${tw`w-1/3 xxl:w-32 border`};
   ${tw`flex`};
-  ${tw``};
+  border: 5px solid white;
+  border-image: url(${ChalkBorderSource}) 70;
+  border-image-repeat: round;
+  border-image-outset: 0.5;
 
   a {
-    ${tw`flex w-full items-center`};
-    ${tw`inline-block py-2 px-2 md:px-4 text-white no-underline uppercase text-sm`};
+    ${tw`flex w-full items-center justify-center`};
+    ${tw` py-2 px-2 md:px-4 text-white no-underline  text-base md:text-xl lg:text-2xl font-chalk `};
+    span {
+    }
   }
 `
 const StyledMenu = styled.ul`

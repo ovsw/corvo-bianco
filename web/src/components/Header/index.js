@@ -12,6 +12,8 @@ import MainNav from './MainNav'
 // images
 import LogoRoundImage from '../../images/corvo-bianco-logo-badge.png'
 import LogoImage from '../../images/corvo-bianco-logo.png'
+import ChalkBorderSource from '../../images/chalk-squalre.png'
+
 
 // styles
 const LogoMobile = styled.img`
@@ -24,8 +26,12 @@ const Logo = styled.img`
 `
 const Line = styled.div`
   ${tw`absolute border-t-2 w-4 lg:w-16`};
-  top: 49%;
+  top: 50%;
   right: 0;
+  border-top: 5px solid white;
+  border-image: url(${ChalkBorderSource}) 70;
+  border-image-repeat: round;
+  border-image-outset: 0.5;
 `
 
 const Header = () => (
