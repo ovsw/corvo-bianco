@@ -222,6 +222,8 @@ module.exports = {
       'serif',
     ],
     mono: ['Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
+    chalk: ['Cabin Sketch', 'Georgia', 'serif'],
+    typewritter: ['Special Elite', 'monospace']
   },
 
   /*

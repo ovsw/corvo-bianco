@@ -8,6 +8,9 @@ import '../styles/tw.css'
 import 'typeface-cantata-one'
 import 'typeface-open-sans'
 
+import 'typeface-cabin-sketch'
+import 'typeface-special-elite'
+
 const Layout = ({ children }) => (
   <>
     <SEO />

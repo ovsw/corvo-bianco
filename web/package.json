@@ -31,8 +31,10 @@
     "styled-components": "^4.3.2",
     "tailwind.macro": "^0.5.10",
     "tailwindcss": "^0.7.4",
+    "typeface-cabin-sketch": "0.0.72",
     "typeface-cantata-one": "^0.0.72",
-    "typeface-open-sans": "^0.0.54"
+    "typeface-open-sans": "^0.0.54",
+    "typeface-special-elite": "0.0.72"
   },
   "keywords": [
     "gatsby",
