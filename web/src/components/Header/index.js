@@ -23,6 +23,10 @@ const StyledHeader = styled.div`
   border-image-repeat: round;
   border-image-outset: 0;
   border-bottom: 2px solid white;
+  @media (min-width: 1400px) {
+    ${tw`mx-auto`};
+    max-width: 1400px;
+  }
 `
 const LogoMobile = styled.img`
   height: 100px;

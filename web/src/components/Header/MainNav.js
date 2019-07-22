@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 import ChalkBorderSource from '../../images/chalk-squalre.png'
 
 const MenuItem = styled.li`
-  ${tw`w-1/3 xxl:w-32 border`};
+  ${tw`w-1/3 border`};
   ${tw`flex`};
   border: 5px solid white;
   border-image: url(${ChalkBorderSource}) 70;
