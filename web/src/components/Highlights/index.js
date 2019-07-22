@@ -79,7 +79,7 @@ const SectionTitle = styled.h2`
   ${tw`text-center font-chalk uppercase text-5xl md:text-6xl leading-none`};
   text-shadow: rgb(150, 50, 50) 0px 0px 1px, rgb(28, 151, 151) 4px 4px 1px;
   @media (min-width: 600px) {
-    text-shadow: rgb(150, 50, 50) 0px 0px 1px, rgb(28, 151, 151) 5px 6px 1px;
+    text-shadow: rgb(150, 50, 50) 0px 0px 1px, rgb(28, 151, 151) 5px 6px 0px, rgba(28, 151, 151, 0.5) 5px 6px 10px;
   }
   span {
     text-shadow: none;
@@ -107,6 +107,12 @@ const Card = styled.a`
   ${tw`flex-1flex flex-wrap no-underline  relative `};
   background: url('${OldPaper}');
   padding-top: 150px;
+  h3 {
+    ${tw`w-full font-bold text-2xl text-grey-darker px-6 mb-6 text-center`};
+    color: rgb(28, 151, 151);
+  }
+  p {
+  }
 `
 
 const contentMap = [
@@ -117,33 +123,36 @@ const contentMap = [
     icon: 'fast',
   },
   {
-    title: 'Charred spots are good.',
+    title: 'Charred spots are good!',
     text:
-      'Due to the high heat, it will have dark spots like a dalmatian. This is not only normal but also desirable and adds to the flavor.',
+      'Due to the high heat, the crust will have dark spots - like a Dalmatian :) This is not only normal but also desirable and adds to the flavor.',
     icon: 'oven',
   },
   {
     title: '1 Pizza serves 1 Person',
     text:
-      '... unless you have a gigantic appetite - in which case, way to go! <br>Smaller than the normal pizza, one pizza/person is the average portion.',
+      'Smaller than the normal pizza, one pizza/person is the average portion... unless you have a gigantic appetite - in which case, way to go :)',
     icon: 'one',
   },
   {
     title: 'Fold 2 Hold (and eat)',
     text:
-      'No Slices. Your call: fold the whole pizza to eat on the go, or sit down with cutlery like a civilized human. ',
+      'No Slices. Your call: fold the whole pizza to eat on the go like a savage, or sit down with cutlery like a civilized human. ',
     icon: 'pizza',
   },
 
   {
-    title: 'Fluffy and Airy',
-    text: "Fluffier & moister than the normal pizza, Neapoletan Pizza doesn't 'turn to cardboard' after a few minutes.",
-    icon: 'cloud',
+    title: 'ONLY Premium Ingredients',
+    // text:
+    //   'Fluffier & moister than the normal pizza, Neapoletan Pizza doesn\'t "turn to cardboard" after a few minutes.',
+    text:
+      'Fiori di Latte Mozarella, San Marzano Tomatoes, Capudo Flour, Organic Fresh Local Toppings, we could go on, and on... ',
+    icon: 'quality',
   },
   {
     title: 'Balanced',
     text:
-      'Cheese is not the main ingredient. A careful balance among crust, sauce, and cheese allows you to savor all 3 components.',
+      'Cheese is not the main ingredient ;) A careful balance among crust, sauce, and cheese allows you to savor all 3 components (and eat healthier).',
     icon: 'balance',
   },
 ]
@@ -160,8 +169,8 @@ const Highlights = () => (
       </SectionTitle>
       <IntroPara>
         <span>
-          Originating from Neapole (Naples) in Italy, Neapoletan Pizza is quite different than what you're used to.
-          Here's what to expect:
+          Originating from Neapole (Naples) in Italy, Neapoletan Pizza may prove quite different than what you're used
+          to. Here's what to expect:
         </span>
       </IntroPara>
       <div className=" mx-auto flex flex-wrap pt-8 pb-6">
@@ -170,7 +179,7 @@ const Highlights = () => (
             <Card href="#" className="">
               {/* <p className='w-full text-gray-600 text-xs md:text-sm px-6'>xGETTING STARTED</p> */}
               <SVG icon={item.icon} fill="#c1611f" left="37%" top="10%" width="24" />
-              <h3 className="w-full font-bold text-2xl text-grey-darker px-6 mb-6 text-center">{item.title}</h3>
+              <h3>{item.title}</h3>
               <p
                 className="text-grey-darkest text-lg leading-loose px-6 mb-6 font-typewritter"
                 dangerouslySetInnerHTML={{ __html: item.text }}
