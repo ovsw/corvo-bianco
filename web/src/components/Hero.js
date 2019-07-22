@@ -13,34 +13,42 @@ import Firelight from '../images/firelight3.png'
 
 const SectionStyled = styled.section`
   background-image: url(${PaintedWoodTexture2});
+  background-position: 80% 0%;
   background-size: cover;
   ${tw`py-12 relative`};
+  @media (min-width: 600px) {
+    background-position: 70% 0%;
+  }
+  @media (min-width: 900px) {
+    background-position: rop right;
+  }
 `
-const FireGradient = styled.div`
-  ${tw`absolute w-1/3 h-full`};
-  top: 0;
-  right: 0;
-  /* background: linear-gradient(-90deg, #80000052 0%, #ffc71900 100%); */
-  background: url(${Firelight}) no-repeat top right;
-  background-size: cover;
-`
+// const FireGradient = styled.div`
+//   ${tw`absolute w-1/3 h-full`};
+//   top: 0;
+//   right: 0;
+//   /* background: linear-gradient(-90deg, #80000052 0%, #ffc71900 100%); */
+//   background: url(${Firelight}) no-repeat top right;
+//   background-size: cover;
+// `
 const LeftCol = styled.div`
   ${tw`flex flex-col justify-center items-center md:items-end`};
-  ${tw`w-full lg:w-2/5`};
-  ${tw`pt-12 md:pb-24 pl-6`};
+  ${tw`w-full md:w-3/4 lg:w-2/5`};
+  ${tw`pt-12  pl-6`};
   ${tw`text-center md:text-right`};
+`
+const RightCol = styled.div`
+  ${tw`w-full lg:w-1/2  text-center`};
+  ${tw`py-6`};
 `
 const Intro = styled.p`
   ${tw`uppercase font-typewritter text-3xl text-orange-dark`};
   ${tw`md:-mr-6`};
   text-shadow: rgba(251, 29, 37, 0.86) 0px 0px 16.49px;
 `
-const RightCol = styled.div`
-  ${tw`w-full lg:w-1/2  text-center`};
-  ${tw`py-6`};
-`
 const HeroH1 = styled.h1`
-  ${tw`font-bold text-6xl mb-6 font-chalk uppercase text-red-dark text-white `};
+  ${tw`font-bold  my-6 font-chalk uppercase text-red-dark text-white leading-none`};
+  ${tw`text-5xl xl:text-6xl`};
   text-shadow: rgb(28, 151, 151) 5px 6px 1px;
 `
 
@@ -91,11 +99,11 @@ const CTAButtonFull = styled.a`
 const Hero = () => (
   <SectionStyled>
     {/* <FireGradient /> */}
-    <div className="container mx-auto flex flex-col md:flex-row items-center text-white">
+    <div className=" flex flex-col md:flex-row items-center text-white">
       {/* left col */}
       <LeftCol className="LeftCol">
         <Intro className="Intro">Pizza of the Day</Intro>
-        <HeroH1>Margherita</HeroH1>
+        <HeroH1>Cinnamon Roll</HeroH1>
         <Paragraph>
           <span>
             Back to the basics. <br />

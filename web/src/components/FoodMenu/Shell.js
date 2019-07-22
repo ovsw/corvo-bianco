@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
-import HpSection from '../../ui/HpSection'
-import { SectionTitle } from '../../ui/Titles'
+// import HpSection from '../../ui/HpSection'
+// import { SectionTitle } from '../../ui/Titles'
 import FoodMenuList from './List'
 
 import BlackBoardBgImage from '../../images/10295.jpg'
@@ -14,7 +14,7 @@ const MenuSection = styled.section`
 
 const MenuTitle = styled.h2`
   ${tw`text-white font-normal text-center font-typewritter text-5xl absolute`};
-  transform:  rotate(-20deg);
+  transform: rotate(-20deg);
   left: 2rem;
   top: 5rem;
 `
