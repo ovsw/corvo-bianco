@@ -14,10 +14,9 @@ import Container from '../../ui/Container'
 import OldPaper from '../../images/old-paper2.jpg'
 
 const SectionStyled = styled.section`
-${tw`pt-16`};
+${tw`pt-8 md:pt-12 lg:pt-16`};
   background-color: #fffdf5;
   background: url('${OldPaper}');
-
   position: relative;
   z-index: 100;
 `
@@ -40,21 +39,58 @@ const SawtoothTop = styled.div`
   background-repeat: repeat-x;
   ${tw`h-6 relative`};
   z-index: 100;
-  top: -76px;
+  top: -46px;
+  @media (min-width: 600px) {
+    top: -66px;
+  }
+  @media (min-width: 900px) {
+    top: -76px;
+  }
 `
 const BoxWrapper = styled.div`
-  ${tw`w-full md:w-1/3 px-6 flex flex-col flex-grow flex-shrink`}
+  ${tw`w-full md:w-1/2 lg:w-1/3 px-6 flex flex-col flex-grow flex-shrink`};
+  border: 1px dashed #a29180;
+  border-width: 0 2px 2px 0;
+
+  &:nth-child(1),
+  &:nth-child(2) {
+    border-width: 2px 2px 2px 0;
+  }
+
+  @media (min-width: 900px) {
+    &:nth-child(1),
+    &:nth-child(2) {
+      border-width: 0px 2px 2px 0;
+    }
+    &:nth-child(3n) {
+      border-width: 0 0 2px 0;
+    }
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(5) {
+      border-width: 0 2px 0 0;
+    }
+    &:last-child {
+      border-width: 0;
+    }
+  }
 `
 const SectionTitle = styled.h2`
-  ${tw`text-center font-chalk uppercase text-6xl leading-none`};
-  text-shadow: rgb(150, 50, 50) 0px 0px 1px, rgb(28, 151, 151) 5px 6px 1px;
+  ${tw`text-center font-chalk uppercase text-5xl md:text-6xl leading-none`};
+  text-shadow: rgb(150, 50, 50) 0px 0px 1px, rgb(28, 151, 151) 4px 4px 1px;
+  @media (min-width: 600px) {
+    text-shadow: rgb(150, 50, 50) 0px 0px 1px, rgb(28, 151, 151) 5px 6px 1px;
+  }
   span {
     text-shadow: none;
     ${tw`block font-typewritter lowercase text-xl mt-4 mb-2`};
+    strong {
+      ${tw`underline`};
+    }
   }
 `
 const IntroPara = styled.p`
-  ${tw`text-center font-typewritter text-xl mt-8 max-w-lg mx-auto leading-loose`};
+  ${tw`text-center font-typewritter text-lg md:text-xl px-2 mt-8 max-w-lg mx-auto leading-loose`};
   span {
     line-height: 2rem;
     ${tw`py-2 px-2`};
@@ -117,7 +153,10 @@ const Highlights = () => (
     <SawtoothTop />
     <Container>
       <SectionTitle>
-        <span>"Neo-what Pizza?"</span> Neapoletan <br /> <span>(nee·uh·po·luh·tn) </span>
+        <span>"Neo-what Pizza?"</span> Neapoletan <br />{' '}
+        <span>
+          [ nee-uh-<strong>paa</strong>-luh-tn ]{' '}
+        </span>
       </SectionTitle>
       <IntroPara>
         <span>
@@ -125,7 +164,7 @@ const Highlights = () => (
           Here's what to expect:
         </span>
       </IntroPara>
-      <div className="container mx-auto flex flex-wrap pt-4 pb-6">
+      <div className=" mx-auto flex flex-wrap pt-8 pb-6">
         {contentMap.map(item => (
           <BoxWrapper>
             <Card href="#" className="">

@@ -10,6 +10,7 @@ import PaintedWoodTexture2 from '../images/h4-slide-33.jpg'
 import Firelight from '../images/firelight3.png'
 
 // styles
+import { StyledLink } from '../ui/Button'
 
 const SectionStyled = styled.section`
   background-image: url(${PaintedWoodTexture2});
@@ -60,41 +61,6 @@ const Paragraph = styled.p`
     ${tw`p-1`};
   }
 `
-const CTAButton = styled.a`
-  /* background-color: #f5d020; */
-  /* background-image: linear-gradient(315deg, #f5d020 0%, #f53803 74%); */
-  box-sizing: border-box;
-  background: linear-gradient(#000, #000), linear-gradient(to right, red, orange);
-  border: 5px solid transparent;
-  background-repeat: no-repeat;
-  background-origin: padding-box, border-box;
-  border-radius: 0.5rem;
-  border-width: 6px;
-  position: relative;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    bottom: -5px;
-    left: -5px;
-    right: -5px;
-    border: 6px solid #000;
-    border-radius: 0.5rem;
-  }
-  ${tw`p-2 pt-4`};
-  span {
-    ${tw`uppercase font-typewritter text-xl text-orange-dark`};
-    text-shadow: rgba(251, 29, 37, 0.86) 0px 0px 16px;
-  }
-`
-
-const CTAButtonFull = styled.a`
-  ${tw`px-4 py-4 text-xl uppercase font-chalk text-white`};
-  border-radius: 0.5rem;
-  background-color: #eb4511;
-  background-image: linear-gradient(315deg, #eb4511 0%, #b02e0c 74%);
-`
 
 const Hero = () => (
   <SectionStyled>
@@ -107,13 +73,13 @@ const Hero = () => (
         <Paragraph>
           <span>
             Back to the basics. <br />
-            Neapolitan dough with "The Sauce", Organic Fresh Basil, Fresh Mozzarella, baked in our wood fired oven in
-            the traditional way.
+            Neapolitan dough with "The Sauce", Organic Fresh Basil and Mozzarella, baked in our wood fired oven in the
+            traditional way.
           </span>
         </Paragraph>
-        <CTAButton>
+        <StyledLink>
           <span>Come & Get it! >>></span>
-        </CTAButton>
+        </StyledLink>
       </LeftCol>
       {/* right col */}
       <RightCol className="RightCol">

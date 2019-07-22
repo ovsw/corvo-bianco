@@ -11,12 +11,12 @@ import MainNav from './MainNav'
 import TopBar from './TopBar'
 
 // images
-
 import LogoRoundImage from '../../images/corvo-bianco-logo-badge.png'
 import LogoImage from '../../images/corvo-bianco-logo.png'
 import ChalkBorderSource from '../../images/chalk-squalre.png'
 
 // elements
+import Container from '../../ui/Container'
 
 // styles
 const StyledHeader = styled.div`
@@ -49,7 +49,7 @@ const Line = styled.div`
 const Header = () => (
   <StyledHeader>
     <TopBar />
-    <div>
+    <Container>
       <nav className="bg-gray-800 mt-0 w-full">
         <div className="mx-auto flex items-stretch ">
           <div className="flex flex-none md:items-center relative ">
@@ -69,7 +69,7 @@ const Header = () => (
       {/* <button onClick={showNav ? onHideNav : onShowNav}>
         <Icon symbol='hamburger' />
       </button> */}
-    </div>
+    </Container>
   </StyledHeader>
 )
 

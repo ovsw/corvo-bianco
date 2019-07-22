@@ -12,7 +12,7 @@ const Dots = styled.span`
 `
 
 const FoodMenuItem = ({ item: { name, slug, mainImage, ingredients, price } }) => (
-  <Link to={slug} className="w-full lg:w-1/2 text-center text-white pb-12 px-12">
+  <Link to={slug} className="w-full lg:w-1/2 text-center text-white pb-12 px-6 md:px-12">
     <span className="flex">
       <span className="text-2xl xl:text-3xl pr-4">{name}</span>
       <Dots />

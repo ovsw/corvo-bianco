@@ -13,10 +13,16 @@ const MenuSection = styled.section`
 `
 
 const MenuTitle = styled.h2`
-  ${tw`text-white font-normal text-center font-typewritter text-5xl absolute`};
-  transform: rotate(-20deg);
-  left: 6rem;
-  top: 7rem;
+  ${tw`text-white font-normal  text-center font-typewritter text-5xl`};
+  @media (min-width: 600px) {
+    position: absolute;
+    transform: rotate(-20deg);
+    left: 3rem;
+    top: 5rem;
+  }
+  @media (min-width: 1200px) {
+    left: 6rem;
+  }
 `
 
 const CategoryTitle = styled.h3`
@@ -27,8 +33,8 @@ const CategoryTitle = styled.h3`
 
 const FoodMenuShell = ({ savoryPizzas, dessertPizzas }) => (
   <MenuSection>
+    <MenuTitle>Our Menu:</MenuTitle>
     <div className="container mx-auto flex flex-wrap pt-4 pb-12">
-      <MenuTitle>Our Menu:</MenuTitle>
       <div className="w-full mb-4">
         <div className="h-1 mx-auto  w-64 opacity-25 my-0 py-0 rounded-t" />
       </div>
