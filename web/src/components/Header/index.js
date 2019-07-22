@@ -8,6 +8,7 @@ import config from '../../../config/website'
 
 // components
 import MainNav from './MainNav'
+import TopBar from './TopBar'
 
 // images
 
@@ -15,26 +16,25 @@ import LogoRoundImage from '../../images/corvo-bianco-logo-badge.png'
 import LogoImage from '../../images/corvo-bianco-logo.png'
 import ChalkBorderSource from '../../images/chalk-squalre.png'
 
+// elements
+
 // styles
 const StyledHeader = styled.div`
   ${tw`relative`};
   z-index: 100;
   border-image: url(${ChalkBorderSource}) 70;
   border-image-repeat: round;
-  border-image-outset: 0;
-  border-bottom: 2px solid white;
-  @media (min-width: 1400px) {
-    ${tw`mx-auto`};
-    max-width: 1400px;
-  }
+  border-bottom: 7px solid white;
 `
+
 const LogoMobile = styled.img`
   height: 100px;
   ${tw`lg:hidden px-4 pt-1`};
 `
 const Logo = styled.img`
-  ${tw`hidden h-16 xl:h-24 lg:block xl:pl-24 relative`};
-  ${tw`pr-16 pl-2 pt-1`};
+  ${tw`hidden lg:block  relative`};
+  ${tw`pr-16 pl-6 pt-1`};
+  width: 420px;
 `
 const Line = styled.div`
   ${tw`absolute border-t-2 w-4 lg:w-16`};
@@ -48,25 +48,28 @@ const Line = styled.div`
 
 const Header = () => (
   <StyledHeader>
-    <nav className="bg-gray-800 mt-0 w-full">
-      <div className="mx-auto flex items-stretch xl:pt-4">
-        <div className="flex flex-none md:items-end relative">
-          <Line />
-          <Link className="no-underline" to="/">
-            <LogoMobile src={LogoRoundImage} alt={`${config.siteTitle} Logo`} />
-            <Logo src={LogoImage} alt={`${config.siteTitle} Logo`} />
-          </Link>
-        </div>
+    <TopBar />
+    <div>
+      <nav className="bg-gray-800 mt-0 w-full">
+        <div className="mx-auto flex items-stretch ">
+          <div className="flex flex-none md:items-center relative ">
+            <Line />
+            <Link className="no-underline" to="/">
+              <LogoMobile src={LogoRoundImage} alt={`${config.siteTitle} Logo`} />
+              <Logo src={LogoImage} alt={`${config.siteTitle} Logo`} />
+            </Link>
+          </div>
 
-        <div className="flex flex-1 pr-2 py-2 content-center justify-center">
-          <MainNav />
+          <div className="flex flex-1 xl:pr-0 content-center justify-center">
+            <MainNav />
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 
-    {/* <button onClick={showNav ? onHideNav : onShowNav}>
+      {/* <button onClick={showNav ? onHideNav : onShowNav}>
         <Icon symbol='hamburger' />
       </button> */}
+    </div>
   </StyledHeader>
 )
 

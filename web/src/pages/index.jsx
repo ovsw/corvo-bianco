@@ -11,7 +11,7 @@ import FoodMenu from '../components/FoodMenu'
 // import ProjectCard from '../components/ProjectCard'
 
 // Elements
-import Container from '../ui/Container'
+// import Container from '../ui/Container'
 // import Inner from '../elements/Inner'
 // import { Title, BigTitle, Subtitle } from '../elements/Titles'
 
@@ -88,10 +88,8 @@ const Index = ({ data, errors }) => {
 
   return (
     <Layout>
-      <Container>
-        <Hero />
-        <FoodMenu />
-      </Container>
+      <Hero />
+      <FoodMenu />
     </Layout>
   )
 }

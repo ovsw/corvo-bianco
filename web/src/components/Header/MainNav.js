@@ -15,15 +15,27 @@ const MenuItem = styled.li`
 
   a {
     ${tw`flex w-full items-center justify-center`};
-    ${tw` py-2 px-2 md:px-4 text-white no-underline  text-base md:text-xl lg:text-2xl font-chalk `};
+    ${tw`m-0  px-2  text-white text-sm uppercase sm:text-base xl:text-xl font-chalk md:tracking-wide`};
     span {
+      border-left: 6px dotted #161719;
+      ${tw`m-0 py-1`};
+    }
+    &:hover {
+      span {
+        border-left: 16px dotted red;
+        border-right: 16px dotted red;
+        color: #f3611b;
+        border-image: url(${ChalkBorderSource}) 100;
+        border-image-repeat: round;
+        border-image-outset: -6;
+      }
     }
   }
 `
 const StyledMenu = styled.ul`
   ${tw`list-reset`};
   ${tw`flex flex-wrap`};
-  ${tw`w-full`};
+  ${tw`w-full m-0 p-0`};
 `
 
 const MainNav = () => {
