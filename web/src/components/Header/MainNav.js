@@ -22,9 +22,9 @@ const MenuItem = styled.li`
     }
     &:hover {
       span {
-        border-left: 16px dotted red;
-        border-right: 16px dotted red;
-        color: #f3611b;
+        border-left: 16px solid #e07628;
+        border-right: 16px solid #e07628;
+        color: #e07628;
         border-image: url(${ChalkBorderSource}) 100;
         border-image-repeat: round;
         border-image-outset: -6;
