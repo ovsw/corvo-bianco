@@ -7,6 +7,7 @@ import GraphQLErrorList from '../components/graphql-error-list'
 // Components
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
+import Highlights from '../components/Highlights'
 import FoodMenu from '../components/FoodMenu'
 // import ProjectCard from '../components/ProjectCard'
 
@@ -89,6 +90,7 @@ const Index = ({ data, errors }) => {
   return (
     <Layout>
       <Hero />
+      <Highlights />
       <FoodMenu />
     </Layout>
   )

@@ -3,7 +3,7 @@ import FoodMenuItem from './Item'
 
 const FoodMenuList = ({ items }) => (
   <>
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap pb-12">
       {items.map((item, index) => (
         <FoodMenuItem key={index} item={item} />
       ))}

@@ -15,12 +15,14 @@ const MenuSection = styled.section`
 const MenuTitle = styled.h2`
   ${tw`text-white font-normal text-center font-typewritter text-5xl absolute`};
   transform: rotate(-20deg);
-  left: 2rem;
-  top: 5rem;
+  left: 6rem;
+  top: 7rem;
 `
 
 const CategoryTitle = styled.h3`
-  ${tw`mb-6 text-center text-6xl font-chalk leading-none`};
+  ${tw`text-center text-6xl font-chalk leading-none`};
+  text-shadow: rgba(224, 118, 40, 1) 5px 6px 1px;
+  margin-bottom: 4rem;
 `
 
 const FoodMenuShell = ({ savoryPizzas, dessertPizzas }) => (
@@ -28,7 +30,7 @@ const FoodMenuShell = ({ savoryPizzas, dessertPizzas }) => (
     <div className="container mx-auto flex flex-wrap pt-4 pb-12">
       <MenuTitle>Our Menu:</MenuTitle>
       <div className="w-full mb-4">
-        <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t" />
+        <div className="h-1 mx-auto  w-64 opacity-25 my-0 py-0 rounded-t" />
       </div>
 
       <div className="w-fullp-6 flex flex-col flex-grow flex-shrink">
