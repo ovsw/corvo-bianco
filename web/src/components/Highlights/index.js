@@ -107,7 +107,26 @@ const Card = styled.a`
   h3 {
     ${tw`w-full font-bold text-2xl text-grey-darker px-6 mb-6 text-center`};
     color: rgb(28, 151, 151);
+      
   }
+`
+const Line = styled.div`
+  border-bottom: 3px solid #c1611f;
+  ${tw`block mx-auto relative mb-4`};
+  width: 5rem;
+  top: -5px;
+`
+
+const Iconbg = styled.div`
+  border-radius: 50%;
+  background-color: rgba(28, 151, 151, 0);
+  box-shadow: 0px 0px 25px rgba(28, 151, 151, 0.8);
+  ${tw`absolute`};
+  left: 50%;
+  top: 10px;
+  height: 150px;
+  width: 150px;
+  margin-left: -75px;
 `
 
 const contentMap = [
@@ -173,8 +192,12 @@ const Highlights = () => (
           <BoxWrapper>
             <Card href="#">
               {/* <p className='w-full text-gray-600 text-xs md:text-sm px-6'>xGETTING STARTED</p> */}
+              {/* <Iconbg /> */}
               <SVG icon={item.icon} fill="#c1611f" left="37%" top="10%" width="24" />
-              <h3>{item.title}</h3>
+              <h3>
+                <span>{item.title}</span>
+              </h3>
+              {/* <Line /> */}
               <p
                 className="text-grey-darkest text-lg leading-loose px-6 mb-6 font-typewritter"
                 dangerouslySetInnerHTML={{ __html: item.text }}
