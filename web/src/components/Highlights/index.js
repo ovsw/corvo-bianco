@@ -14,7 +14,7 @@ import Container from '../../ui/Container'
 import OldPaper from '../../images/old-paper2.jpg'
 
 const SectionStyled = styled.section`
-${tw`pt-8 md:pt-12 lg:pt-16`};
+${tw`pt-1 xl:pt-8`};
   background-color: #fffdf5;
   background: url('${OldPaper}');
   position: relative;
@@ -39,12 +39,9 @@ const SawtoothTop = styled.div`
   background-repeat: repeat-x;
   ${tw`h-6 relative`};
   z-index: 100;
-  top: -46px;
-  @media (min-width: 600px) {
-    top: -66px;
-  }
-  @media (min-width: 900px) {
-    top: -76px;
+  top: -28px;
+  @media (min-width: 1200px) {
+    top: -46px;
   }
 `
 const BoxWrapper = styled.div`
@@ -111,8 +108,6 @@ const Card = styled.a`
     ${tw`w-full font-bold text-2xl text-grey-darker px-6 mb-6 text-center`};
     color: rgb(28, 151, 151);
   }
-  p {
-  }
 `
 
 const contentMap = [
@@ -162,9 +157,9 @@ const Highlights = () => (
     <SawtoothTop />
     <Container>
       <SectionTitle>
-        <span>"Neo-what Pizza?"</span> Neapoletan <br />{' '}
+        <span>"Neo-what Pizza?"</span> Neapoletan <br />
         <span>
-          [ nee-uh-<strong>paa</strong>-luh-tn ]{' '}
+          [ nee-uh-<strong>paa</strong>-luh-tn ]
         </span>
       </SectionTitle>
       <IntroPara>
@@ -176,7 +171,7 @@ const Highlights = () => (
       <div className=" mx-auto flex flex-wrap pt-8 pb-6">
         {contentMap.map(item => (
           <BoxWrapper>
-            <Card href="#" className="">
+            <Card href="#">
               {/* <p className='w-full text-gray-600 text-xs md:text-sm px-6'>xGETTING STARTED</p> */}
               <SVG icon={item.icon} fill="#c1611f" left="37%" top="10%" width="24" />
               <h3>{item.title}</h3>

@@ -22,6 +22,7 @@ const MenuTitle = styled.h2`
   }
   @media (min-width: 1200px) {
     left: 6rem;
+    top: 7rem;
   }
 `
 

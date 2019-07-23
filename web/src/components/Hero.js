@@ -8,6 +8,10 @@ import RusticWoodTexture from '../images/smooth-black-wood.jpg'
 import PaintedWoodTexture from '../images/h4-slide-3.jpg'
 import PaintedWoodTexture2 from '../images/h4-slide-33.jpg'
 import Firelight from '../images/firelight3.png'
+import PizzaPlaceholder from '../images/placeholder-pizza.png'
+
+// elements
+import Container from '../ui/Container'
 
 // styles
 import { StyledLink } from '../ui/Button'
@@ -16,7 +20,7 @@ const SectionStyled = styled.section`
   background-image: url(${PaintedWoodTexture2});
   background-position: 80% 0%;
   background-size: cover;
-  ${tw`py-12 relative`};
+  ${tw`py-12 relative overflow-hidden`};
   @media (min-width: 600px) {
     background-position: 70% 0%;
   }
@@ -34,17 +38,35 @@ const SectionStyled = styled.section`
 // `
 const LeftCol = styled.div`
   ${tw`flex flex-col justify-center items-center md:items-end`};
-  ${tw`w-full md:w-3/4 lg:w-2/5`};
-  ${tw`pt-12  pl-6`};
+  ${tw`w-full md:w-3/5 lg:w-2/5`};
+  ${tw`py-6 lg:pt-0 pl-6`};
   ${tw`text-center md:text-right`};
 `
 const RightCol = styled.div`
-  ${tw`w-full lg:w-1/2  text-center`};
-  ${tw`py-6`};
+  ${tw`w-full md:w-2/5 lg:w-1/2  text-center relative`};
+  ${tw`py-2 px-2`};
+  padding-bottom: 200px;
+  @media (min-width: 900px) {
+    ${tw`py-2 px-2`};
+  }
+  img {
+    max-height: 60vh;
+    ${tw`absolute`};
+    left: 1rem;
+    @media (min-width: 600px) {
+      left: 2rem;
+      width: 500px;
+      max-width: 1000%;
+    }
+    @media (min-width: 900px) {
+      ${tw`static`};
+      width: 500px;
+      max-width: 100%;
+    }
+  }
 `
 const Intro = styled.p`
-  ${tw`uppercase font-typewritter text-3xl text-orange-dark`};
-  ${tw`md:-mr-6`};
+  ${tw`uppercase font-typewritter text-2xl leading-none text-orange-dark`};
   text-shadow: rgba(251, 29, 37, 0.86) 0px 0px 16.49px;
 `
 const HeroH1 = styled.h1`
@@ -54,7 +76,7 @@ const HeroH1 = styled.h1`
 `
 
 const Paragraph = styled.p`
-  ${tw`leading-normal mb-8 mr-6 text-xl font-typewritter`};
+  ${tw`leading-normal mb-8  text-xl font-typewritter`};
   color: #ccc;
   span {
     background-color: black;
@@ -65,28 +87,30 @@ const Paragraph = styled.p`
 const Hero = () => (
   <SectionStyled>
     {/* <FireGradient /> */}
-    <div className=" flex flex-col md:flex-row items-center text-white">
-      {/* left col */}
-      <LeftCol className="LeftCol">
-        <Intro className="Intro">Pizza of the Day</Intro>
-        <HeroH1>Cinnamon Roll</HeroH1>
-        <Paragraph>
-          <span>
-            Back to the basics. <br />
-            Neapolitan dough with "The Sauce", Organic Fresh Basil and Mozzarella, baked in our wood fired oven in the
-            traditional way.
-          </span>
-        </Paragraph>
-        <StyledLink>
-          <span>Come & Get it! >>></span>
-        </StyledLink>
-      </LeftCol>
-      {/* right col */}
-      <RightCol className="RightCol">
-        {/* prod image */}
-        <img src="https://mymidici.com/devsite/wp-content/uploads/2017/12/NP-Margherita.png" alt="placeholder" />
-      </RightCol>
-    </div>
+    <Container>
+      <div className=" flex flex-col md:flex-row items-center md:items-start lg:items-center  text-white">
+        {/* left col */}
+        <LeftCol className="LeftCol">
+          <Intro className="Intro">Pizza of the Day</Intro>
+          <HeroH1>Cinnamon Roll</HeroH1>
+          <Paragraph>
+            <span>
+              Back to the basics. <br />
+              Neapolitan dough with "The Sauce", Organic Fresh Basil and Mozzarella, baked in our wood fired oven in the
+              traditional way.
+            </span>
+          </Paragraph>
+          <StyledLink>
+            <span>Come & Get it! >>></span>
+          </StyledLink>
+        </LeftCol>
+        {/* right col */}
+        <RightCol className="RightCol">
+          {/* prod image */}
+          <img src={PizzaPlaceholder} alt="placeholder" />
+        </RightCol>
+      </div>
+    </Container>
   </SectionStyled>
 )
 

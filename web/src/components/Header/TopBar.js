@@ -18,23 +18,29 @@ const Wrapper = styled.div`
   border-image-outset: 0.5;
   p {
     color: white;
-    ${tw`inline-block  font-chalk text-xl p-2 pt-4`};
-    font-weight: 900;
+    ${tw`inline-block text-sm md:text-md font-typewritter text-sm p-2 pt-4 md:pl-4`};
     opacity: 1;
     border-radius: 0 15px 15px 0;
   }
 `
 const ColWrapper = styled.div`
-  ${tw`flex`};
+  ${tw`flex items-center`};
 `
 const LeftCol = styled.div`
-  ${tw`flex-1`};
+  ${tw`w-3/4 `};
 `
 const RightCol = styled.div`
-  ${tw`flex-1 text-right`};
+  ${tw` text-right w-1/4`};
+  a {
+    ${tw`flex items-center md:inline-block hidden md:text-3xl relative`};
+    top: 3px;
+    &:first-child {
+      ${tw`inline-block`};
+    }
+  }
 `
 const SocialLink = styled.a`
-  ${tw`mr-4`};
+  ${tw`mr-4 text-2xl`};
   &:hover {
     ${tw`text-white`};
   }
@@ -48,7 +54,7 @@ const TopBar = () => (
           <p>Fast, tasty, healthy, NOT fast-food. </p>
         </LeftCol>
         <RightCol>
-          <p>
+          <div>
             <SocialLink href="https://www.google.com" rel="noopener noreferrer" target="_blank">
               <FaFacebookSquare />
             </SocialLink>
@@ -58,13 +64,13 @@ const TopBar = () => (
             <SocialLink href="https://www.google.com" rel="noopener noreferrer" target="_blank">
               <FaTwitter />
             </SocialLink>
-            <SocialLink href="https://www.google.com" rel="noopener noreferrer" target="_blank">
+            {/* <SocialLink href="https://www.google.com" rel="noopener noreferrer" target="_blank" >
               <FaWhatsapp />
-            </SocialLink>
+            </SocialLink> */}
             <SocialLink href="https://www.google.com" rel="noopener noreferrer" target="_blank">
               <FaRegEnvelope />
             </SocialLink>
-          </p>
+          </div>
         </RightCol>
       </ColWrapper>
     </Container>

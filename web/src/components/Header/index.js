@@ -28,7 +28,7 @@ const StyledHeader = styled.div`
 `
 
 const LogoMobile = styled.img`
-  height: 100px;
+  height: 80px;
   ${tw`lg:hidden px-4 pt-1`};
 `
 const Logo = styled.img`
