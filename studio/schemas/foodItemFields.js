@@ -24,6 +24,7 @@ const FoodItemFields = [
     title: 'Slug',
     type: 'slug',
     description: 'this will be the address of the page for this menu item',
+    validation: Rule => Rule.required().error('The slug is missing.'),
     options: {
       source: 'name',
       maxLength: 96

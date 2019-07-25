@@ -13,6 +13,7 @@ export default {
       title: 'Slug',
       type: 'slug',
       description: 'Some frontend will require a slug to be set to be able to show the post',
+      validation: Rule => Rule.required().error('The slug is missing.'),
       options: {
         source: 'title',
         maxLength: 96
@@ -70,13 +71,14 @@ export default {
       publishedAt: 'publishedAt',
       image: 'mainImage'
     },
-    prepare ({ title = 'No title', publishedAt, image }) {
+    prepare ({ title = 'No title', publishedAt, image, excerpt }) {
       return {
         title,
         subtitle: publishedAt
           ? new Date(publishedAt).toLocaleDateString()
           : 'Missing publishing date',
-        media: image
+        media: image,
+        description: excerpt
       }
     }
   }
