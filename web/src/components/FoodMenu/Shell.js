@@ -5,6 +5,7 @@ import tw from 'tailwind.macro'
 // import { SectionTitle } from '../../ui/Titles'
 import FoodMenuList from './List'
 
+// images
 import BlackBoardBgImage from '../../images/10295.jpg'
 
 const MenuSection = styled.section`

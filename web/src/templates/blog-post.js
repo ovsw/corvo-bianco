@@ -1,6 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import GraphQLErrorList from '../components/graphql-error-list'
+
+// Components
+import Layout from '../components/Layout'
 import BlogPost from '../components/blog-post'
 
 export const query = graphql`
@@ -75,7 +78,7 @@ const BlogPostTemplate = props => {
   const { data, errors } = props
   const post = data && data.post
   return (
-    <div>
+    <Layout>
       {/* {errors && <SEO title="GraphQL Error" />} */}
       {/* {post && <SEO title={post.title || 'Untitled'} />} */}
 
@@ -86,7 +89,7 @@ const BlogPostTemplate = props => {
       )}
 
       {post && <BlogPost {...post} />}
-    </div>
+    </Layout>
   )
 }
 

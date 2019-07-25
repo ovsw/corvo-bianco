@@ -8,6 +8,7 @@ import { graphql } from 'gatsby'
 // import Layout from '../containers/layout'
 
 // components
+import Layout from '../components/Layout'
 import SingleDish from '../components/SingleDish'
 
 export const query = graphql`
@@ -17,6 +18,7 @@ export const query = graphql`
         _id
         title
       }
+      ingredients
       mainImage {
         crop {
           _key
@@ -40,6 +42,7 @@ export const query = graphql`
         alt
       }
       name
+      price
       slug {
         current
       }
@@ -51,7 +54,11 @@ export const query = graphql`
 const MenuItem = props => {
   const { data, errors } = props
   const menuItem = data && data.insalateMenuItem
-  return <SingleDish dish={menuItem} />
+  return (
+    <Layout>
+      <SingleDish dish={menuItem} />
+    </Layout>
+  )
 }
 
 export default MenuItem
