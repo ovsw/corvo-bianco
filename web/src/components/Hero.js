@@ -100,7 +100,7 @@ const Hero = () => (
               traditional way.
             </span>
           </Paragraph>
-          <StyledLink>
+          <StyledLink to="/">
             <span>Come & Get it! >>></span>
           </StyledLink>
         </LeftCol>

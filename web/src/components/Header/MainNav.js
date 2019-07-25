@@ -69,7 +69,7 @@ const MainNav = () => {
   return (
     <StyledMenu>
       {MenuItems.map(item => (
-        <MenuItem key={item.url}>
+        <MenuItem key={item.name}>
           <Link to={item.url}>
             <span>{item.name}</span>
           </Link>
