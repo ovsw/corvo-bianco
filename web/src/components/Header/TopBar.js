@@ -11,11 +11,10 @@ import ChalkBorderSource from '../../images/chalk-squalre.png'
 import Container from '../../ui/Container'
 
 const Wrapper = styled.div`
-  border-image: url(${ChalkBorderSource}) 70;
-  border-image-repeat: round;
+  border-image: url(${ChalkBorderSource}) 70 repeat;
   border-bottom: 5px solid white;
   border-top: 5px solid white;
-  border-image-outset: 0.5;
+  border-image-outset: 1px;
   p {
     color: white;
     ${tw`inline-block text-sm md:text-md font-typewritter text-sm p-2 pt-4 md:pl-4`};

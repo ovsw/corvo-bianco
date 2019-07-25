@@ -14,9 +14,8 @@ const MenuItem = styled.li`
   ${tw`w-1/3 border`};
   ${tw`flex`};
   border: 5px solid black;
-  border-image: url(${ChalkBorderSource}) 70;
-  border-image-repeat: round;
-  border-image-outset: 0.5;
+  border-image: url(${ChalkBorderSource}) 70 repeat;
+  border-image-outset: 2px;
 
   a {
     ${tw`flex w-full items-center justify-center`};
@@ -30,8 +29,7 @@ const MenuItem = styled.li`
         border-left: 16px solid #e07628;
         border-right: 16px solid #e07628;
         color: #e07628;
-        border-image: url(${ChalkBorderSource}) 100;
-        border-image-repeat: round;
+        border-image: url(${ChalkBorderSource}) 100 repeat;
         border-image-outset: -6;
       }
     }

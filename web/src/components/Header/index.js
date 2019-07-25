@@ -22,9 +22,8 @@ import Container from '../../ui/Container'
 const StyledHeader = styled.div`
   ${tw`relative`};
   z-index: 100;
-  border-image: url(${ChalkBorderSource}) 70;
-  border-image-repeat: round;
-  border-bottom: 7px solid white;
+  border-image: url(${ChalkBorderSource}) 70 repeat;
+  border-bottom: 5px solid black;
 `
 
 const LogoMobile = styled.img`
