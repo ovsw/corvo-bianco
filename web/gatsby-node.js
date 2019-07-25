@@ -43,43 +43,146 @@ async function createBlogPostPages(graphql, actions, reporter) {
   })
 }
 
-// async function createMenuItemPages(graphql, actions, reporter) {
-//   const { createPage } = actions
-//   const result = await graphql(`
-//     {
-//       allSanityMenuItem(filter: { slug: { current: { ne: null } } }) {
-//         edges {
-//           node {
-//             id
-//             slug {
-//               current
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `)
+async function createSavoryPizzaMenuItemPages(graphql, actions, reporter) {
+  const { createPage } = actions
+  const result = await graphql(`
+    {
+      sanityMenuSettings {
+        savoryPizzaCurrMenu {
+          id
+          slug {
+            current
+          }
+        }
+      }
+    }
+  `)
 
-//   if (result.errors) throw result.errors
+  if (result.errors) throw result.errors
 
-//   const MenuItemEdges = (result.data.allSanityMenuItem || {}).edges || []
+  const savoryPizzaCurrMenu = result.data.sanityMenuSettings.savoryPizzaCurrMenu || []
 
-//   MenuItemEdges.forEach(edge => {
-//     const { id } = edge.node
-//     const slug = edge.node.slug.current
-//     const path = `/menu/${slug}/`
+  savoryPizzaCurrMenu.forEach(item => {
+    const { id } = item
+    const slug = item.slug.current
+    const path = `/menu/${slug}/`
 
-//     reporter.info(`Creating Menu Item page: ${path}`)
+    reporter.info(`Creating Savory Pizza Menu page: ${path}`)
 
-//     createPage({
-//       path,
-//       component: require.resolve('./src/templates/menu-item.js'),
-//       context: { id },
-//     })
-//   })
-// }
+    createPage({
+      path,
+      component: require.resolve('./src/templates/savoryPizza-menu-item.js'),
+      context: { id },
+    })
+  })
+}
+
+async function createDessertPizzaMenuItemPages(graphql, actions, reporter) {
+  const { createPage } = actions
+  const result = await graphql(`
+    {
+      sanityMenuSettings {
+        dessertPizzaCurrMenu {
+          id
+          slug {
+            current
+          }
+        }
+      }
+    }
+  `)
+
+  if (result.errors) throw result.errors
+
+  const dessertPizzaCurrMenu = result.data.sanityMenuSettings.dessertPizzaCurrMenu || []
+
+  dessertPizzaCurrMenu.forEach(item => {
+    const { id } = item
+    const slug = item.slug.current
+    const path = `/menu/${slug}/`
+
+    reporter.info(`Creating Dessert Pizza Menu page: ${path}`)
+
+    createPage({
+      path,
+      component: require.resolve('./src/templates/dessertPizza-menu-item.js'),
+      context: { id },
+    })
+  })
+}
+
+async function createPucciaMenuItemPages(graphql, actions, reporter) {
+  const { createPage } = actions
+  const result = await graphql(`
+    {
+      sanityMenuSettings {
+        pucciaCurrMenu {
+          id
+          slug {
+            current
+          }
+        }
+      }
+    }
+  `)
+
+  if (result.errors) throw result.errors
+
+  const pucciaCurrMenu = result.data.sanityMenuSettings.pucciaCurrMenu || []
+
+  pucciaCurrMenu.forEach(item => {
+    const { id } = item
+    const slug = item.slug.current
+    const path = `/menu/${slug}/`
+
+    reporter.info(`Creating Puccia Menu page: ${path}`)
+
+    createPage({
+      path,
+      component: require.resolve('./src/templates/puccia-menu-item.js'),
+      context: { id },
+    })
+  })
+}
+
+async function createInsalateMenuItemPages(graphql, actions, reporter) {
+  const { createPage } = actions
+  const result = await graphql(`
+    {
+      sanityMenuSettings {
+        insalateCurrMenu {
+          id
+          slug {
+            current
+          }
+        }
+      }
+    }
+  `)
+
+  if (result.errors) throw result.errors
+
+  const insalateCurrMenu = result.data.sanityMenuSettings.insalateCurrMenu || []
+
+  insalateCurrMenu.forEach(item => {
+    const { id } = item
+    const slug = item.slug.current
+    const path = `/menu/${slug}/`
+
+    reporter.info(`Creating Insalate Menu page: ${path}`)
+
+    createPage({
+      path,
+      component: require.resolve('./src/templates/insalate-menu-item.js'),
+      context: { id },
+    })
+  })
+}
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   await createBlogPostPages(graphql, actions, reporter)
-  // await createMenuItemPages(graphql, actions, reporter)
+  await createSavoryPizzaMenuItemPages(graphql, actions, reporter)
+  await createDessertPizzaMenuItemPages(graphql, actions, reporter)
+  await createPucciaMenuItemPages(graphql, actions, reporter)
+  await createInsalateMenuItemPages(graphql, actions, reporter)
 }

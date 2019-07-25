@@ -12,17 +12,19 @@ const Dots = styled.span`
 `
 
 const FoodMenuItem = ({ item: { name, slug, mainImage, ingredients, price } }) => (
-  <Link to={slug} className="w-full lg:w-1/2 text-center text-white pb-12 px-6 md:px-12">
-    <span className="flex">
-      <span className="text-2xl xl:text-3xl pr-4">{name}</span>
-      <Dots />
-      <span className="text-2xl xl:text-3xl pl-4"> ${price}</span>
-    </span>
-    <span className="block fpmt-normal text-grey-dark text-base tracking-wide text-left px-2 mt-2 font-typewritter">
-      {ingredients}
-    </span>
-    {/* <span className="mt-6 mb-4 rounded-full bg-red-400 inline-block overflow-hidden"> */}
-    {/* <img
+  <>
+    {/* {console.log(slug)} */}
+    <Link to={`/menu/${slug.current}`} className="w-full lg:w-1/2 text-center text-white pb-12 px-6 md:px-12">
+      <span className="flex">
+        <span className="text-2xl xl:text-3xl pr-4">{name}</span>
+        <Dots />
+        <span className="text-2xl xl:text-3xl pl-4"> ${price}</span>
+      </span>
+      <span className="block fpmt-normal text-grey-dark text-base tracking-wide text-left px-2 mt-2 font-typewritter">
+        {ingredients}
+      </span>
+      {/* <span className="mt-6 mb-4 rounded-full bg-red-400 inline-block overflow-hidden"> */}
+      {/* <img
         src={imageUrlFor(buildImageObj(mainImage))
           .width(200)
           .height(Math.floor((1 / 1) * 200))
@@ -30,9 +32,10 @@ const FoodMenuItem = ({ item: { name, slug, mainImage, ingredients, price } }) =
         alt={name}
       /> */}
 
-    {/* {!mainImage.crop && <Img fixed={mainImage.asset.fixed} /> } */}
-    {/* </span> */}
-  </Link>
+      {/* {!mainImage.crop && <Img fixed={mainImage.asset.fixed} /> } */}
+      {/* </span> */}
+    </Link>
+  </>
 )
 
 export default FoodMenuItem
