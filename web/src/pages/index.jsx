@@ -1,7 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import styled from 'styled-components'
-import tw from 'tailwind.macro'
 import GraphQLErrorList from '../components/graphql-error-list'
 
 // Components

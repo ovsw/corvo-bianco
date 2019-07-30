@@ -160,7 +160,7 @@ const contentMap = [
     // text:
     //   'Fluffier & moister than the normal pizza, Neapoletan Pizza doesn\'t "turn to cardboard" after a few minutes.',
     text:
-      'Fiori di Latte Mozarella, San Marzano Tomatoes, Capudo Flour, Organic Fresh Local Toppings, we could go on, and on... ',
+      'Fiori di Latte Mozarella, San Marzano Tomatoes, Caputo Flour, Organic Fresh Local Toppings, we could go on, and on... ',
     icon: 'quality',
   },
   {

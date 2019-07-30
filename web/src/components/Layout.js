@@ -2,6 +2,7 @@ import React from 'react'
 import GlobalStyle from '../styles/global'
 import SEO from './SEO'
 import Header from './Header'
+import Footer from './Footer'
 
 import '../styles/tw.css'
 
@@ -17,6 +18,7 @@ const Layout = ({ children }) => (
     <GlobalStyle />
     <Header />
     {children}
+    <Footer />
   </>
 )
 

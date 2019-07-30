@@ -2,10 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
 
-import { FaFacebookSquare, FaInstagram, FaTwitter, FaWhatsapp, FaRegEnvelope } from 'react-icons/fa'
-
 // images
 import ChalkBorderSource from '../../images/chalk-squalre.png'
+
+// components
+import SocialLinks from '../SocialLinks'
 
 // elements
 import Container from '../../ui/Container'
@@ -44,12 +45,6 @@ const RightCol = styled.div`
     }
   }
 `
-const SocialLink = styled.a`
-  ${tw`mr-4 text-2xl`};
-  &:hover {
-    ${tw`text-white`};
-  }
-`
 
 const TopBar = () => (
   <Wrapper>
@@ -60,21 +55,7 @@ const TopBar = () => (
         </LeftCol>
         <RightCol>
           <div>
-            <SocialLink href="https://www.google.com" rel="noopener noreferrer" target="_blank">
-              <FaFacebookSquare />
-            </SocialLink>
-            <SocialLink href="https://www.google.com" rel="noopener noreferrer" target="_blank">
-              <FaInstagram />
-            </SocialLink>
-            <SocialLink href="https://www.google.com" rel="noopener noreferrer" target="_blank">
-              <FaTwitter />
-            </SocialLink>
-            {/* <SocialLink href="https://www.google.com" rel="noopener noreferrer" target="_blank" >
-              <FaWhatsapp />
-            </SocialLink> */}
-            <SocialLink href="https://www.google.com" rel="noopener noreferrer" target="_blank">
-              <FaRegEnvelope />
-            </SocialLink>
+            <SocialLinks />
           </div>
         </RightCol>
       </ColWrapper>
