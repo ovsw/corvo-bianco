@@ -45,7 +45,7 @@ const SawtoothTop = styled.div`
   }
 `
 const BoxWrapper = styled.div`
-  ${tw`w-full md:w-1/2 lg:w-1/3 px-6 flex flex-col flex-grow flex-shrink`};
+  ${tw`w-full md:w-1/2 lg:w-1/3 md:px-6 flex flex-col flex-grow flex-shrink`};
   border: 1px dashed #a29180;
   border-width: 0 2px 2px 0;
 
@@ -101,57 +101,42 @@ const IntroPara = styled.p`
   }
 `
 const Card = styled.a`
-  ${tw`flex-1flex flex-wrap no-underline  relative `};
+  ${tw`flex-1 flex flex-wrap no-underline  relative `};
   background: url('${OldPaper}');
   padding-top: 150px;
   h3 {
-    ${tw`w-full font-bold text-2xl text-grey-darker px-6 mb-6 text-center`};
+    ${tw`w-full font-chalk font-bold text-4xl text-grey-darker px-6 mb-6 text-center`};
     color: rgb(28, 151, 151);
-      
+    text-shadow: rgb(150,50,50) 0px 0px 0px, rgb(28,151,151) 0px 0px 1px;
   }
-`
-const Line = styled.div`
-  border-bottom: 3px solid #c1611f;
-  ${tw`block mx-auto relative mb-4`};
-  width: 5rem;
-  top: -5px;
-`
-
-const Iconbg = styled.div`
-  border-radius: 50%;
-  background-color: rgba(28, 151, 151, 0);
-  box-shadow: 0px 0px 25px rgba(28, 151, 151, 0.8);
-  ${tw`absolute`};
-  left: 50%;
-  top: 10px;
-  height: 150px;
-  width: 150px;
-  margin-left: -75px;
+  strong {
+    color: #ce6a25;
+  }
 `
 
 const contentMap = [
   {
-    title: 'Ready in 2 minutes',
+    title: 'Ready in 3 minutes or less',
     text:
-      "The Wood-fired oven is crazy-hot. Pies are done in about 2 minutes or less. We make'em fast so you can enjoy them slowly - they come out piping hot!",
+      "The Wood-fired oven is crazy-hot. Pies are done in about 3 minutes or less. <strong>Best enjoyed fresh from the oven </strong>if you're looking for that crispy goodness!",
     icon: 'fast',
   },
   {
     title: 'Charred spots are good!',
     text:
-      'Due to the high heat, the crust will have dark spots - like a Dalmatian :) This is not only normal but also desirable and adds to the flavor.',
+      'Due to the high heat, the crust will have dark spots - like a Dalmatian :) This is <strong>not only normal but also desirable</strong>, as it adds to the flavor.',
     icon: 'oven',
   },
   {
     title: '1 Pizza serves 1 Person',
     text:
-      'Smaller than the normal pizza, one pizza/person is the average portion... unless you have a gigantic appetite - in which case, way to go :)',
+      'Smaller than the normal pizza, <strong>one pizza/person is the average portion</strong>... unless you have a gigantic appetite - in which case, get two :)',
     icon: 'one',
   },
   {
     title: 'Fold 2 Hold (and eat)',
     text:
-      'No Slices. Your call: fold the whole pizza to eat on the go like a savage, or sit down with cutlery like a civilized human. ',
+      'Your call: <strong>fold the whole pizza</strong> to eat on the go like a savage, or <strong>sit down with cutlery</strong> like a civilized human. ',
     icon: 'pizza',
   },
 
@@ -160,13 +145,13 @@ const contentMap = [
     // text:
     //   'Fluffier & moister than the normal pizza, Neapoletan Pizza doesn\'t "turn to cardboard" after a few minutes.',
     text:
-      'Fiori di Latte Mozarella, San Marzano Tomatoes, Caputo Flour, Organic Fresh Local Toppings, we could go on, and on... ',
+      'Fiori di Latte Mozarella <strong>made daily</strong>, <strong>authentic imported</strong> San Marzano Tomatoes, <strong>Caputo Flour</strong>, Italian Sea Salt, <strong>Organic Fresh Local</strong> Toppings ... ',
     icon: 'quality',
   },
   {
-    title: 'Balanced',
+    title: 'A healthier Balance',
     text:
-      'Cheese is not the main ingredient ;) A careful balance among crust, sauce, and cheese allows you to savor all 3 components (and eat healthier).',
+      '<strong>Zero sugar. Suitable even for gluten-sensitive people</strong>. A careful balance among crust, sauce, and cheese allows you to savor all 3 components.',
     icon: 'balance',
   },
 ]
