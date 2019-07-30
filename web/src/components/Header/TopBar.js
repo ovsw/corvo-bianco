@@ -24,12 +24,18 @@ const Wrapper = styled.div`
 `
 const ColWrapper = styled.div`
   ${tw`flex items-center`};
+  @media (min-width: 600px) {
+    padding-left: 150px;
+  }
+  @media (min-width: 900px) {
+    padding-left: 250px;
+  }
 `
 const LeftCol = styled.div`
-  ${tw`w-3/4 `};
+  ${tw`md:w-3/5 lg:w-3/4 `};
 `
 const RightCol = styled.div`
-  ${tw` text-right w-1/4`};
+  ${tw` text-right md:w-2/5 lg:w-1/4`};
   a {
     ${tw`flex items-center md:inline-block hidden md:text-3xl relative`};
     top: 3px;

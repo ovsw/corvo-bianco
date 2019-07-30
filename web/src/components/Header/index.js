@@ -14,6 +14,7 @@ import TopBar from './TopBar'
 import LogoRoundImage from '../../images/corvo-bianco-logo-badge.png'
 import LogoImage from '../../images/corvo-bianco-logo.png'
 import ChalkBorderSource from '../../images/chalk-squalre.png'
+import BlackBoardBgImage from '../../images/10295.jpg'
 
 // elements
 import Container from '../../ui/Container'
@@ -24,19 +25,40 @@ const StyledHeader = styled.div`
   z-index: 100;
   border-image: url(${ChalkBorderSource}) 70 repeat;
   border-bottom: 5px solid black;
+  background: url(${BlackBoardBgImage});
 `
-
-const LogoMobile = styled.img`
-  height: 80px;
-  ${tw`lg:hidden px-4 pt-1`};
+const LogoWrapper = styled.div`
+  width: 100px;
+  @media (min-width: 600px) {
+    width: 150px;
+  }
+  @media (min-width: 900px) {
+    width: 250px;
+  }
 `
 const Logo = styled.img`
-  ${tw`hidden lg:block  relative`};
-  ${tw`pr-16 pl-6 pt-1`};
-  width: 420px;
+  height: 100px;
+  ${tw`lg:px-4 pt-1`};
+  position: absolute;
+  top: -15px;
+  @media (min-width: 600px) {
+    height: 140px;
+    top: -50px;
+    left: 5px;
+  }
+  @media (min-width: 900px) {
+    height: 150px;
+    top: -50px;
+    left: 25px;
+  }
+  @media (min-width: 1200px) {
+    height: 160px;
+    top: -50px;
+    left: 25px;
+  }
 `
 const Line = styled.div`
-  ${tw`absolute border-t-2 w-4 lg:w-16`};
+  ${tw`absolute border-t-2 w-4 lg:w-24`};
   top: 50%;
   right: 0;
   border-top: 5px solid white;
@@ -53,10 +75,11 @@ const Header = () => (
         <div className="mx-auto flex items-stretch ">
           <div className="flex flex-none md:items-center relative ">
             <Line />
-            <Link className="no-underline" to="/">
-              <LogoMobile src={LogoRoundImage} alt={`${config.siteTitle} Logo`} />
-              <Logo src={LogoImage} alt={`${config.siteTitle} Logo`} />
-            </Link>
+            <LogoWrapper>
+              <Link className="no-underline" to="/">
+                <Logo src={LogoRoundImage} alt={`${config.siteTitle} Logo`} />
+              </Link>
+            </LogoWrapper>
           </div>
 
           <div className="flex flex-1 xl:pr-0 content-center justify-center">

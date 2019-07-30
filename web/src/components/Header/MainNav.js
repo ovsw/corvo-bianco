@@ -21,7 +21,6 @@ const MenuItem = styled.li`
     ${tw`flex w-full items-center justify-center`};
     ${tw`m-0 px-0 md:px-2  text-white text-sm uppercase sm:text-base xl:text-xl font-chalk md:tracking-wide`};
     span {
-      border-left: 6px solid #161719;
       ${tw`m-0 py-1`};
     }
     &:hover {
