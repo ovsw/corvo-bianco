@@ -9,6 +9,7 @@ import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import Highlights from '../components/Highlights'
 import FoodMenu from '../components/FoodMenu'
+import MapSection from '../components/MapSection'
 // import ProjectCard from '../components/ProjectCard'
 
 // Elements
@@ -92,6 +93,7 @@ const Index = ({ data, errors }) => {
       <Hero />
       <Highlights />
       <FoodMenu />
+      <MapSection />
     </Layout>
   )
 }
