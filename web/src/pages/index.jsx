@@ -22,7 +22,7 @@ import FoodMenu from '../components/FoodMenu'
 // import About from '../views/About'
 // import Contact from '../views/Contact'
 
-import avatar from '../images/avatar.jpg'
+// import avatar from '../images/avatar.jpg'
 
 export const query = graphql`
   query IndexPageQuery {

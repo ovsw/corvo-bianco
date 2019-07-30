@@ -55,7 +55,7 @@ const MenuItem = props => {
   const menuItem = data && data.pucciaMenuItem
   return (
     <Layout>
-      <SingleDish dish={menuItem} />
+      <SingleDish dish={menuItem} category="Pizza-dough Sandwich" suffix="Puccia" />
     </Layout>
   )
 }

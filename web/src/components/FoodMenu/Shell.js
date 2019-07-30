@@ -8,6 +8,9 @@ import FoodMenuList from './List'
 // images
 import BlackBoardBgImage from '../../images/10295.jpg'
 
+// elements
+import BigTitle from '../../ui/BigTitle'
+
 const MenuSection = styled.section`
   background: url(${BlackBoardBgImage});
   ${tw`text-white font-chalk relative pt-24`};
@@ -27,9 +30,8 @@ const MenuTitle = styled.h2`
   }
 `
 
-const CategoryTitle = styled.h3`
-  ${tw`text-center text-6xl font-chalk leading-none`};
-  text-shadow: rgba(224, 118, 40, 1) 5px 6px 1px;
+const CategoryTitle = styled(BigTitle)`
+  ${tw`text-center`};
   margin-bottom: 4rem;
 `
 
@@ -42,9 +44,13 @@ const FoodMenuShell = ({ savoryPizzas, dessertPizzas }) => (
       </div>
 
       <div className="w-fullp-6 flex flex-col flex-grow flex-shrink">
-        <CategoryTitle>Savory Pizzas</CategoryTitle>
+        <CategoryTitle hot centered>
+          Savory Pizzas
+        </CategoryTitle>
         <FoodMenuList items={savoryPizzas} />
-        <CategoryTitle>Dessert Pizzas</CategoryTitle>
+        <CategoryTitle hot centered>
+          Dessert Pizzas
+        </CategoryTitle>
         <FoodMenuList items={dessertPizzas} />
       </div>
     </div>

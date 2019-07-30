@@ -56,7 +56,7 @@ const MenuItem = props => {
   const menuItem = data && data.insalateMenuItem
   return (
     <Layout>
-      <SingleDish dish={menuItem} />
+      <SingleDish dish={menuItem} category="Insalata" suffix="Salad" />
     </Layout>
   )
 }

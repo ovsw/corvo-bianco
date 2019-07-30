@@ -12,6 +12,7 @@ import PizzaPlaceholder from '../images/placeholder-pizza.png'
 
 // elements
 import Container from '../ui/Container'
+import BigTitle from '../ui/BigTitle'
 
 // styles
 import { StyledLink } from '../ui/Button'
@@ -69,11 +70,6 @@ const Intro = styled.p`
   ${tw`uppercase font-typewritter text-2xl leading-none text-orange-dark`};
   text-shadow: rgba(251, 29, 37, 0.86) 0px 0px 16.49px;
 `
-const HeroH1 = styled.h1`
-  ${tw`font-bold  my-6 font-chalk uppercase text-red-dark text-white leading-none`};
-  ${tw`text-5xl xl:text-6xl`};
-  text-shadow: rgb(28, 151, 151) 5px 6px 1px;
-`
 
 const Paragraph = styled.p`
   ${tw`leading-normal mb-8  text-xl font-typewritter`};
@@ -92,7 +88,7 @@ const Hero = () => (
         {/* left col */}
         <LeftCol className="LeftCol">
           <Intro className="Intro">Pizza of the Day</Intro>
-          <HeroH1>Cinnamon Roll</HeroH1>
+          <BigTitle>Cinnamon Roll</BigTitle>
           <Paragraph>
             <span>
               Back to the basics. <br />
