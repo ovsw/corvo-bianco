@@ -40,11 +40,11 @@ const MainNav = () => {
   const MenuItems = [
     {
       name: 'Menu',
-      url: '/',
+      url: '/menu',
     },
     {
       name: 'Location',
-      url: '/',
+      url: '/location',
     },
     {
       name: 'Reviews',
