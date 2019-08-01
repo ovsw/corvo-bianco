@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import GraphQLErrorList from '../components/graphql-error-list'
+import { mapEdgesToNodes, filterOutDocsWithoutSlugs } from '../lib/helpers'
 
 // Components
 import Layout from '../components/Layout'
@@ -8,6 +9,7 @@ import Hero from '../components/Hero'
 import Highlights from '../components/Highlights'
 import FoodMenu from '../components/FoodMenu'
 import MapSection from '../components/MapSection'
+import BlogPostPreviewGrid from '../components/BlogPostsPreview'
 // import ProjectCard from '../components/ProjectCard'
 
 // Elements
@@ -79,6 +81,7 @@ const Index = ({ data, errors }) => {
   }
 
   const { site } = data || {}
+  const postNodes = (data || {}).posts ? mapEdgesToNodes(data.posts).filter(filterOutDocsWithoutSlugs) : []
 
   if (!site) {
     throw new Error(
@@ -92,6 +95,7 @@ const Index = ({ data, errors }) => {
       <Highlights />
       <FoodMenu />
       <MapSection />
+      {postNodes && <BlogPostPreviewGrid title="Latest News" nodes={postNodes} browseMoreHref="/blog/" />}
     </Layout>
   )
 }
