@@ -16,6 +16,9 @@ const ItemWrapper = styled(Link)`
   border: 7px solid white;
   box-shadow: 20px 15px 0px 10px rgba(193, 97, 31, 0.3), 30px -20px 0px 0px rgba(193, 97, 31, 0.3),
     5px 5px 5px 0px rgba(0, 0, 0, 0.1);
+  @media (min-width: 600px) {
+    margin-bottom: 2rem;
+  }
 `
 
 function BlogPostPreviewItem({ title, slug, publishedAt, mainImage, _rawExcerpt }) {

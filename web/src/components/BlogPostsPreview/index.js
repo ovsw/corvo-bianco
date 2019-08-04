@@ -22,7 +22,10 @@ function BlogPostPreviewGrid({ title, browseMoreHref, nodes }) {
         <ul className="flex flex-wrap lg:flex-no-wrap pt-8 mx-auto max-w-sm lg:max-w-4xl list-reset md:mb-12">
           {nodes &&
             nodes.map(node => (
-              <li key={node.id} className="w-full max-w-md mx-auto md:mx-0 mb-10 md:mb-0  text-center px-6">
+              <li
+                key={node.id}
+                className="w-full max-w-md mx-auto md:mx-0 mb-10 md:mb-0  text-center px-6 md:flex md:flex-column"
+              >
                 <Post {...node} />
               </li>
             ))}
