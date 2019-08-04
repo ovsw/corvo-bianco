@@ -20,7 +20,7 @@ const PostTitle = styled(BigTitle)`
   border-top: 2px solid rgb(28, 151, 151);
   border-bottom: 2px solid rgb(28, 151, 151);
   ${tw`py-4 md:py-8 mb-2 md:mb-8 md:mb-12`};
-  ${tw`text-3xl mt-0 md:text-6xl capitalize`};
+  ${tw`text-2xl mt-0 md:text-5xl lg:text-6xl capitalize`};
 `
 const PostContent = styled.div`
   ${tw`text-lg md:text-2xl font-typewritter leading-loose`};
