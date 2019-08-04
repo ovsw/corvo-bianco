@@ -7,43 +7,10 @@ import { colors } from '../../../tailwind'
 import SVG from '../SVG'
 
 // import { tsModuleBlock } from '@babel/types'
-// ui elements
+// elements
 import Container from '../../ui/Container'
+import HpSection from '../../ui/HpSection'
 
-// images
-import OldPaper from '../../images/old-paper2.jpg'
-
-const SectionStyled = styled.section`
-${tw`pt-1 xl:pt-8`};
-  background-color: #fffdf5;
-  background: url('${OldPaper}');
-  position: relative;
-  z-index: 100;
-`
-
-const SawtoothBottom = styled.div`
-  background-image: linear-gradient(135deg, #dccfbf 50%, transparent 50%),
-    linear-gradient(225deg, #dccfbf 50%, transparent 50%);
-  background-position: bottom left, bottom left;
-  background-size: 24px 20px;
-  background-repeat: repeat-x;
-  ${tw`h-6 relative`};
-  z-index: 100;
-  bottom: -10px;
-`
-const SawtoothTop = styled.div`
-  background-image: linear-gradient(45deg, #dccfbf 50%, transparent 50%),
-    linear-gradient(-45deg, #dccfbf 50%, transparent 50%);
-  background-position: bottom left, bottom left;
-  background-size: 24px 20px;
-  background-repeat: repeat-x;
-  ${tw`h-6 relative`};
-  z-index: 100;
-  top: -28px;
-  @media (min-width: 1200px) {
-    top: -46px;
-  }
-`
 const BoxWrapper = styled.div`
   ${tw`w-full md:w-1/2 lg:w-1/3 md:px-6 flex flex-col flex-grow flex-shrink`};
   border: 1px dashed #a29180;
@@ -102,12 +69,11 @@ const IntroPara = styled.p`
 `
 const Card = styled.a`
   ${tw`flex-1 flex flex-wrap no-underline  relative `};
-  background: url('${OldPaper}');
   padding-top: 150px;
   h3 {
     ${tw`w-full font-chalk font-bold text-4xl text-grey-darker px-6 mb-6 text-center`};
     color: rgb(28, 151, 151);
-    text-shadow: rgb(150,50,50) 0px 0px 0px, rgb(28,151,151) 0px 0px 1px;
+    text-shadow: rgb(150, 50, 50) 0px 0px 0px, rgb(28, 151, 151) 0px 0px 1px;
   }
   strong {
     color: #ce6a25;
@@ -157,8 +123,7 @@ const contentMap = [
 ]
 
 const Highlights = () => (
-  <SectionStyled>
-    <SawtoothTop />
+  <HpSection>
     <Container>
       <SectionTitle>
         <span>"Neo-what Pizza?"</span> Neapoletan <br />
@@ -202,8 +167,7 @@ const Highlights = () => (
         ))}
       </div>
     </Container>
-    <SawtoothBottom />
-  </SectionStyled>
+  </HpSection>
 )
 
 export default Highlights

@@ -8,8 +8,14 @@ import { imageUrlFor } from '../../lib/image-url'
 import BlockText from '../block-text'
 
 const ItemWrapper = styled(Link)`
-  ${tw`text-left block`};
+  ${tw`text-left font-typewritter block`};
   ${tw`rounded-lg overflow-hidden`};
+  margin-bottom: 5rem;
+  background-color: white;
+  border-radius: 1000rem 1000rem 0 0;
+  border: 7px solid white;
+  box-shadow: 20px 15px 0px 10px rgba(193, 97, 31, 0.3), 30px -20px 0px 0px rgba(193, 97, 31, 0.3),
+    5px 5px 5px 0px rgba(0, 0, 0, 0.1);
 `
 
 function BlogPostPreviewItem({ title, slug, publishedAt, mainImage, _rawExcerpt }) {
@@ -18,19 +24,19 @@ function BlogPostPreviewItem({ title, slug, publishedAt, mainImage, _rawExcerpt 
       {mainImage && mainImage.asset && (
         <img
           src={imageUrlFor(buildImageObj(mainImage))
-            .width(400)
-            .height(Math.floor((9 / 16) * 400))
+            .width(450)
+            .height(Math.floor((9 / 16) * 450))
             .url()}
           alt={mainImage.alt}
         />
       )}
-      <div className="p-4 text-gray-600">
-        <h3 className="text-2xl font-bold text-gray-900">{title}</h3>
-        <p>
+      <div className="p-4">
+        <h3 className="text-2xl text-grey-darker mb-1">{title}</h3>
+        <p className="mb-1 text-orange-light">
           <Moment format="MMMM Do">{publishedAt}</Moment>
         </p>
         {_rawExcerpt && (
-          <div>
+          <div className="text-grey-dark mt-4">
             <BlockText blocks={_rawExcerpt} />
           </div>
         )}
