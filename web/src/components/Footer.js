@@ -21,7 +21,7 @@ const FooterStyled = styled.footer`
   background: url(${BgDark});
 `
 const FooterColumns = styled.div`
-  ${tw`flex`};
+  ${tw`md:flex`};
 `
 const LeftCol = styled.div`
   ${tw`md:w-2/3 text-center md:text-left px-4 pb-8 md:pl-12`};
