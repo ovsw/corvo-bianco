@@ -23,6 +23,12 @@ const StyledTitle = styled.h2`
     props.hot
       ? 'text-shadow: rgba(224,118,40,1) 5px 6px 1px;'
       : 'text-shadow: rgb(150, 50, 50) 0px 0px 1px, rgb(28, 151, 151) 5px 6px 0px, rgba(28, 151, 151, 0.5) 5px 6px 10px;'}
+  @media (max-width:600px) {
+    ${props =>
+    props.hot
+      ? 'text-shadow: rgba(224,118,40,1) 2px 3px 1px;'
+      : 'text-shadow: rgb(150, 50, 50) 0px 0px 1px, rgb(28, 151, 151) 2px 3px 0px, rgba(28, 151, 151, 0.5) 2px 3px 10px;'}
+  }
   a {
     color: black;
     ${props => (props.dark ? 'color: black' : 'color:white')};

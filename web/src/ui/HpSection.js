@@ -31,15 +31,29 @@ const SawtoothTop = styled.div`
   background-repeat: repeat-x;
   ${tw`h-6 relative`};
   z-index: 100;
-  top: -28px;
+  top: -25px;
   @media (min-width: 1200px) {
-    top: -46px;
+    top: -50px;
+  }
+`
+const SawtoothTop2 = styled.div`
+  background-image: linear-gradient(45deg, #505050 50%, transparent 50%),
+    linear-gradient(-45deg, #505050 50%, transparent 50%);
+  background-position: bottom left, bottom left;
+  background-size: 24px 20px;
+  background-repeat: repeat-x;
+  ${tw`h-6 relative`};
+  z-index: 90;
+  top: -50px;
+  @media (min-width: 1200px) {
+    top: -75px;
   }
 `
 
 const HpSection = props => (
   <SectionStyled {...props}>
     <SawtoothTop />
+    <SawtoothTop2 />
     {props.children}
     <SawtoothBottom />
   </SectionStyled>

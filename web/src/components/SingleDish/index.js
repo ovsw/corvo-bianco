@@ -15,7 +15,7 @@ import Highlights from '../Highlights'
 import Container from '../../ui/Container'
 import BigTitle from '../../ui/BigTitle'
 
-const MainWrapper = styled.section`
+const DarkWrapper = styled.section`
   background: url(${BlackBoardBgImage});
   ${tw`text-white relative  overflow-hidden`};
   padding-top: 150px;
@@ -80,7 +80,7 @@ const SingleDish = ({
   suffix = 'No suffix',
 }) => (
   <>
-    <MainWrapper>
+    <DarkWrapper>
       <Container>
         <StyledArticle>
           <LeftColumn>
@@ -108,7 +108,7 @@ const SingleDish = ({
           </RightColumn>
         </StyledArticle>
       </Container>
-    </MainWrapper>
+    </DarkWrapper>
     <Highlights />
   </>
 )
