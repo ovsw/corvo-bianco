@@ -4,10 +4,10 @@ import React from 'react'
 import Layout from '../components/Layout'
 import FoodMenu from '../components/FoodMenu'
 
-const Index = () => (
+const Menu = () => (
   <Layout>
     <FoodMenu />
   </Layout>
 )
 
-export default Index
+export default Menu

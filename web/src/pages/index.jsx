@@ -9,7 +9,7 @@ import Hero from '../components/Hero'
 import Highlights from '../components/Highlights'
 import FoodMenu from '../components/FoodMenu'
 import MapSection from '../components/MapSection'
-import BlogPostPreviewGrid from '../components/BlogPostsPreview'
+import BlogPostsPreview from '../components/BlogPostsPreview'
 // import ProjectCard from '../components/ProjectCard'
 
 // Elements
@@ -25,6 +25,37 @@ import BlogPostPreviewGrid from '../components/BlogPostsPreview'
 
 // import avatar from '../images/avatar.jpg'
 
+const Index = ({ data, errors }) => {
+  if (errors) {
+    return (
+      <Layout>
+        <GraphQLErrorList errors={errors} />
+      </Layout>
+    )
+  }
+
+  const { site } = data || {}
+  const postNodes = (data || {}).posts ? mapEdgesToNodes(data.posts).filter(filterOutDocsWithoutSlugs) : []
+
+  if (!site) {
+    throw new Error(
+      'Missing "Site settings". Open the studio at http://localhost:3333 and add some content to "Site settings" and restart the development server.'
+    )
+  }
+
+  return (
+    <Layout>
+      <Hero />
+      <Highlights />
+      <FoodMenu />
+      <MapSection />
+      {postNodes && <BlogPostsPreview title="Latest News" nodes={postNodes} browseMoreHref="/blog/" />}
+    </Layout>
+  )
+}
+
+export default Index
+
 export const query = graphql`
   query IndexPageQuery {
     site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
@@ -33,7 +64,7 @@ export const query = graphql`
       keywords
     }
 
-    posts: allSanityPost(limit: 6, sort: { fields: [publishedAt], order: DESC }) {
+    posts: allSanityPost(limit: 3, sort: { fields: [publishedAt], order: DESC }) {
       edges {
         node {
           id
@@ -70,34 +101,3 @@ export const query = graphql`
     }
   }
 `
-
-const Index = ({ data, errors }) => {
-  if (errors) {
-    return (
-      <Layout>
-        <GraphQLErrorList errors={errors} />
-      </Layout>
-    )
-  }
-
-  const { site } = data || {}
-  const postNodes = (data || {}).posts ? mapEdgesToNodes(data.posts).filter(filterOutDocsWithoutSlugs) : []
-
-  if (!site) {
-    throw new Error(
-      'Missing "Site settings". Open the studio at http://localhost:3333 and add some content to "Site settings" and restart the development server.'
-    )
-  }
-
-  return (
-    <Layout>
-      <Hero />
-      <Highlights />
-      <FoodMenu />
-      <MapSection />
-      {postNodes && <BlogPostPreviewGrid title="Latest News" nodes={postNodes} browseMoreHref="/blog/" />}
-    </Layout>
-  )
-}
-
-export default Index
