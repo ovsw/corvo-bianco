@@ -51,7 +51,7 @@ const MainNav = () => {
     },
     {
       name: 'About',
-      url: '/',
+      url: '/about',
     },
     {
       name: 'News',
@@ -59,7 +59,7 @@ const MainNav = () => {
     },
     {
       name: 'Contact',
-      url: '/',
+      url: '/contact',
     },
   ]
 
