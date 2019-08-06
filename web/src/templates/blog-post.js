@@ -2,9 +2,31 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import GraphQLErrorList from '../components/graphql-error-list'
 
+// views
+import GenericPage from '../views/GenericPage'
+
 // Components
-import Layout from '../components/Layout'
-import BlogPost from '../components/blog-post'
+import BlogPost from '../components/BlogPost'
+
+const BlogPostTemplate = props => {
+  const { data, errors } = props
+  const post = data && data.post
+  return (
+    <>
+      {/* {errors && <SEO title="GraphQL Error" />} */}
+      {/* {post && <SEO title={post.title || 'Untitled'} />} */}
+
+      {errors && (
+        <div>
+          <GraphQLErrorList errors={errors} />
+        </div>
+      )}
+      <GenericPage mainImage={data.post.mainImage}>{post && <BlogPost {...post} />}</GenericPage>
+    </>
+  )
+}
+
+export default BlogPostTemplate
 
 export const query = graphql`
   query BlogPostTemplateQuery($id: String!) {
@@ -41,24 +63,3 @@ export const query = graphql`
     }
   }
 `
-
-const BlogPostTemplate = props => {
-  const { data, errors } = props
-  const post = data && data.post
-  return (
-    <Layout>
-      {/* {errors && <SEO title="GraphQL Error" />} */}
-      {/* {post && <SEO title={post.title || 'Untitled'} />} */}
-
-      {errors && (
-        <div>
-          <GraphQLErrorList errors={errors} />
-        </div>
-      )}
-
-      {post && <BlogPost {...post} />}
-    </Layout>
-  )
-}
-
-export default BlogPostTemplate

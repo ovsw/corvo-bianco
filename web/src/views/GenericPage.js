@@ -4,15 +4,13 @@ import tw from 'tailwind.macro'
 
 // components
 import PageHeader from '../components/PageHeader'
-
-// elements
-import HpSection from '../ui/HpSection'
+import Layout from '../components/Layout'
 
 const GenericPage = ({ mainImage, children }) => (
-  <>
+  <Layout>
     <PageHeader mainImage={mainImage} />
-    <HpSection>{children}</HpSection>
-  </>
+    {children}
+  </Layout>
 )
 
 export default GenericPage

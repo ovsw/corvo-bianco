@@ -9,8 +9,8 @@ import Container from '../ui/Container'
 import BigTitle from '../ui/BigTitle'
 // import RoleList from './role-list'
 
-// views
-import GenericPage from '../views/GenericPage'
+// elements
+import HpSection from '../ui/HpSection'
 
 const PostContainer = styled(Container)`
   ${tw`md:max-w-lg xl:max-w-xl md:mx-auto`};
@@ -35,7 +35,7 @@ const PostDate = styled.p`
 function BlogPost(props) {
   const { _rawBody, authors, categories, title, mainImage, publishedAt } = props
   return (
-    <GenericPage mainImage={mainImage}>
+    <HpSection>
       <PostContainer>
         <article>
           {publishedAt && (
@@ -64,7 +64,7 @@ function BlogPost(props) {
           </aside>
         </article>
       </PostContainer>
-    </GenericPage>
+    </HpSection>
   )
 }
 
