@@ -22,7 +22,7 @@ const MapWrapper = styled.section`
 //       // Important! Always set the container height explicitly
 //       <div style={{ height: '100vh', width: '100%' }}>
 //         <GoogleMapReact
-//           bootstrapURLKeys={{ key: 'AIzaSyBT7HeltWok33QleFDP0sM8y5ZCg4YMM9I' }}
+//           bootstrapURLKeys={{ key: '' }}
 //           defaultCenter={this.props.center}
 //           defaultZoom={this.props.zoom}
 //         >
