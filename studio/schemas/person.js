@@ -6,6 +6,7 @@ export default {
   type: 'document',
   icon: MdPerson,
   liveEdit: false,
+  __experimental_actions: [ 'update', 'publish' ], /* 'create', 'delete' */
   fields: [
     {
       name: 'name',

@@ -63,6 +63,15 @@ export default () =>
                 )
                 .icon(FaFile),
               S.listItem()
+                .title('News')
+                .child(
+                  S.editor()
+                    .id('newsPage')
+                    .schemaType('page')
+                    .documentId('news')
+                )
+                .icon(FaFile),
+              S.listItem()
                 .title('Contact')
                 .child(
                   S.editor()
@@ -73,14 +82,14 @@ export default () =>
                 .icon(FaFile)
             ])
         ),
-      S.listItem()
-        .title('People')
-        .schemaType('person')
-        .child(S.documentTypeList('person').title('People')),
-      S.listItem()
-        .title('Categories')
-        .schemaType('category')
-        .child(S.documentTypeList('category').title('Categories')),
+      // S.listItem()
+      //   .title('People')
+      //   .schemaType('person')
+      //   .child(S.documentTypeList('person').title('People')),
+      // S.listItem()
+      //   .title('Categories')
+      //   .schemaType('category')
+      //   .child(S.documentTypeList('category').title('Categories')),
       S.listItem()
         .title('Site Settings')
         .child(

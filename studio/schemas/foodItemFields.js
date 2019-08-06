@@ -5,21 +5,6 @@ const FoodItemFields = [
     type: 'string'
   },
   {
-    name: 'ingredients',
-    title: 'Ingredients',
-    type: 'string'
-  },
-  {
-    name: 'price',
-    title: 'Price ($)',
-    type: 'number'
-  },
-  {
-    name: 'mainImage',
-    title: 'Main image',
-    type: 'mainImage'
-  },
-  {
     name: 'slug',
     title: 'Slug',
     type: 'slug',
@@ -30,13 +15,28 @@ const FoodItemFields = [
       maxLength: 96
     }
   },
-
   {
-    name: 'categories',
-    title: 'Categories',
-    type: 'array',
-    of: [{ type: 'reference', to: { type: 'category' } }]
+    name: 'mainImage',
+    title: 'Main image',
+    type: 'mainImage'
   },
+  {
+    name: 'ingredients',
+    title: 'Ingredients',
+    type: 'string'
+  },
+  {
+    name: 'price',
+    title: 'Price ($)',
+    type: 'number'
+  },
+
+  // {
+  //   name: 'categories',
+  //   title: 'Categories',
+  //   type: 'array',
+  //   of: [{ type: 'reference', to: { type: 'category' } }]
+  // },
   {
     name: 'body',
     title: 'Body',

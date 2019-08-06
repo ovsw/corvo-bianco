@@ -18,7 +18,6 @@ import postAuthor from './postAuthor'
 import projectMember from './projectMember'
 import siteSettings from './siteSettings'
 import slideshow from './slideshow'
-import menuItem from './menuItem'
 import savoryPizza from './savoryPizza'
 import dessertPizza from './dessertPizza'
 import puccia from './puccia'
@@ -47,7 +46,6 @@ export default createSchema({
     projectMember,
     siteSettings,
     slideshow,
-    menuItem,
     savoryPizza,
     dessertPizza,
     puccia,
