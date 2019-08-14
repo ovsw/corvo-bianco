@@ -8,7 +8,7 @@ import RusticWoodTexture from '../images/smooth-black-wood.jpg'
 import PaintedWoodTexture from '../images/h4-slide-3.jpg'
 import PaintedWoodTexture2 from '../images/h4-slide-33.jpg'
 import Firelight from '../images/firelight3.png'
-import PizzaPlaceholder from '../images/placeholder-pizza.png'
+import PizzaPlaceholder from '../images/Margareets2.png'
 
 // elements
 import Container from '../ui/Container'
@@ -19,14 +19,13 @@ import { StyledLink } from '../ui/Button'
 
 const SectionStyled = styled.section`
   background-image: url(${PaintedWoodTexture2});
-  background-position: 80% 0%;
   background-size: cover;
   ${tw`py-12 relative overflow-hidden`};
   @media (min-width: 600px) {
     background-position: 70% 0%;
   }
   @media (min-width: 900px) {
-    background-position: rop right;
+    background-position: top right;
   }
 `
 // const FireGradient = styled.div`
@@ -49,9 +48,9 @@ const RightCol = styled.div`
   padding-bottom: 200px;
   @media (min-width: 900px) {
     ${tw`py-2 px-2`};
+    min-height: 600px;
   }
   img {
-    max-height: 60vh;
     ${tw`absolute`};
     left: 1rem;
     @media (min-width: 600px) {
@@ -61,7 +60,7 @@ const RightCol = styled.div`
     }
     @media (min-width: 900px) {
       ${tw`static`};
-      width: 500px;
+      width: 800px;
       max-width: 100%;
     }
   }
@@ -88,7 +87,7 @@ const Hero = () => (
         {/* left col */}
         <LeftCol className="LeftCol">
           <Intro className="Intro">Pizza of the Day</Intro>
-          <BigTitle>Cinnamon Roll</BigTitle>
+          <BigTitle>Margareets</BigTitle>
           <Paragraph>
             <span>
               Back to the basics. <br />
