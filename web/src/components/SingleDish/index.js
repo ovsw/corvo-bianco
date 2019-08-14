@@ -53,7 +53,7 @@ const RightColumn = styled.div`
     ${tw`absolute`};
     left: 200px;
     max-width: 1000px;
-    margin-left: -100px;
+
     top: -200px;
     width: 400px;
     @media (min-width: 600px) {
