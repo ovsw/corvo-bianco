@@ -15,11 +15,14 @@ import Highlights from '../Highlights'
 import Container from '../../ui/Container'
 import BigTitle from '../../ui/BigTitle'
 
+// images
+import ChalkBorderSource from '../../images/chalk-squalre.png'
+
 const DarkWrapper = styled.section`
   background: url(${BlackBoardBgImage});
   ${tw`text-white relative  overflow-hidden`};
   padding-top: 150px;
-  ${tw`md:py-12 px-8 xl:px-0`};
+  ${tw`pb-12 md:py-12 px-8 xl:px-0`};
 
   h1 {
     ${tw`font-chalk`};
@@ -40,11 +43,15 @@ const LeftColumn = styled.div`
     ${tw`text-3xl`};
   }
   .ingredients {
-    ${tw`font-typewritter text-2xl leading-normal xl:pr-12`};
+    ${tw`font-typewritter md:text-2xl leading-normal pb-4 xl:pr-12`};
+    color: gray;
   }
 `
 const Story = styled.div`
-  ${tw`font-typewritter leading-loose pr-12`};
+  ${tw`font-typewritter leading-loose pt-4 md:pr-12`};
+  border-top: 5px solid white;
+  border-image: url(${ChalkBorderSource}) 70 repeat;
+  border-image-outset: 2px;
 `
 const RightColumn = styled.div`
   ${tw`w-full md:w-1/3 xl:w-1/2 md:relative text-center`};
@@ -69,7 +76,7 @@ const RightColumn = styled.div`
   }
 `
 const StyledBigHeading = styled(BigTitle)`
-  ${tw`text-5xl xl:text-6xl`};
+  ${tw`text-4xl md:text-5xl xl:text-6xl`};
 `
 const StyledSubHeading = styled(BigTitle)`
   ${tw`text-4xl xl:text-5xl`};
@@ -88,10 +95,10 @@ const SingleDish = ({
             <StyledBigHeading priority="1" hot>
               {name} {suffix}
             </StyledBigHeading>
-            <p className="ingredients">{ingredients}</p>
             <StyledSubHeading priority="2" className="price">
               ${price}
             </StyledSubHeading>
+            <p className="ingredients">{ingredients}</p>
             <Story>{_rawBody && <BlockContent blocks={_rawBody} />}</Story>
           </LeftColumn>
           <RightColumn>
