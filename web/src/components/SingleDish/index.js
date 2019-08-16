@@ -105,9 +105,10 @@ const SingleDish = ({
             {mainImage && mainImage.asset && (
               <img
                 src={imageUrlFor(buildImageObj(mainImage))
-                  .width(600)
-                  .height(Math.floor((16 / 16) * 600))
-                  .fit('crop')
+                  // .width(600)
+                  // .height(Math.floor((16 / 16) * 600))
+                  // .fit('crop')
+                  .auto('format')
                   .url()}
                 alt={mainImage.alt}
               />

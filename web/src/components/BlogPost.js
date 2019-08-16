@@ -23,9 +23,21 @@ const PostTitle = styled(BigTitle)`
   ${tw`text-2xl mt-0 md:text-5xl lg:text-6xl capitalize`};
 `
 const PostContent = styled.div`
-  ${tw`text-lg md:text-2xl font-typewritter leading-loose`};
+  ${tw`text-lg md:text-xl font-typewritter leading-loose`};
   ${tw`pt-4 mb-12`};
   color: #3a3a3a;
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    ${tw`font-chalk text-6xl leading-none mb-8`};
+    text-shadow: 0 0 2px #e07628;
+  }
+  h3 {
+    ${tw`text-4xl mb-4`};
+  }
 `
 const PostDate = styled.p`
   ${tw`font-typewritter text-lg md:text-2xl mb-4 md:mb-8 `};
