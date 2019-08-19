@@ -2,7 +2,25 @@ export default {
   name: 'post',
   title: 'Blog Post',
   type: 'document',
+  fieldsets: [
+    { title: 'SEO Info',
+      name: 'seo',
+      options: { collapsible: true, collapsed: true }
+    }
+  ],
   fields: [
+    {
+      name: 'seoTitle',
+      title: 'SEO Title',
+      type: 'string',
+      fieldset: 'seo'
+    },
+    {
+      name: 'seoDescription',
+      title: 'SEO Description',
+      type: 'text',
+      fieldset: 'seo'
+    },
     {
       name: 'title',
       title: 'Title',

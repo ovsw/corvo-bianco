@@ -26,10 +26,6 @@ export default FoodMenu
 
 const query = graphql`
   query CurrentMenuQuery {
-    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
-      title
-    }
-
     sanityMenuSettings {
       savoryPizzaCurrMenu {
         id

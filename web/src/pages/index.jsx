@@ -44,7 +44,7 @@ const Index = ({ data, errors }) => {
   }
 
   return (
-    <Layout>
+    <Layout seoTitle={site.seoTitle} seoDescription={site.seoDescription}>
       <Hero />
       <Highlights />
       <FoodMenu />
@@ -59,9 +59,8 @@ export default Index
 export const query = graphql`
   query IndexPageQuery {
     site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
-      title
-      description
-      keywords
+      seoTitle
+      seoDescription
     }
 
     posts: allSanityPost(limit: 3, sort: { fields: [publishedAt], order: DESC }) {

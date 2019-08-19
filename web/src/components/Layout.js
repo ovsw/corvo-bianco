@@ -13,9 +13,13 @@ import 'typeface-open-sans'
 import 'typeface-cabin-sketch'
 import 'typeface-special-elite'
 
-const Layout = ({ children }) => (
+const Layout = ({
+  seoTitle = 'Corvo Bianco - Wood Fired Pizza Truck',
+  seoDescription = 'Wood fire Pizza Truck serving Neapolitan Pizza, Puccia and Instalate. Authentic fresh ingredients.',
+  children,
+}) => (
   <>
-    <SEO />
+    <SEO seoTitle={seoTitle} seoDescription={seoDescription} />
     <GlobalStyle />
 
     <Headroom style={{ zIndex: '99999', position: 'fixed' }} disable>

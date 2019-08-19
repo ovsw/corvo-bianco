@@ -5,7 +5,25 @@ export default {
   title: 'Current Menu Settings',
   type: 'document',
   icon: MdViewList,
+  fieldsets: [
+    { title: 'SEO Info',
+      name: 'seo',
+      options: { collapsible: true, collapsed: true }
+    }
+  ],
   fields: [
+    {
+      name: 'seoTitle',
+      title: 'SEO Title',
+      type: 'string',
+      fieldset: 'seo'
+    },
+    {
+      name: 'seoDescription',
+      title: 'SEO Description',
+      type: 'text',
+      fieldset: 'seo'
+    },
     {
       title: 'Savory Pizza Current Menu',
       name: 'savoryPizzaCurrMenu',

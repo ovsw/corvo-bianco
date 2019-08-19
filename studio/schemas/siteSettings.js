@@ -7,30 +7,49 @@ export default {
   liveEdit: false,
   __experimental_actions: ['update', 'publish' /* 'create', 'delete' */],
   icon: MdSettings,
+  fieldsets: [
+    { title: 'SEO Info',
+      name: 'seo'
+    }
+  ],
   fields: [
     {
-      name: 'title',
-      title: 'Title',
-      type: 'string'
+      name: 'seoTitle',
+      description: 'Home Page SEO Title',
+      title: 'SEO Title',
+      type: 'string',
+      fieldset: 'seo'
     },
     {
-      name: 'description',
-      title: 'Description',
-      type: 'text'
-    },
-    {
-      name: 'keywords',
-      title: 'Keywords',
-      type: 'array',
-      of: [{ type: 'string' }],
-      options: {
-        layout: 'tags'
-      }
-    },
-    {
-      name: 'author',
-      title: 'Author',
-      type: 'string'
+      name: 'seoDescription',
+      description: 'Home Page SEO Description',
+      title: 'SEO Description',
+      type: 'text',
+      fieldset: 'seo'
     }
+    // {
+    //   name: 'title',
+    //   title: 'Title',
+    //   type: 'string'
+    // },
+    // {
+    //   name: 'description',
+    //   title: 'Description',
+    //   type: 'text'
+    // }
+    // {
+    //   name: 'keywords',
+    //   title: 'Keywords',
+    //   type: 'array',
+    //   of: [{ type: 'string' }],
+    //   options: {
+    //     layout: 'tags'
+    //   }
+    // },
+    // {
+    //   name: 'author',
+    //   title: 'Author',
+    //   type: 'string'
+    // }
   ]
 }

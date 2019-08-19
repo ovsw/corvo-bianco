@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import { graphql, useStaticQuery } from 'gatsby'
 import config from '../../config/website'
 
-const SEO = () => {
+const SEO = ({ seoTitle, seoDescription }) => {
   const data = useStaticQuery(
     graphql`
       query SEO {
@@ -14,8 +14,10 @@ const SEO = () => {
     `
   )
 
-  const title = config.siteTitle
-  const description = config.siteDescription
+  console.log(seoTitle)
+
+  const title = seoTitle
+  const description = seoDescription
 
   const realPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
   const homeURL = `${config.siteUrl}${realPrefix}`
@@ -32,24 +34,24 @@ const SEO = () => {
     headline: config.siteHeadline,
     inLanguage: 'en',
     mainEntityOfPage: homeURL,
-    description: config.siteDescription,
-    name: config.siteTitle,
+    description: data.seoDescription,
+    name: data.seoTitle,
     author: {
       '@type': 'Person',
-      name: config.author,
+      name: 'OVS Websites',
     },
     copyrightHolder: {
       '@type': 'Person',
-      name: config.author,
+      name: 'Dena Leigh',
     },
     copyrightYear: '2019',
     creator: {
       '@type': 'Person',
-      name: config.author,
+      name: 'Dena Leigh',
     },
     publisher: {
       '@type': 'Person',
-      name: config.author,
+      name: 'Corvo Bianco',
     },
     datePublished: '2019-01-17',
     dateModified: data.site.buildTime,
