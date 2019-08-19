@@ -1,4 +1,5 @@
 import React from 'react'
+import Headroom from 'react-headroom'
 import GlobalStyle from '../styles/global'
 import SEO from './SEO'
 import Header from './Header'
@@ -16,7 +17,10 @@ const Layout = ({ children }) => (
   <>
     <SEO />
     <GlobalStyle />
-    <Header />
+
+    <Headroom style={{ zIndex: '99999', position: 'fixed' }} disable>
+      <Header />
+    </Headroom>
     {children}
     <Footer />
   </>

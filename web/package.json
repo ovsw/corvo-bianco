@@ -26,6 +26,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-headroom": "^2.2.8",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.7.0",
     "react-moment": "^0.9.2",
@@ -74,7 +75,11 @@
   "homepage": "https://corvo-bianco.pizza",
   "eslintConfig": {
     "root": true,
-    "extends": ["airbnb", "prettier", "prettier/react"],
+    "extends": [
+      "airbnb",
+      "prettier",
+      "prettier/react"
+    ],
     "parser": "babel-eslint",
     "parserOptions": {
       "ecmaVersion": 2017,
@@ -99,7 +104,10 @@
           "argsIgnorePattern": "res|next|stage|^err|on|config"
         }
       ],
-      "arrow-body-style": [2, "as-needed"],
+      "arrow-body-style": [
+        2,
+        "as-needed"
+      ],
       "no-param-reassign": [
         2,
         {
@@ -107,7 +115,8 @@
         }
       ],
       "no-unused-expressions": [
-        1, {
+        1,
+        {
           "allowTaggedTemplates": true
         }
       ],
@@ -133,7 +142,10 @@
       "react/jsx-filename-extension": [
         1,
         {
-          "extensions": [".js", ".jsx"]
+          "extensions": [
+            ".js",
+            ".jsx"
+          ]
         }
       ],
       "quotes": [
@@ -144,7 +156,13 @@
           "allowTemplateLiterals": true
         }
       ],
-      "indent": ["error", 2, {"SwitchCase": 1}],
+      "indent": [
+        "error",
+        2,
+        {
+          "SwitchCase": 1
+        }
+      ],
       "prettier/prettier": [
         "error",
         {
@@ -158,10 +176,14 @@
       "jsx-a11y/anchor-is-valid": [
         "warn",
         {
-          "aspects": ["invalidHref"]
+          "aspects": [
+            "invalidHref"
+          ]
         }
       ]
     },
-    "plugins": ["prettier"]
+    "plugins": [
+      "prettier"
+    ]
   }
 }

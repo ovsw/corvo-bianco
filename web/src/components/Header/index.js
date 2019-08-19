@@ -23,7 +23,7 @@ import Container from '../../ui/Container'
 // styles
 const StyledHeader = styled.div`
   ${tw`relative`};
-  z-index: 100;
+  z-index: 9999;
   border-image: url(${ChalkBorderSource}) 70 repeat;
   border-bottom: 5px solid black;
   background: url(${BgDark});
