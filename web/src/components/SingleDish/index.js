@@ -52,6 +52,7 @@ const Story = styled.div`
   border-top: 5px solid white;
   border-image: url(${ChalkBorderSource}) 70 repeat;
   border-image-outset: 2px;
+  ${tw`mb-8`};
 `
 const RightColumn = styled.div`
   ${tw`w-full md:w-1/3 xl:w-1/2 md:relative text-center`};
