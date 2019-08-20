@@ -15,7 +15,7 @@ import SocialLinks from './SocialLinks'
 import Container from '../ui/Container'
 
 const FooterStyled = styled.footer`
-  ${tw`text-white pt-12 md:pt-8`};
+  ${tw`text-white pt-12 `};
   border-image: url(${ChalkBorderSource}) 70 repeat;
   border-top: 5px solid white;
   background: url(${BgDark});
@@ -36,6 +36,7 @@ const LeftCol = styled.div`
     ${tw`font-typewritter leading-normal`};
   }
   .contact {
+    ${tw`my-2`};
     br {
       ${tw`md:hidden`};
     }
@@ -44,7 +45,7 @@ const LeftCol = styled.div`
     }
   }
   .address {
-    ${tw`mt-2`};
+    ${tw`my-2`};
   }
 
   svg {
@@ -53,8 +54,7 @@ const LeftCol = styled.div`
   }
 `
 const Tagline = styled.p`
-  margin-bottom: 2rem;
-  ${tw`px-4 pb-8 md:px-0 md:pb-2`};
+  ${tw`px-4 pb-8 md:px-2 md:py-4`};
   border-image: url(${ChalkBorderSource}) 70 repeat;
   border-bottom: 5px solid white;
 `
@@ -79,26 +79,24 @@ const Copyright = styled.p`
     ${tw`md:hidden`};
   }
 `
-const Footer = () => (
+const Footer = ({ footerText }) => (
   <FooterStyled>
     <Container>
       <FooterColumns>
         <LeftCol>
           <h3>Corvo Bianco</h3>
           <Tagline>Authentic Neapolitan Wood Fired Pizza Truck</Tagline>
+          <p className="address">
+            <FaMap /> {footerText}
+          </p>
           <p className="contact">
-            <a href="tel:508-238-2387">
-              <FaPhone /> (508) 238-2387
+            <a href="tel:914-733-2475">
+              <FaPhone /> (914) 733 2475
             </a>{' '}
             <br />{' '}
             <a href="mailto:info@corvobianco.pizza">
               <FaEnvelope /> info@corvobianco.pizza
             </a>
-          </p>
-          <p className="address">
-            <FaMap /> 1497 Main Street, #227
-            <br />
-            Dunedin, FL, 34698
           </p>
         </LeftCol>
         <RightCol>

@@ -67,7 +67,7 @@ const IntroPara = styled.p`
     ); */
   }
 `
-const Card = styled.a`
+const Card = styled.div`
   ${tw`flex-1 flex flex-wrap no-underline  relative `};
   padding-top: 150px;
   h3 {
@@ -84,13 +84,13 @@ const contentMap = [
   {
     title: 'Ready in 3 minutes or less',
     text:
-      "The Wood-fired oven is crazy-hot. Pies are done in about 3 minutes or less. <strong>Best enjoyed fresh from the oven </strong>if you're looking for that crispy goodness!",
+      "The Wood-fired oven is crazy-hot. Pies are done in about 3 minutes or less. <strong>Best enjoyed fresh from the oven </strong> or re-heated beforehand, if you're looking for that crispy goodness!",
     icon: 'fast',
   },
   {
     title: 'Charred spots are good!',
     text:
-      'Due to the high heat, the crust will have dark spots - like a Dalmatian :) This is <strong>not only normal but also desirable</strong>, as it adds to the flavor.',
+      'Due to the high heat, the crust will have dark spots - like a leopard :) This is <strong>not only normal but also desirable</strong>, as it adds to the flavor.',
     icon: 'oven',
   },
   {
@@ -111,7 +111,7 @@ const contentMap = [
     // text:
     //   'Fluffier & moister than the normal pizza, Neapoletan Pizza doesn\'t "turn to cardboard" after a few minutes.',
     text:
-      'Fiori di Latte Mozarella <strong>made daily</strong>, <strong>authentic imported</strong> San Marzano Tomatoes, <strong>Caputo Flour</strong>, Italian Sea Salt, <strong>Organic Fresh Local</strong> Toppings ... ',
+      'Fiori di Latte Mozarella <strong>made daily</strong>, <strong>authentic imported</strong> San Marzano Tomatoes, <strong>Caputo 00 Flour</strong>, Italian Sea Salt, <strong>Organic Fresh Local</strong> Toppings ... ',
     icon: 'quality',
   },
   {

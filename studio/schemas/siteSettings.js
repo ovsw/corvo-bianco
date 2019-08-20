@@ -9,7 +9,8 @@ export default {
   icon: MdSettings,
   fieldsets: [
     { title: 'SEO Info',
-      name: 'seo'
+      name: 'seo',
+      options: { collapsible: true, collapsed: true }
     }
   ],
   fields: [
@@ -18,15 +19,26 @@ export default {
       description: 'Home Page SEO Title',
       title: 'SEO Title',
       type: 'string',
-      fieldset: 'seo'
+      fieldset: 'seo',
+      validation: Rule => Rule.required().error('The SEO Title is missing.')
+
     },
     {
       name: 'seoDescription',
       description: 'Home Page SEO Description',
       title: 'SEO Description',
       type: 'text',
-      fieldset: 'seo'
+      fieldset: 'seo',
+      validation: Rule => Rule.required().error('The SEO Description is missing.')
+
+    },
+    {
+      name: 'footerText',
+      description: 'This appeares in the footer of the website. Used for the locations text.',
+      title: 'Footer Text',
+      type: 'text'
     }
+
     // {
     //   name: 'title',
     //   title: 'Title',
