@@ -126,7 +126,7 @@ const Highlights = () => (
   <HpSection>
     <Container>
       <SectionTitle>
-        <span>"Neo-what Pizza?"</span> Neapoletan <br />
+        <span>"Neo-what Pizza?"</span> Neapolitan <br />
         <span>
           [ nee-uh-<strong>paa</strong>-luh-tn ]
         </span>
