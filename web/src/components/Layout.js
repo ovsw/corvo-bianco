@@ -28,14 +28,12 @@ const Layout = ({ seoTitle, seoDescription, children }) => {
     `
   )
 
-  const seoTitleProcessed = seoTitle || data.seoTitle
-  const seoDescProcessed = seoDescription || data.seoDescription
-
-  console.log(data.site.footerText)
+  const seoTitleProcessed = seoTitle !== undefined ? seoTitle : data.site.seoTitle
+  const seoDescProcessed = seoDescription !== undefined ? seoDescription : data.site.seoDescription
 
   return (
     <>
-      <SEO seoTitle={seoTitleProcessed} seoDescription={seoDescription} />
+      <SEO seoTitle={seoTitleProcessed} seoDescription={seoDescProcessed} />
       <GlobalStyle />
 
       <Headroom style={{ zIndex: '99999', position: 'fixed' }} disable>

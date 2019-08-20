@@ -14,8 +14,6 @@ const SEO = ({ seoTitle, seoDescription }) => {
     `
   )
 
-  console.log(seoTitle)
-
   const title = seoTitle
   const description = seoDescription
 
