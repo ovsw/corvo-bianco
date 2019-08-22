@@ -3,11 +3,7 @@ import styled from 'styled-components'
 import tw from 'tailwind.macro'
 
 // images
-import WhiteWoodTexture from '../images/white-wood.jpg'
-import RusticWoodTexture from '../images/smooth-black-wood.jpg'
-import PaintedWoodTexture from '../images/h4-slide-3.jpg'
 import PaintedWoodTexture2 from '../images/h4-slide-33.jpg'
-import Firelight from '../images/firelight3.png'
 import PizzaPlaceholder from '../images/Margareets3.png'
 
 // elements

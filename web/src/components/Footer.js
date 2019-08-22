@@ -6,6 +6,7 @@ import { FaPhone, FaEnvelope, FaMap } from 'react-icons/fa'
 // images
 import BgDark from '../images/bgd.jpg'
 import MulinoCaputoLogo from '../images/farine-caputo-logo.png'
+import CiaoLogo from '../images/ciao-logo.png'
 import ChalkBorderSource from '../images/chalk-square2.png'
 
 // components
@@ -60,8 +61,12 @@ const Tagline = styled.p`
 `
 const RightCol = styled.div`
   ${tw`md:w-1/3 text-center`};
-  img {
+  a img {
     width: 160px;
+    ${tw`mr-4`};
+  }
+  a:last-child img {
+    ${tw`mr-0`};
   }
 `
 const SocialLinksWrapper = styled.div`
@@ -113,6 +118,9 @@ const Footer = ({ footerText }) => (
           </SocialLinksWrapper>
           <a href="http://www.mulinocaputo.it/en/flour" rel="noopener noreferrer" target="_blank">
             <img src={MulinoCaputoLogo} alt="Mulino Caputo Logo" />
+          </a>
+          <a href="https://www.compagniamercantiledoltremare.com/" rel="noopener noreferrer" target="_blank">
+            <img src={CiaoLogo} alt="Ciao Logo" />
           </a>
         </RightCol>
       </FooterColumns>

@@ -17,9 +17,12 @@ import BigTitle from '../../ui/BigTitle'
 
 // images
 import ChalkBorderSource from '../../images/chalk-square.png'
+import PaintedWoodTexture2 from '../../images/h4-slide-33.jpg'
 
 const DarkWrapper = styled.section`
-  background: url(${BlackBoardBgImage});
+  background: url(${PaintedWoodTexture2});
+  background-position: top right;
+  background-size: cover;
   ${tw`text-white relative  overflow-hidden`};
   padding-top: 150px;
   ${tw`pb-12 md:py-12 px-8 xl:px-0`};
@@ -44,7 +47,7 @@ const LeftColumn = styled.div`
   }
   .ingredients {
     ${tw`font-typewritter md:text-2xl leading-normal pb-4 xl:pr-12`};
-    color: gray;
+    color: #b7b7b7;
   }
 `
 const Story = styled.div`
