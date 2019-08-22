@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import tw from 'tailwind.macro'
 import { Link } from 'gatsby'
 
-import ChalkBorderSource from '../../images/chalk-squalre.png'
+import ChalkBorderSource from '../../images/chalk-square2.png'
 
 const StyledMenu = styled.ul`
   ${tw`list-reset`};

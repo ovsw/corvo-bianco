@@ -108,10 +108,8 @@ const contentMap = [
 
   {
     title: 'ONLY Premium Ingredients',
-    // text:
-    //   'Fluffier & moister than the normal pizza, Neapoletan Pizza doesn\'t "turn to cardboard" after a few minutes.',
     text:
-      'Fiori di Latte Mozarella <strong>made daily</strong>, <strong>authentic imported</strong> San Marzano Tomatoes, <strong>Caputo 00 Flour</strong>, Italian Sea Salt, <strong>Organic Fresh Local</strong> Toppings ... ',
+      'Fior di Latte Mozzarella <strong>made daily</strong>, <strong>authentic imported</strong> San Marzano Tomatoes, <strong>Caputo 00 Flour</strong>, Italian Sea Salt, <strong>Organic Fresh, Non-GMO Local</strong> ingredients ... ',
     icon: 'quality',
   },
   {

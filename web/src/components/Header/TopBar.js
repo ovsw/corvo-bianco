@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import tw from 'tailwind.macro'
 
 // images
-import ChalkBorderSource from '../../images/chalk-squalre.png'
+import ChalkBorderSource from '../../images/chalk-square2.png'
 
 // components
 import SocialLinks from '../SocialLinks'
@@ -24,7 +24,7 @@ const Wrapper = styled.div`
   }
 `
 const ColWrapper = styled.div`
-  ${tw`flex items-center`};
+  ${tw`flex items-center justify-between`};
   @media (min-width: 600px) {
     padding-left: 150px;
   }
@@ -40,7 +40,8 @@ const RightCol = styled.div`
   a {
     ${tw`flex items-center md:inline-block hidden md:text-3xl relative`};
     top: 3px;
-    &:first-child {
+    &:first-child,
+    &:nth-child(2) {
       ${tw`inline-block`};
     }
   }
@@ -51,7 +52,7 @@ const TopBar = () => (
     <Container>
       <ColWrapper>
         <LeftCol>
-          <p>Fast, tasty, healthy, NOT fast-food. </p>
+          <p>Tagline from Kay goes here.</p>
         </LeftCol>
         <RightCol>
           <div>

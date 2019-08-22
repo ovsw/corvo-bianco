@@ -12,10 +12,8 @@ import TopBar from './TopBar'
 
 // images
 import LogoRoundImage from '../../images/corvo-bianco-logo-badge.png'
-import LogoImage from '../../images/corvo-bianco-logo.png'
 import BgDark from '../../images/bgd.jpg'
-import ChalkBorderSource from '../../images/chalk-squalre.png'
-import BlackBoardBgImage from '../../images/10295.jpg'
+import ChalkBorderSource from '../../images/chalk-square2.png'
 
 // elements
 import Container from '../../ui/Container'

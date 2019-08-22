@@ -8,7 +8,7 @@ import tw from 'tailwind.macro'
 
 // images
 import hand from '../../images/icons/hand.svg'
-import ChalkBorderSource from '../../images/chalk-squalre.png'
+import ChalkBorderSource from '../../images/chalk-square2.png'
 
 const Dots = styled.span`
   ${tw`border-b-4 border-dotted border-grey w-6 flex-1 relative`};

@@ -16,7 +16,7 @@ import Container from '../../ui/Container'
 import BigTitle from '../../ui/BigTitle'
 
 // images
-import ChalkBorderSource from '../../images/chalk-squalre.png'
+import ChalkBorderSource from '../../images/chalk-square.png'
 
 const DarkWrapper = styled.section`
   background: url(${BlackBoardBgImage});

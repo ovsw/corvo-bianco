@@ -6,7 +6,7 @@ import { FaPhone, FaEnvelope, FaMap } from 'react-icons/fa'
 // images
 import BgDark from '../images/bgd.jpg'
 import MulinoCaputoLogo from '../images/farine-caputo-logo.png'
-import ChalkBorderSource from '../images/chalk-squalre.png'
+import ChalkBorderSource from '../images/chalk-square2.png'
 
 // components
 import SocialLinks from './SocialLinks'
@@ -54,7 +54,7 @@ const LeftCol = styled.div`
   }
 `
 const Tagline = styled.p`
-  ${tw`px-4 pb-8 md:px-2 md:py-4`};
+  ${tw`px-4 pb-8 md:px-2 md:pb-2 md:pt-4`};
   border-image: url(${ChalkBorderSource}) 70 repeat;
   border-bottom: 5px solid white;
 `
@@ -86,9 +86,17 @@ const Footer = ({ footerText }) => (
         <LeftCol>
           <h3>Corvo Bianco</h3>
           <Tagline>Authentic Neapolitan Wood Fired Pizza Truck</Tagline>
+          <Tagline>
+            Veteran owned and operated.{' '}
+            <strong style={{ color: '#e07628' }}>
+              10% off for all first responders, veterans and active duty military
+            </strong>
+            .
+          </Tagline>
           <p className="address">
             <FaMap /> {footerText}
           </p>
+
           <p className="contact">
             <a href="tel:914-733-2475">
               <FaPhone /> (914) 733 2475
