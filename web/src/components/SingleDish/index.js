@@ -136,10 +136,14 @@ const SingleDish = ({
             <LeftColumn>
               <p className="category">{category}</p>
               <StyledBigHeading priority="1" hot>
-                {name} {suffix}
+                <span style={{ textDecoration: !isDishOnMenu ? 'line-through' : 'none' }}>
+                  {name} {suffix}
+                </span>
               </StyledBigHeading>
+              {/* <p className="category">{!isDishOnMenu && 'Not currently on the menu. Check Back Later?'}</p> */}
+
               <StyledSubHeading priority="2" className="price">
-                ${price}
+                {isDishOnMenu ? `$${price}` : 'Not available :('}
               </StyledSubHeading>
               <p className="ingredients">{ingredients}</p>
               <Story>{_rawBody && <BlockContent blocks={_rawBody} />}</Story>
