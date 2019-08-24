@@ -47,11 +47,13 @@ async function createSavoryPizzaMenuItemPages(graphql, actions, reporter) {
   const { createPage } = actions
   const result = await graphql(`
     {
-      sanityMenuSettings {
-        savoryPizzaCurrMenu {
-          id
-          slug {
-            current
+      allSanitySavoryPizza {
+        edges {
+          node {
+            id
+            slug {
+              current
+            }
           }
         }
       }
@@ -60,12 +62,12 @@ async function createSavoryPizzaMenuItemPages(graphql, actions, reporter) {
 
   if (result.errors) throw result.errors
 
-  const savoryPizzaCurrMenu = result.data.sanityMenuSettings.savoryPizzaCurrMenu || []
+  // const savoryPizzaCurrMenu = result.data.sanityMenuSettings.savoryPizzaCurrMenu || []
+  const savoryPizzaEdges = (result.data.allSanitySavoryPizza || {}).edges || []
 
-  savoryPizzaCurrMenu.forEach(item => {
-    const { id } = item
-    const slug = item.slug.current
-    const path = `/menu/${slug}/`
+  savoryPizzaEdges.forEach(edge => {
+    const { id, slug = {} } = edge.node
+    const path = `/menu/${slug.current}/`
 
     reporter.info(`Creating Savory Pizza Menu page: ${path}`)
 
@@ -81,11 +83,13 @@ async function createDessertPizzaMenuItemPages(graphql, actions, reporter) {
   const { createPage } = actions
   const result = await graphql(`
     {
-      sanityMenuSettings {
-        dessertPizzaCurrMenu {
-          id
-          slug {
-            current
+      allSanityDessertPizza {
+        edges {
+          node {
+            id
+            slug {
+              current
+            }
           }
         }
       }
@@ -94,12 +98,12 @@ async function createDessertPizzaMenuItemPages(graphql, actions, reporter) {
 
   if (result.errors) throw result.errors
 
-  const dessertPizzaCurrMenu = result.data.sanityMenuSettings.dessertPizzaCurrMenu || []
+  // const dessertPizzaCurrMenu = result.data.sanityMenuSettings.dessertPizzaCurrMenu || []
+  const dessertPizzaEdges = (result.data.allSanityDessertPizza || {}).edges || []
 
-  dessertPizzaCurrMenu.forEach(item => {
-    const { id } = item
-    const slug = item.slug.current
-    const path = `/menu/${slug}/`
+  dessertPizzaEdges.forEach(edge => {
+    const { id, slug = {} } = edge.node
+    const path = `/menu/${slug.current}/`
 
     reporter.info(`Creating Dessert Pizza Menu page: ${path}`)
 
@@ -115,11 +119,13 @@ async function createPucciaMenuItemPages(graphql, actions, reporter) {
   const { createPage } = actions
   const result = await graphql(`
     {
-      sanityMenuSettings {
-        pucciaCurrMenu {
-          id
-          slug {
-            current
+      allSanityPuccia {
+        edges {
+          node {
+            id
+            slug {
+              current
+            }
           }
         }
       }
@@ -128,12 +134,12 @@ async function createPucciaMenuItemPages(graphql, actions, reporter) {
 
   if (result.errors) throw result.errors
 
-  const pucciaCurrMenu = result.data.sanityMenuSettings.pucciaCurrMenu || []
+  // const pucciaCurrMenu = result.data.sanityMenuSettings.pucciaCurrMenu || []
+  const pucciaEdges = (result.data.allSanityPuccia || {}).edges || []
 
-  pucciaCurrMenu.forEach(item => {
-    const { id } = item
-    const slug = item.slug.current
-    const path = `/menu/${slug}/`
+  pucciaEdges.forEach(edge => {
+    const { id, slug = {} } = edge.node
+    const path = `/menu/${slug.current}/`
 
     reporter.info(`Creating Puccia Menu page: ${path}`)
 
@@ -149,11 +155,13 @@ async function createInsalateMenuItemPages(graphql, actions, reporter) {
   const { createPage } = actions
   const result = await graphql(`
     {
-      sanityMenuSettings {
-        insalateCurrMenu {
-          id
-          slug {
-            current
+      allSanityInsalata {
+        edges {
+          node {
+            id
+            slug {
+              current
+            }
           }
         }
       }
@@ -162,12 +170,12 @@ async function createInsalateMenuItemPages(graphql, actions, reporter) {
 
   if (result.errors) throw result.errors
 
-  const insalateCurrMenu = result.data.sanityMenuSettings.insalateCurrMenu || []
+  // const insalateCurrMenu = result.data.sanityMenuSettings.insalateCurrMenu || []
+  const dessertPizzaEdges = (result.data.allSanityInsalata || {}).edges || []
 
-  insalateCurrMenu.forEach(item => {
-    const { id } = item
-    const slug = item.slug.current
-    const path = `/menu/${slug}/`
+  dessertPizzaEdges.forEach(edge => {
+    const { id, slug = {} } = edge.node
+    const path = `/menu/${slug.current}/`
 
     reporter.info(`Creating Insalate Menu page: ${path}`)
 

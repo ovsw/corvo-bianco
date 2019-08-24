@@ -13,6 +13,7 @@ import SingleDish from '../components/SingleDish'
 export const query = graphql`
   query SavoryPizzaMenuItemQuery($id: String!) {
     savoryPizzaMenuItem: sanitySavoryPizza(id: { eq: $id }) {
+      id
       ingredients
       mainImage {
         crop {

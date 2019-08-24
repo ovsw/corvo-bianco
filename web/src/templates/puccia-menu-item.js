@@ -13,6 +13,7 @@ import SingleDish from '../components/SingleDish'
 export const query = graphql`
   query PucciaMenuItemQuery($id: String!) {
     pucciaMenuItem: sanityPuccia(id: { eq: $id }) {
+      id
       ingredients
       mainImage {
         crop {

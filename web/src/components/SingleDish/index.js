@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
+import { graphql, useStaticQuery } from 'gatsby'
 import { buildImageObj } from '../../lib/helpers'
 import { imageUrlFor } from '../../lib/image-url'
+
 import BlockContent from '../block-content'
 
 // images
@@ -86,43 +88,81 @@ const StyledSubHeading = styled(BigTitle)`
   ${tw`text-4xl xl:text-5xl`};
 `
 const SingleDish = ({
-  dish: { name, mainImage, ingredients, price, _rawBody },
+  dish: { id, name, mainImage, ingredients, price, _rawBody },
   category = 'No Category',
   suffix = 'No suffix',
-}) => (
-  <>
-    <DarkWrapper>
-      <Container>
-        <StyledArticle>
-          <LeftColumn>
-            <p className="category">{category}</p>
-            <StyledBigHeading priority="1" hot>
-              {name} {suffix}
-            </StyledBigHeading>
-            <StyledSubHeading priority="2" className="price">
-              ${price}
-            </StyledSubHeading>
-            <p className="ingredients">{ingredients}</p>
-            <Story>{_rawBody && <BlockContent blocks={_rawBody} />}</Story>
-          </LeftColumn>
-          <RightColumn>
-            {mainImage && mainImage.asset && (
-              <img
-                src={imageUrlFor(buildImageObj(mainImage))
-                  // .width(600)
-                  // .height(Math.floor((16 / 16) * 600))
-                  // .fit('crop')
-                  .auto('format')
-                  .url()}
-                alt={mainImage.alt}
-              />
-            )}
-          </RightColumn>
-        </StyledArticle>
-      </Container>
-    </DarkWrapper>
-    <Highlights />
-  </>
-)
+}) => {
+  const data = useStaticQuery(
+    graphql`
+      query currMenuIdsQuery {
+        currentMenuIds: sanityMenuSettings {
+          savoryPizzaCurrMenu {
+            id
+          }
+          dessertPizzaCurrMenu {
+            id
+          }
+          pucciaCurrMenu {
+            id
+          }
+          insalateCurrMenu {
+            id
+          }
+        }
+      }
+    `
+  )
+
+  // grab the ids of all dishes from the current menu
+  // this will return an array of arrays if ids - one sub-array for each menu category
+  const currMenuIdsinCategoriesArr = Object.values(data.currentMenuIds).map(arrayOfObjects =>
+    arrayOfObjects.map(object => object.id)
+  )
+
+  // merge all category arrays into one, so we can run indexOf(curentDishId) on it later
+  // to see if the current dish is in the menu or not
+  const currMenuIdsArr = [].concat(...currMenuIdsinCategoriesArr)
+
+  // returns true if the current dish is on the current menu
+  const isDishOnMenu = currMenuIdsArr.indexOf(id) > -1
+
+  console.log(isDishOnMenu)
+
+  return (
+    <>
+      <DarkWrapper>
+        <Container>
+          <StyledArticle>
+            <LeftColumn>
+              <p className="category">{category}</p>
+              <StyledBigHeading priority="1" hot>
+                {name} {suffix}
+              </StyledBigHeading>
+              <StyledSubHeading priority="2" className="price">
+                ${price}
+              </StyledSubHeading>
+              <p className="ingredients">{ingredients}</p>
+              <Story>{_rawBody && <BlockContent blocks={_rawBody} />}</Story>
+            </LeftColumn>
+            <RightColumn>
+              {mainImage && mainImage.asset && (
+                <img
+                  src={imageUrlFor(buildImageObj(mainImage))
+                    // .width(600)
+                    // .height(Math.floor((16 / 16) * 600))
+                    // .fit('crop')
+                    .auto('format')
+                    .url()}
+                  alt={mainImage.alt}
+                />
+              )}
+            </RightColumn>
+          </StyledArticle>
+        </Container>
+      </DarkWrapper>
+      <Highlights />
+    </>
+  )
+}
 
 export default SingleDish
