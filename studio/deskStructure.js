@@ -48,11 +48,33 @@ export default () =>
         .schemaType('post')
         .child(S.documentTypeList('post').title('Blog posts')),
       S.listItem()
+        .title('Events')
+        .schemaType('event')
+        .child(S.documentTypeList('event').title('Events')),
+      S.listItem()
         .title('Pages')
         .child(
           S.list()
             .title('Pages')
             .items([
+              S.listItem()
+                .title('Events')
+                .child(
+                  S.editor()
+                    .id('eventsPage')
+                    .schemaType('page')
+                    .documentId('events')
+                )
+                .icon(FaFile),
+              S.listItem()
+                .title('Reviews')
+                .child(
+                  S.editor()
+                    .id('reviewsPage')
+                    .schemaType('page')
+                    .documentId('reviews')
+                )
+                .icon(FaFile),
               S.listItem()
                 .title('About')
                 .child(

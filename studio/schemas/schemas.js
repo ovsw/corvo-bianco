@@ -23,6 +23,7 @@ import dessertPizza from './dessertPizza'
 import puccia from './puccia'
 import insalata from './insalata'
 import menuSettings from './menuSettings'
+import event from './event'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -50,8 +51,8 @@ export default createSchema({
     dessertPizza,
     puccia,
     insalata,
-    menuSettings
-
+    menuSettings,
+    event
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
   ])
