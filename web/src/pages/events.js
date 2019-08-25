@@ -8,9 +8,11 @@ import GenericPage from '../views/GenericPage'
 
 // Components
 import BlogPostsPreview from '../components/BlogPostsPreview'
+import BlogPost from '../components/BlogPost'
 
 const Events = ({ data, errors }) => {
-  const postNodes = (data || {}).posts ? mapEdgesToNodes(data.posts).filter(filterOutDocsWithoutSlugs) : []
+  const eventsNodes = (data || {}).events ? mapEdgesToNodes(data.events).filter(filterOutDocsWithoutSlugs) : []
+  const eventsPage = data && data.eventsPage
 
   return (
     <>
@@ -19,9 +21,13 @@ const Events = ({ data, errors }) => {
           <GraphQLErrorList errors={errors} />
         </div>
       )}
-
+      {console.log(eventsNodes.length)}
       <GenericPage mainImage={data.eventsPage.mainImage}>
-        {postNodes && <BlogPostsPreview title="Latest Events" nodes={postNodes} browseMoreHref="/news/" />}
+        {eventsNodes.length > 0 ? (
+          <BlogPostsPreview title="Latest Events" nodes={eventsNodes} browseMoreHref="/news/" />
+        ) : (
+          <BlogPost {...eventsPage} />
+        )}
       </GenericPage>
     </>
   )
@@ -58,7 +64,7 @@ export const query = graphql`
       _rawBody
     }
 
-    posts: allSanityEvent(limit: 6, sort: { fields: [publishedAt], order: DESC }) {
+    events: allSanityEvent(limit: 6, sort: { fields: [publishedAt], order: DESC }) {
       edges {
         node {
           id
