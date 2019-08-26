@@ -24,7 +24,7 @@ const Events = ({ data, errors }) => {
       {console.log(eventsNodes.length)}
       <GenericPage mainImage={data.eventsPage.mainImage}>
         {eventsNodes.length > 0 ? (
-          <BlogPostsPreview title="Latest Events" nodes={eventsNodes} />
+          <BlogPostsPreview title="Latest Events" nodes={eventsNodes} mode="events" />
         ) : (
           <BlogPost {...eventsPage} />
         )}

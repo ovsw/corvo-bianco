@@ -9,7 +9,7 @@ import HpSection from '../../ui/HpSection'
 // elements
 import BigTitle from '../../ui/BigTitle'
 
-function BlogPostPreviewGrid({ title, browseMoreHref, nodes }) {
+function BlogPostPreviewGrid({ title, browseMoreHref, mode, nodes }) {
   return (
     <HpSection>
       <Container>
@@ -26,7 +26,8 @@ function BlogPostPreviewGrid({ title, browseMoreHref, nodes }) {
                 key={node.id}
                 className="w-full max-w-md mx-auto md:mx-0 mb-10 md:mb-0  text-center px-6 md:flex md:flex-column"
               >
-                <Post {...node} />
+                <Post {...node} mode={mode} />
+                {/* mode can be either events or posts. it's used to form the url to the individual page. */}
               </li>
             ))}
         </ul>

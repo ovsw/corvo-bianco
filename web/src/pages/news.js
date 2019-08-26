@@ -21,7 +21,7 @@ const News = ({ data, errors }) => {
       )}
 
       <GenericPage mainImage={data.newsPage.mainImage}>
-        {postNodes && <BlogPostsPreview title="Latest News" nodes={postNodes} />}
+        {postNodes && <BlogPostsPreview title="Latest News" nodes={postNodes} mode="posts" />}
       </GenericPage>
     </>
   )

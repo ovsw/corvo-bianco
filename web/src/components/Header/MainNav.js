@@ -42,8 +42,8 @@ const MainNav = () => {
       url: '/menu',
     },
     {
-      name: 'Location',
-      url: '/location',
+      name: 'Events',
+      url: '/events',
     },
     {
       name: 'Reviews',

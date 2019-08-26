@@ -21,9 +21,11 @@ const ItemWrapper = styled(Link)`
   }
 `
 
-function BlogPostPreviewItem({ title, slug, publishedAt, mainImage, _rawExcerpt }) {
+function BlogPostPreviewItem({ title, slug, publishedAt, mainImage, _rawExcerpt, mode }) {
+  const itemUrl = mode === 'posts' ? getBlogUrl(publishedAt, slug.current) : `/events/${slug.current}`
+
   return (
-    <ItemWrapper to={getBlogUrl(publishedAt, slug.current)}>
+    <ItemWrapper to={itemUrl}>
       {mainImage && mainImage.asset && (
         <img
           src={imageUrlFor(buildImageObj(mainImage))

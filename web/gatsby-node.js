@@ -43,6 +43,42 @@ async function createBlogPostPages(graphql, actions, reporter) {
   })
 }
 
+async function createEventPages(graphql, actions, reporter) {
+  const { createPage } = actions
+  const result = await graphql(`
+    {
+      allSanityEvent(filter: { slug: { current: { ne: null } } }) {
+        edges {
+          node {
+            id
+            publishedAt
+            slug {
+              current
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  if (result.errors) throw result.errors
+
+  const eventEdges = (result.data.allSanityEvent || {}).edges || []
+
+  eventEdges.forEach((edge, index) => {
+    const { id, slug = {} } = edge.node
+    const path = `/events/${slug.current}/`
+
+    reporter.info(`Creating event page: ${path}`)
+
+    createPage({
+      path,
+      component: require.resolve('./src/templates/event.js'),
+      context: { id },
+    })
+  })
+}
+
 async function createSavoryPizzaMenuItemPages(graphql, actions, reporter) {
   const { createPage } = actions
   const result = await graphql(`
@@ -189,6 +225,7 @@ async function createInsalateMenuItemPages(graphql, actions, reporter) {
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   await createBlogPostPages(graphql, actions, reporter)
+  await createEventPages(graphql, actions, reporter)
   await createSavoryPizzaMenuItemPages(graphql, actions, reporter)
   await createDessertPizzaMenuItemPages(graphql, actions, reporter)
   await createPucciaMenuItemPages(graphql, actions, reporter)
