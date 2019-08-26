@@ -126,7 +126,7 @@ const SingleDish = ({
   // returns true if the current dish is on the current menu
   const isDishOnMenu = currMenuIdsArr.indexOf(id) > -1
 
-  console.log(isDishOnMenu)
+  // console.log(isDishOnMenu)
 
   return (
     <>

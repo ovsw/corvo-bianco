@@ -21,7 +21,7 @@ const Events = ({ data, errors }) => {
           <GraphQLErrorList errors={errors} />
         </div>
       )}
-      {console.log(eventsNodes.length)}
+      {/* {console.log(eventsNodes.length)} */}
       <GenericPage mainImage={data.eventsPage.mainImage}>
         {eventsNodes.length > 0 ? (
           <BlogPostsPreview title="Latest Events" nodes={eventsNodes} mode="events" />
