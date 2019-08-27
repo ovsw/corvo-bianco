@@ -36,12 +36,12 @@ function BlogPostPreviewItem({ title, slug, publishedAt, mainImage, _rawExcerpt,
         />
       )}
       <div className="p-4">
-        <h3 className="text-2xl text-grey-darker mb-1">{title}</h3>
+        <h3 className="text-2xl text-grey-darker mb-4 leading-normal">{title}</h3>
         <p className="mb-1 text-orange-light">
           <Moment format="MMMM Do">{publishedAt}</Moment>
         </p>
         {_rawExcerpt && (
-          <div className="text-grey-dark mt-4">
+          <div className="text-grey-dark mt-4 leading-normal">
             <BlockText blocks={_rawExcerpt} />
           </div>
         )}
