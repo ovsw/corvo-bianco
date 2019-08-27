@@ -19,7 +19,7 @@ const PageHeader = ({ mainImage }) => (
         <source
           srcSet={imageUrlFor(buildImageObj(mainImage))
             .width(400)
-            .height(250)
+            .height(220)
             .fit('crop')
             .url()}
           media="(max-width: 400px)"
@@ -28,7 +28,7 @@ const PageHeader = ({ mainImage }) => (
         <source
           srcSet={imageUrlFor(buildImageObj(mainImage))
             .width(600)
-            .height(300)
+            .height(250)
             .fit('crop')
             .url()}
           media="(min-width: 401px) and (max-width: 1199px)"
@@ -37,7 +37,7 @@ const PageHeader = ({ mainImage }) => (
         <source
           srcSet={imageUrlFor(buildImageObj(mainImage))
             .width(1900)
-            .height(350)
+            .height(450)
             .fit('crop')
             .url()}
           media="(min-width: 1200px)"
