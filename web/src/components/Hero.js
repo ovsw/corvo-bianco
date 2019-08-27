@@ -82,7 +82,7 @@ const Hero = () => (
       <div className=" flex flex-col md:flex-row items-center md:items-start lg:items-center  text-white">
         {/* left col */}
         <LeftCol className="LeftCol">
-          <Intro className="Intro">Pizza of the Day</Intro>
+          <Intro className="Intro">Featured Dish</Intro>
           <BigTitle>Margareets</BigTitle>
           <Paragraph>
             <span>
@@ -91,8 +91,8 @@ const Hero = () => (
               traditional way.
             </span>
           </Paragraph>
-          <StyledLink to="/">
-            <span>Come & Get it! >>></span>
+          <StyledLink to="/menu">
+            <span>See Full Menu >>></span>
           </StyledLink>
         </LeftCol>
         {/* right col */}
