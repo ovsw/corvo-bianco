@@ -6,8 +6,8 @@ import tw from 'tailwind.macro'
 import PageHeader from '../components/PageHeader'
 import Layout from '../components/Layout'
 
-const GenericPage = ({ mainImage, children }) => (
-  <Layout>
+const GenericPage = ({ mainImage, children, seoTitle, seoDescription }) => (
+  <Layout seoTitle={seoTitle} seoDescription={seoDescription}>
     <PageHeader mainImage={mainImage} />
     {children}
   </Layout>

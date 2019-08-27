@@ -19,7 +19,13 @@ const AboutPage = ({ data, errors }) => {
         </div>
       )}
 
-      <GenericPage mainImage={data.aboutPage.mainImage}>{aboutPage && <BlogPost {...aboutPage} />}</GenericPage>
+      <GenericPage
+        mainImage={data.aboutPage.mainImage}
+        seoTitle={data.aboutPage.seoTitle}
+        seoDescription={data.aboutPage.seoDescription}
+      >
+        {aboutPage && <BlogPost {...aboutPage} />}
+      </GenericPage>
     </>
   )
 }
@@ -30,6 +36,8 @@ export const query = graphql`
   query AboutPageQuery {
     aboutPage: sanityPage(_id: { regex: "/(drafts.|)about/" }) {
       title
+      seoTitle
+      seoDescription
       mainImage {
         crop {
           _key

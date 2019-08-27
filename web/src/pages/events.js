@@ -22,7 +22,11 @@ const Events = ({ data, errors }) => {
         </div>
       )}
       {/* {console.log(eventsNodes.length)} */}
-      <GenericPage mainImage={data.eventsPage.mainImage}>
+      <GenericPage
+        mainImage={data.eventsPage.mainImage}
+        seoTitle={data.eventsPage.seoTitle}
+        seoDescription={data.eventsPage.seoDescription}
+      >
         {eventsNodes.length > 0 ? (
           <BlogPostsPreview title="Latest Events" nodes={eventsNodes} mode="events" />
         ) : (
@@ -39,6 +43,8 @@ export const query = graphql`
   query EventsPageQuery {
     eventsPage: sanityPage(_id: { regex: "/(drafts.|)events/" }) {
       title
+      seoTitle
+      seoDescription
       mainImage {
         crop {
           _key

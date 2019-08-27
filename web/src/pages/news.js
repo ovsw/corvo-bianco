@@ -20,7 +20,11 @@ const News = ({ data, errors }) => {
         </div>
       )}
 
-      <GenericPage mainImage={data.newsPage.mainImage}>
+      <GenericPage
+        mainImage={data.newsPage.mainImage}
+        seoTitle={data.newsPage.seoTitle}
+        seoDescription={data.newsPage.seoDescription}
+      >
         {postNodes && <BlogPostsPreview title="Latest News" nodes={postNodes} mode="posts" />}
       </GenericPage>
     </>
@@ -33,6 +37,8 @@ export const query = graphql`
   query NewsPageQuery {
     newsPage: sanityPage(_id: { regex: "/(drafts.|)news/" }) {
       title
+      seoTitle
+      seoDescription
       mainImage {
         crop {
           _key

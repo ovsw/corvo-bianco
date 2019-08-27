@@ -19,7 +19,13 @@ const ContactPage = ({ data, errors }) => {
         </div>
       )}
 
-      <GenericPage mainImage={data.contactPage.mainImage}>{contactPage && <BlogPost {...contactPage} />}</GenericPage>
+      <GenericPage
+        mainImage={data.contactPage.mainImage}
+        seoTitle={data.contactPage.seoTitle}
+        seoDescription={data.contactPage.seoDescription}
+      >
+        {contactPage && <BlogPost {...contactPage} />}
+      </GenericPage>
     </>
   )
 }
@@ -30,6 +36,8 @@ export const query = graphql`
   query ContactPageQuery {
     contactPage: sanityPage(_id: { regex: "/(drafts.|)contact/" }) {
       title
+      seoTitle
+      seoDescription
       mainImage {
         crop {
           _key
