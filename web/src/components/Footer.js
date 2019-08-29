@@ -90,7 +90,7 @@ const Footer = ({ footerText }) => (
     <Container>
       <FooterColumns>
         <LeftCol>
-          <h3>Corvo Bianco</h3>
+          <h3>Corvo Bianco Wood Fired Pizza</h3>
           <Tagline>Authentic Neapolitan Wood Fired Pizza Truck</Tagline>
           <Tagline>
             Veteran owned and operated.{' '}
