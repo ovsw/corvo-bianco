@@ -40,7 +40,7 @@ const Notes = styled.div`
   ${tw`flex flex-wrap`};
 `
 const Note = styled.div`
-  ${tw`px-6  w-1/2`};
+  ${tw`px-6  md:w-1/2`};
   ${tw`mb-6`};
 
   &:first-child {
@@ -65,7 +65,7 @@ const FoodMenuShell = ({ savoryPizzas, dessertPizzas }) => (
     <MainTitle priority="1">Main Ingredients:</MainTitle>
     <div className="container mx-auto flex flex-wrap pt-4 pb-12">
       <div className="w-full mb-4">
-        <div className=" mx-auto  w-64 opacity-25 my-0 py-0 rounded-t" />
+        <div className=" mx-auto w-64 opacity-25 my-0 py-0 rounded-t" />
       </div>
 
       <Notes>
