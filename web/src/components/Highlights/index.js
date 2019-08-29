@@ -138,9 +138,7 @@ const Highlights = () => (
       <div className=" mx-auto flex flex-wrap pt-8 pb-6">
         {contentMap.map(item => (
           <BoxWrapper key={item.title}>
-            <Card href="#">
-              {/* <p className='w-full text-gray-600 text-xs md:text-sm px-6'>xGETTING STARTED</p> */}
-              {/* <Iconbg /> */}
+            <Card>
               <SVG icon={item.icon} fill="#c1611f" left="37%" top="10%" width={24} />
               <h3>
                 <span>{item.title}</span>
