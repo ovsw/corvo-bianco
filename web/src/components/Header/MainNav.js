@@ -47,7 +47,7 @@ const MainNav = () => {
     },
     {
       name: 'Reviews',
-      url: '/',
+      url: '/reviews',
     },
     {
       name: 'About',
