@@ -68,6 +68,12 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: ['/menu/*'],
+      },
+    },
     /* Must be placed at the end */
     // 'gatsby-plugin-offline',
     `gatsby-plugin-remove-serviceworker`,
