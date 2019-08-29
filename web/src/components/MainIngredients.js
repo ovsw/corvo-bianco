@@ -113,7 +113,7 @@ const FoodMenuShell = ({ savoryPizzas, dessertPizzas }) => (
             <strong>highest quality dairy</strong>.
           </p>
           <p>
-            Fior di Latte Mozzarella is smooth, little tangy in flavour, elastically textured, with{' '}
+            Fior di Latte Mozzarella is smooth, a little tangy in flavour, elastically textured, with{' '}
             <strong>superb melting characteristics that make it perfect for Pizza</strong>.
           </p>
           <p>

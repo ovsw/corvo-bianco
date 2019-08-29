@@ -51,7 +51,7 @@ const TopBar = () => (
     <Container>
       <ColWrapper>
         <LeftCol>
-          <p>Woodfired Neopolitan Pizza Truck - Tampa Bay Area</p>
+          <p>Wood Fired Neapolitan Pizza Truck - Tampa Bay Area</p>
         </LeftCol>
         <RightCol>
           <div>
