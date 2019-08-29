@@ -32,11 +32,12 @@ const PostContent = styled.div`
   }
 
   h2 {
-    ${tw`font-chalk text-6xl leading-none mb-8`};
+    ${tw`font-chalk text-5xl leading-none mb-8 mt-12`};
     text-shadow: 0 0 2px #e07628;
+    font-size: 3.5rem;
   }
   h3 {
-    ${tw`text-4xl mb-4`};
+    ${tw`text-3xl mb-4`};
   }
 `
 const PostDate = styled.p`
