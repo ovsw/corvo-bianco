@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /menu/*
+
+sitemap: https://www.corvobianco.pizza/sitemap.xml
