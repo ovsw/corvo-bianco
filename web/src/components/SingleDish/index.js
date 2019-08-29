@@ -26,8 +26,16 @@ const DarkWrapper = styled.section`
   background-position: top right;
   background-size: cover;
   ${tw`text-white relative  overflow-hidden`};
-  padding-top: 150px;
+  padding-top: 140px;
   ${tw`pb-12 md:py-12 px-8 xl:px-0`};
+
+  @media (min-width: 374px) {
+    padding-top: 190px;
+  }
+
+  @media (min-width: 600px) {
+    padding-top: 2rem;
+  }
 
   h1 {
     ${tw`font-chalk`};
@@ -64,20 +72,29 @@ const RightColumn = styled.div`
 
   img {
     ${tw`absolute`};
-    left: 200px;
-    max-width: 1000px;
+    left: 0%;
+    width: 100%;
+    top: -210px;
+    max-width: 100%;
 
-    top: -200px;
-    width: 400px;
+    @media (min-width: 374px) {
+      left: 50%;
+      width: 400px;
+      margin-left: -200px;
+    }
+
+    @media (min-width: 400px) {
+      top: -220px;
+    }
+
     @media (min-width: 600px) {
-      left: 0rem;
+      left: 0;
       width: 700px;
       max-width: 1000%;
+      margin-left: 0;
     }
     @media (min-width: 1200px) {
-      ${tw`static`};
-      width: auto;
-      max-width: 100%;
+      top: -2rem;
     }
   }
 `
