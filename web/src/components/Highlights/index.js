@@ -131,7 +131,7 @@ const Highlights = () => (
       </SectionTitle>
       <IntroPara>
         <span>
-          Originating from Neapole (Naples) in Italy, Neapoletan Pizza may prove quite different than what you're used
+          Originating from Neapole (Naples) in Italy, Neapolitan Pizza may prove quite different than what you're used
           to. Here's what to expect:
         </span>
       </IntroPara>
