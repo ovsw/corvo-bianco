@@ -7,8 +7,28 @@ import { imageUrlFor } from '../lib/image-url'
 
 const StyledHeaderWrapper = styled.div`
   ${tw``};
+
+  height: 180px;
+
+  @media (min-width: 600px) {
+    height: 200px;
+  }
+
+  @media (min-width: 900px) {
+    height: 300px;
+  }
+
+  @media (min-width: 1200px) {
+    height: 400px;
+  }
+  @media (min-width: 1600px) {
+    height: 450px;
+  }
+
   img {
     width: 100%;
+    position: fixed;
+    object-fit: cover;
   }
 `
 
@@ -36,17 +56,26 @@ const PageHeader = ({ mainImage }) => (
 
         <source
           srcSet={imageUrlFor(buildImageObj(mainImage))
-            .width(1900)
-            .height(450)
+            .width(1600)
+            .height(550)
             .fit('crop')
             .url()}
-          media="(min-width: 1200px)"
+          media="(min-width: 1200px) and (max-width: 1600px)"
+        />
+
+        <source
+          srcSet={imageUrlFor(buildImageObj(mainImage))
+            .width(1900)
+            .height(530)
+            .fit('crop')
+            .url()}
+          media="(min-width: 1600px)"
         />
 
         <img
           src={imageUrlFor(buildImageObj(mainImage))
             .width(1900)
-            .height(350)
+            .height(500)
             .fit('crop')
             .url()}
           alt={mainImage.alt}

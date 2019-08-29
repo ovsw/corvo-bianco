@@ -16,7 +16,8 @@ import SocialLinks from './SocialLinks'
 import Container from '../ui/Container'
 
 const FooterStyled = styled.footer`
-  ${tw`text-white pt-12 `};
+  z-index: 900;
+  ${tw`text-white pt-12 relative`};
   border-image: url(${ChalkBorderSource}) 70 repeat;
   border-top: 5px solid white;
   background: url(${BgDark});
