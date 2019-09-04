@@ -107,6 +107,7 @@ const SEO = ({ seoTitle, seoDescription }) => {
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <meta name="twitter:image:alt" content={description} />
+      <meta name="google-site-verification" content="QS8GjLT3XOeeEU9Mc6NgrGNBUPlH144c9LGV_RXQWKk" />
       <script type="application/ld+json">{JSON.stringify(schemaOrgWebPage)}</script>
       <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
     </Helmet>
