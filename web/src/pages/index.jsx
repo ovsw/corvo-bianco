@@ -49,7 +49,7 @@ const Index = ({ data, errors }) => {
       <Highlights />
       <FoodMenu />
       <MapSection />
-      {postNodes && <BlogPostsPreview title="Latest News" nodes={postNodes} browseMoreHref="/news/" />}
+      {postNodes && <BlogPostsPreview title="Latest News" nodes={postNodes} browseMoreHref="/news/" mode="posts" />}
     </Layout>
   )
 }
