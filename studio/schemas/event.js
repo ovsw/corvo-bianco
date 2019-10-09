@@ -50,7 +50,8 @@ export default {
     {
       name: 'mainImage',
       title: 'Main image',
-      type: 'mainImage'
+      type: 'mainImage',
+      validation: Rule => Rule.required().error('An Main Image is required.')
     },
     {
       name: 'publishedAt',
