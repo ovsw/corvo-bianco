@@ -24,7 +24,7 @@ function BlogPostPreviewGrid({ title, browseMoreHref, mode, nodes }) {
             nodes.map(node => (
               <li
                 key={node.id}
-                className="w-full max-w-md mx-auto md:mx-0 mb-10 md:mb-0  text-center px-6 md:flex md:flex-column"
+                className="w-full max-w-sm mx-auto md:mx-0 mb-10 md:mb-0  text-center px-6 md:flex md:flex-column"
               >
                 <Post {...node} mode={mode} />
                 {/* mode can be either events or posts. it's used to form the url to the individual page. */}
