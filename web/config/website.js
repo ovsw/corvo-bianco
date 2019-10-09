@@ -7,7 +7,7 @@ module.exports = {
   siteTitleAlt: 'Corvo Bianco', // Alternative Site title for SEO
   siteTitleShort: 'Corvo Bianco', // short_name for manifest
   siteHeadline: 'Wood Fired Neapolitan Pizza Truck', // Headline for schema.org JSONLD
-  siteUrl: 'https://www.corvo-bianco.pizza', // Domain of your site. No trailing slash!
+  siteUrl: 'https://www.corvobianco.pizza', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logo.png', // Used for SEO and manifest
   siteDescription: 'Website for Corvo Bianco Wood Fired Cookery',
@@ -17,7 +17,8 @@ module.exports = {
   userTwitter: '@corvobianco.pizza', // Twitter Username
   ogSiteName: 'corvobianco.pizza', // Facebook Site Name
   ogLanguage: 'en_US', // Facebook Language
-  googleAnalyticsID: 'UA-47519312-5',
+  googleAnalyticsID: 'UA-146677776-1',
+  gtmID: 'GTM-PWZ6K2Z',
 
   // Manifest and Progress color
   themeColor: tailwind.colors.orange,

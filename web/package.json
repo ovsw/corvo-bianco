@@ -74,7 +74,7 @@
   "bugs": {
     "url": "https://github.com/ovsw/corvo-bianco/issues"
   },
-  "homepage": "https://corvo-bianco.pizza",
+  "homepage": "https://www.corvobianco.pizza",
   "eslintConfig": {
     "root": true,
     "extends": [

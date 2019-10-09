@@ -14,7 +14,7 @@ function Figure(props) {
           alt={alt}
         />
       )}
-      <figcaption>{caption}</figcaption>
+      <figcaption style={{ textAlign: 'center', color: 'gray' }}>{caption}</figcaption>
     </figure>
   )
 }
