@@ -101,6 +101,15 @@ export default () =>
                     .schemaType('page')
                     .documentId('contact')
                 )
+                .icon(FaFile),
+              S.listItem()
+                .title('Privacy Policy and TOS')
+                .child(
+                  S.editor()
+                    .id('privacyTosPage')
+                    .schemaType('page')
+                    .documentId('privacyTos')
+                )
                 .icon(FaFile)
             ])
         ),
