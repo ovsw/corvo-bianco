@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
+import { Link } from 'gatsby'
 import { FaPhone, FaEnvelope, FaMap } from 'react-icons/fa'
 
 // images
@@ -127,7 +128,8 @@ const Footer = ({ footerText }) => (
       </FooterColumns>
     </Container>
     <Copyright>
-      Copyright &copy; {new Date().getFullYear()} Corvo Bianco. <br /> Website by{' '}
+      Copyright &copy; {new Date().getFullYear()} Corvo Bianco. <br />{' '}
+      <Link to="/privacy-policy-tos">Provacy Policy and Terms of Service</Link> Website by{' '}
       <a href="https://ovswebsites.com">OVS Websites</a>.
     </Copyright>
   </FooterStyled>
