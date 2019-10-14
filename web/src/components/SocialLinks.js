@@ -19,7 +19,7 @@ const SocialIcons = () => (
     <SocialLink href="https://www.facebook.com/corvobianco.pizza/" rel="noopener noreferrer" target="_blank">
       <FaFacebookSquare />
     </SocialLink>
-    <SocialLink href="https://www.twitter.com" rel="noopener noreferrer" target="_blank">
+    <SocialLink href="https://www.twitter.com/@CorvoPizza" rel="noopener noreferrer" target="_blank">
       <FaTwitter />
     </SocialLink>
     {/* <SocialLink href="https://www.google.com" rel="noopener noreferrer" target="_blank">
