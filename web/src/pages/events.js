@@ -70,7 +70,7 @@ export const query = graphql`
       _rawBody
     }
 
-    events: allSanityEvent(limit: 6, sort: { fields: [publishedAt], order: DESC }) {
+    events: allSanityEvent(limit: 6, sort: { fields: [publishedAt], order: ASC }) {
       edges {
         node {
           id

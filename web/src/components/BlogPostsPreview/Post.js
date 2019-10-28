@@ -12,20 +12,31 @@ const ItemWrapper = styled(Link)`
   ${tw`rounded-lg overflow-hidden`};
   margin-bottom: 5rem;
   background-color: white;
-  border-radius: 1000rem 1000rem 0 0;
+  ${props => (props.square ? '' : 'border-radius: 1000rem 1000rem 0 0;')};
   border: 7px solid white;
-  box-shadow: 20px 15px 0px 10px rgba(193, 97, 31, 0.3), 30px -20px 0px 0px rgba(193, 97, 31, 0.3),
-    5px 5px 5px 0px rgba(0, 0, 0, 0.1);
+  ${props =>
+    props.clean
+      ? 'box-shadow: 10px 10px 0px 7px rgba(193, 97, 31, 0.3)'
+      : 'box-shadow: 20px 15px 0px 10px rgba(193, 97, 31, 0.3), 30px -20px 0px 0px rgba(193, 97, 31, 0.3),5px 5px 5px 0px rgba(0, 0, 0, 0.1);'};
   @media (min-width: 600px) {
     margin-bottom: 2rem;
   }
 `
 
-function BlogPostPreviewItem({ title, slug, publishedAt, mainImage, _rawExcerpt, mode }) {
+function BlogPostPreviewItem({
+  title,
+  slug,
+  publishedAt,
+  mainImage,
+  _rawExcerpt,
+  mode,
+  square = false,
+  clean = false,
+}) {
   const itemUrl = mode === 'posts' ? getBlogUrl(publishedAt, slug.current) : `/events/${slug.current}`
 
   return (
-    <ItemWrapper to={itemUrl}>
+    <ItemWrapper to={itemUrl} square={square} clean={clean}>
       {mainImage && mainImage.asset && (
         <img
           src={imageUrlFor(buildImageObj(mainImage))
