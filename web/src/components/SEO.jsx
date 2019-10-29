@@ -35,7 +35,7 @@ const SEO = ({ seoTitle, seoDescription }) => {
     description: data.seoDescription,
     name: data.seoTitle,
     author: {
-      '@type': 'Person',
+      '@type': 'Organization',
       name: 'OVS Websites',
     },
     copyrightHolder: {
