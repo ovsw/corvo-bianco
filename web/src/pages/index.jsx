@@ -48,7 +48,7 @@ const Index = ({ data, errors }) => {
       <Hero />
       <Highlights />
       <FoodMenu />
-      <MapSection />
+      {/* <MapSection /> */}
       {postNodes && <BlogPostsPreview title="Latest News" nodes={postNodes} browseMoreHref="/news/" mode="posts" />}
     </Layout>
   )
