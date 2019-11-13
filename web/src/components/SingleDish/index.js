@@ -71,7 +71,7 @@ const RightColumn = styled.div`
   ${tw`w-full md:w-1/3 xl:w-1/2 md:relative text-center`};
 
   img {
-    ${tw`absolute`};
+    position: ${props => (props.normalImagePosition ? 'static' : 'absolute')};
     left: 0%;
     width: 100%;
     top: -210px;
@@ -108,6 +108,7 @@ const SingleDish = ({
   dish: { id, name, mainImage, ingredients, price, _rawBody },
   category = 'No Category',
   suffix = 'No suffix',
+  normalImagePosition = false,
 }) => {
   const data = useStaticQuery(
     graphql`
@@ -144,7 +145,6 @@ const SingleDish = ({
   const isDishOnMenu = currMenuIdsArr.indexOf(id) > -1
 
   // console.log(isDishOnMenu)
-
   return (
     <>
       <DarkWrapper>
@@ -165,7 +165,7 @@ const SingleDish = ({
               <p className="ingredients">{ingredients}</p>
               <Story>{_rawBody && <BlockContent blocks={_rawBody} />}</Story>
             </LeftColumn>
-            <RightColumn>
+            <RightColumn normalImagePosition={normalImagePosition}>
               {mainImage && mainImage.asset && (
                 <img
                   src={imageUrlFor(buildImageObj(mainImage))

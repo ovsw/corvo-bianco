@@ -11,11 +11,16 @@ const FoodMenu = () => (
         throw new Error('Problem with missing menu items in backend. Please check and add as needed.')
       }
 
-      const { savoryPizzaCurrMenu, dessertPizzaCurrMenu } = data.sanityMenuSettings
+      const { savoryPizzaCurrMenu, dessertPizzaCurrMenu, pucciaCurrMenu, insalateCurrMenu } = data.sanityMenuSettings
       // console.log(desertPizzaCurrMenu)
       return (
         <>
-          <FoodMenuShell savoryPizzas={savoryPizzaCurrMenu} dessertPizzas={dessertPizzaCurrMenu} />
+          <FoodMenuShell
+            savoryPizzas={savoryPizzaCurrMenu}
+            dessertPizzas={dessertPizzaCurrMenu}
+            puccia={pucciaCurrMenu}
+            insalate={insalateCurrMenu}
+          />
         </>
       )
     }}

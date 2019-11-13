@@ -52,7 +52,7 @@ const IngredientsLink = styled.div`
   }
 `
 
-const FoodMenuShell = ({ savoryPizzas, dessertPizzas }) => (
+const FoodMenuShell = ({ savoryPizzas, dessertPizzas, puccia, insalate }) => (
   <MenuSection>
     <MenuTitle>Our Menu:</MenuTitle>
     <div className="container mx-auto flex flex-wrap pt-4 pb-12">
@@ -75,6 +75,14 @@ const FoodMenuShell = ({ savoryPizzas, dessertPizzas }) => (
           Dessert Pizzas
         </CategoryTitle>
         <FoodMenuList items={dessertPizzas} />
+        <CategoryTitle hot centered>
+          Puccia
+        </CategoryTitle>
+        <FoodMenuList items={puccia} />
+        <CategoryTitle hot centered>
+          Insalate
+        </CategoryTitle>
+        <FoodMenuList items={insalate} />
       </div>
     </div>
   </MenuSection>
