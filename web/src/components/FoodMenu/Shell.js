@@ -36,7 +36,12 @@ const MenuTitle = styled.h2`
 const CategoryTitle = styled(BigTitle)`
   ${tw`text-center`};
   margin-bottom: 4rem;
+  span {
+    ${tw`text-center text-2xl block lowercase mt-4`};
+    text-shadow: rgba(224, 118, 40, 1) 3px 3px 1px;
+  }
 `
+
 const IngredientsLink = styled.div`
   ${tw`mx-auto lg:w-1/2 my-0 py-0 text-center leading-normal mb-8 md:mt-8`};
   ${tw`text-xl`};
@@ -77,10 +82,12 @@ const FoodMenuShell = ({ savoryPizzas, dessertPizzas, puccia, insalate }) => (
         <FoodMenuList items={dessertPizzas} />
         <CategoryTitle hot centered>
           Puccia
+          <span>(sandwiches made on wood fired pizza dough bread)</span>
         </CategoryTitle>
         <FoodMenuList items={puccia} />
         <CategoryTitle hot centered>
-          Insalate
+          Salads
+          <span>(served in wood fired pizza dough bowls)</span>
         </CategoryTitle>
         <FoodMenuList items={insalate} />
       </div>
