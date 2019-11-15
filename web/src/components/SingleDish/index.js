@@ -26,14 +26,18 @@ const DarkWrapper = styled.section`
   background-position: top right;
   background-size: cover;
   ${tw`text-white relative  overflow-hidden`};
-  padding-top: 140px;
+  padding-top: ${props => (props.normalImagePosition ? '2rem' : '140px')};
   ${tw`pb-12 md:py-12 px-8 xl:px-0`};
 
   @media (min-width: 374px) {
-    padding-top: 190px;
+    padding-top: ${props => (props.normalImagePosition ? '2rem' : '190px')};
   }
 
   @media (min-width: 600px) {
+    padding-top: 4rem;
+  }
+
+  @media (min-width: 1200px) {
     padding-top: 2rem;
   }
 
@@ -50,7 +54,8 @@ const StyledArticle = styled.article`
   ${tw`block md:flex`};
 `
 const LeftColumn = styled.div`
-  ${tw`w-full md:w-2/3 xl:w-1/2 xl:pt-12 xl:pl-12`};
+  padding-top: ${props =>
+    props.normalImagePosition ? tw`w-full xl:w-1/2 xl:pt-12 xl:pl-12` : tw`w-full md:w-2/3 xl:w-1/2 xl:pt-12 xl:pl-12`};
 
   .category {
     ${tw`text-3xl`};
@@ -68,7 +73,10 @@ const Story = styled.div`
   ${tw`mb-8`};
 `
 const RightColumn = styled.div`
-  ${tw`w-full md:w-1/3 xl:w-1/2 md:relative text-center`};
+  padding-top: ${props =>
+    props.normalImagePosition
+      ? tw`w-full xl:w-1/2 md:relative text-center md:ml-8`
+      : tw`w-full md:w-1/3 xl:w-1/2 md:relative text-center`};
 
   img {
     position: ${props => (props.normalImagePosition ? 'static' : 'absolute')};
@@ -80,7 +88,7 @@ const RightColumn = styled.div`
     @media (min-width: 374px) {
       left: 50%;
       width: 400px;
-      margin-left: -200px;
+      margin-left: ${props => (props.normalImagePosition ? '0' : '-200px')};
     }
 
     @media (min-width: 400px) {
@@ -147,7 +155,7 @@ const SingleDish = ({
   // console.log(isDishOnMenu)
   return (
     <>
-      <DarkWrapper>
+      <DarkWrapper normalImagePosition={normalImagePosition}>
         <Container>
           <StyledArticle>
             <LeftColumn>
