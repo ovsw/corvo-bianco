@@ -21,15 +21,18 @@ const MenuSection = styled.section`
 
 const MenuTitle = styled.h2`
   ${tw`text-white font-normal  text-center font-typewritter text-5xl`};
-  @media (min-width: 600px) {
+  /* @media (min-width: 600px) {
     position: absolute;
-    transform: rotate(-20deg);
     left: 3rem;
     top: 5rem;
   }
   @media (min-width: 1200px) {
     left: 6rem;
     top: 7rem;
+  } */
+  span {
+    display: block;
+    font-size: 2rem;
   }
 `
 
@@ -59,7 +62,9 @@ const IngredientsLink = styled.div`
 
 const FoodMenuShell = ({ savoryPizzas, dessertPizzas, puccia, insalate }) => (
   <MenuSection>
-    <MenuTitle>Our Menu:</MenuTitle>
+    <MenuTitle>
+      Our Menu for this week <span>(changes weekly)</span>
+    </MenuTitle>
     <div className="container mx-auto flex flex-wrap pt-4 pb-12">
       <div className="w-full mb-4">
         <IngredientsLink>
