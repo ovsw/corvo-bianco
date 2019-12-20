@@ -13,6 +13,16 @@ import BigTitle from '../ui/BigTitle'
 // styles
 import { StyledLink } from '../ui/Button'
 
+const GrubHubLink = styled.a`
+  ${tw`px-6 py-4 pt-6 text-lg md:text-xl uppercase font-typewritter`};
+  color: white;
+  text-shadow: 0 0 3px #ded1c1;
+  background-color: red;
+  border-radius: 10px;
+  box-shadow: #c1611f 2px 2px 1px, #ded1c1 2px 2px 16px;
+  cursor: pointer;
+`
+
 const SectionStyled = styled.section`
   background-image: url(${PaintedWoodTexture2});
   background-size: cover;
@@ -82,18 +92,17 @@ const Hero = () => (
       <div className=" flex flex-col md:flex-row items-center md:items-start lg:items-center  text-white">
         {/* left col */}
         <LeftCol className="LeftCol">
-          <Intro className="Intro">Featured Dish</Intro>
-          <BigTitle>Margareets</BigTitle>
-          <Paragraph>
-            <span>
-              Back to the basics. <br />
-              Neapolitan dough with "The Sauce", Organic Fresh Basil and Mozzarella, baked in our wood fired oven in the
-              traditional way.
-            </span>
-          </Paragraph>
-          <StyledLink to="/menu">
-            <span>See Full Menu >>></span>
-          </StyledLink>
+          <Intro className="Intro">We're now on GrubHub!</Intro>
+          <BigTitle>Order Online</BigTitle>
+          {/* <Paragraph>
+            <span>We're now on GrubHub!</span>
+          </Paragraph> */}
+          <GrubHubLink
+            href="https://grubhub.com/restaurant/corvo-bianco-490-us-19-alt-palm-harbor/1711255?classicAffiliateId=%2Fr%2Fw%2F1711255%2F&utm_source=kitchen.grubhub.com&utm_medium=OOL&utm_campaign=order%20online&utm_content=1711255"
+            target="_blank"
+          >
+            <span>Order with GRUBHUB</span>
+          </GrubHubLink>
         </LeftCol>
         {/* right col */}
         <RightCol className="RightCol">
