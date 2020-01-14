@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
 import { Link } from 'gatsby'
-import { FaPhone, FaEnvelope, FaMap } from 'react-icons/fa'
+import { FaPhone, FaEnvelope, FaMap, FaUniversalAccess } from 'react-icons/fa'
 
 // images
 import BgDark from '../images/bgd.jpg'
@@ -112,6 +112,10 @@ const Footer = ({ footerText }) => (
             <a href="mailto:info@corvobianco.pizza">
               <FaEnvelope /> info@corvobianco.pizza
             </a>
+            <br />{' '}
+            <Link to="/ada-compliance/">
+              <FaUniversalAccess /> ADA Compliance
+            </Link>
           </p>
         </LeftCol>
         <RightCol>

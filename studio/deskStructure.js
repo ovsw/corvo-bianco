@@ -110,6 +110,15 @@ export default () =>
                     .schemaType('page')
                     .documentId('privacyTos')
                 )
+                .icon(FaFile),
+              S.listItem()
+                .title('ADA Compliance')
+                .child(
+                  S.editor()
+                    .id('adaCompliance')
+                    .schemaType('page')
+                    .documentId('adaCompliance')
+                )
                 .icon(FaFile)
             ])
         ),
