@@ -19,7 +19,7 @@ const GrubHubLink = styled.a`
   text-shadow: 0 0 3px #ded1c1;
   background-color: red;
   border-radius: 10px;
-  box-shadow: #c1611f 2px 2px 1px, #ded1c1 2px 2px 16px;
+  box-shadow: #c1611f 0px 0px 14px;
   cursor: pointer;
 `
 
